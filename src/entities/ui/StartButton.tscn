@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/entities/ui/StartButton.gd" type="Script" id=1]
+
+[node name="StartButton" type="Button"]
+margin_top = 120.0
+margin_right = 417.0
+margin_bottom = 171.0
+text = "Start Game"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_up" from="." to="." method="_on_StartButton_button_up"]

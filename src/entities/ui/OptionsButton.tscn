@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/entities/ui/OptionsButton.gd" type="Script" id=1]
+
+[node name="OptionsButton" type="Button"]
+margin_top = 175.0
+margin_right = 417.0
+margin_bottom = 226.0
+text = "Options"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_up" from="." to="." method="_on_OptionsButton_button_up"]

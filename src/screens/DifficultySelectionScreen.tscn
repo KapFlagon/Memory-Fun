@@ -1,0 +1,78 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/themes/Theme_01.tres" type="Theme" id=1]
+[ext_resource path="res://src/screens/DifficultySelectionScreen.gd" type="Script" id=2]
+
+[node name="DifficultySelectionScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.172549, 0.545098, 0.509804, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBox_DifficultySelection" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -202.0
+margin_top = -176.0
+margin_right = 202.0
+margin_bottom = 176.0
+size_flags_stretch_ratio = 0.0
+theme = ExtResource( 1 )
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DifficultyPrompt" type="Label" parent="VBox_DifficultySelection"]
+margin_top = 43.0
+margin_right = 404.0
+margin_bottom = 88.0
+text = "Select a Difficulty:"
+align = 1
+
+[node name="EasyDifButton" type="Button" parent="VBox_DifficultySelection" groups=[
+"DifficultyGroup",
+]]
+margin_top = 92.0
+margin_right = 404.0
+margin_bottom = 143.0
+hint_tooltip = "3 Shapes, 1 Colour"
+text = "Easy"
+
+[node name="MedDifButton" type="Button" parent="VBox_DifficultySelection" groups=[
+"DifficultyGroup",
+]]
+margin_top = 147.0
+margin_right = 404.0
+margin_bottom = 198.0
+hint_tooltip = "5 Shapes, 3 Colours"
+text = "Medium"
+
+[node name="HardDifButton" type="Button" parent="VBox_DifficultySelection" groups=[
+"DifficultyGroup",
+]]
+margin_top = 202.0
+margin_right = 404.0
+margin_bottom = 253.0
+hint_tooltip = "5 Shapes, 7 Colours"
+text = "Hard"
+
+[node name="BackButton" type="Button" parent="VBox_DifficultySelection"]
+margin_top = 257.0
+margin_right = 404.0
+margin_bottom = 308.0
+text = "Back"
+[connection signal="button_up" from="VBox_DifficultySelection/BackButton" to="." method="_on_BackButton_button_up"]

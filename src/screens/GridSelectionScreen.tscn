@@ -1,0 +1,108 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/themes/Theme_01.tres" type="Theme" id=1]
+[ext_resource path="res://src/screens/GridSelectionScreen.gd" type="Script" id=2]
+
+[node name="GridSelectionScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.172549, 0.545098, 0.509804, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBox_GridSelection" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -287.5
+margin_top = -183.0
+margin_right = 287.5
+margin_bottom = 183.0
+size_flags_stretch_ratio = 0.0
+theme = ExtResource( 1 )
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridPrompt" type="Label" parent="VBox_GridSelection"]
+margin_top = 78.0
+margin_right = 575.0
+margin_bottom = 123.0
+text = "Select a Grid Size:"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="VBox_GridSelection"]
+margin_top = 127.0
+margin_right = 575.0
+margin_bottom = 233.0
+columns = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="8TileGridButton" type="Button" parent="VBox_GridSelection/GridContainer"]
+margin_right = 189.0
+margin_bottom = 51.0
+size_flags_horizontal = 3
+text = "8"
+
+[node name="12TileGridButton" type="Button" parent="VBox_GridSelection/GridContainer"]
+margin_left = 193.0
+margin_right = 382.0
+margin_bottom = 51.0
+size_flags_horizontal = 3
+text = "12"
+
+[node name="16TileGridButton" type="Button" parent="VBox_GridSelection/GridContainer"]
+margin_left = 386.0
+margin_right = 575.0
+margin_bottom = 51.0
+size_flags_horizontal = 3
+text = "16"
+
+[node name="20TileGridButton" type="Button" parent="VBox_GridSelection/GridContainer"]
+margin_top = 55.0
+margin_right = 189.0
+margin_bottom = 106.0
+size_flags_horizontal = 3
+text = "20"
+
+[node name="24TileGridButton" type="Button" parent="VBox_GridSelection/GridContainer"]
+margin_left = 193.0
+margin_top = 55.0
+margin_right = 382.0
+margin_bottom = 106.0
+size_flags_horizontal = 3
+text = "24"
+
+[node name="CustomTileGridButton" type="Button" parent="VBox_GridSelection/GridContainer"]
+margin_left = 386.0
+margin_top = 55.0
+margin_right = 575.0
+margin_bottom = 106.0
+size_flags_horizontal = 3
+text = "Custom"
+
+[node name="BackButton" type="Button" parent="VBox_GridSelection"]
+margin_left = 232.0
+margin_top = 237.0
+margin_right = 343.0
+margin_bottom = 288.0
+size_flags_horizontal = 4
+text = "Back"
+[connection signal="button_up" from="VBox_GridSelection/BackButton" to="." method="_on_BackButton_button_up"]
