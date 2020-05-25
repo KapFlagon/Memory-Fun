@@ -1,1 +1,5 @@
 > Make Cards Clickable in TestGameScreen 
+> Make UI display a "currently selected" card for non mouse/touch screen layouts. 
+> Touch, mouseclick, enter key, or space key: select and turn card
+> Accept keyboard input
+> Create a shuffle function for the card grid 2d array (try to implement Fisher-Yates aka Knuth Shuffle)
