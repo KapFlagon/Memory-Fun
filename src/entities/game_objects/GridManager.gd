@@ -17,13 +17,14 @@ export var item_padding_y: int
 var card_grid = []
 var CardPreLoad = preload("res://src/entities/game_objects/Card.tscn")
 var random = RandomNumberGenerator.new()
-var selector_position := Vector2(0, 0)
+var current_selector_position := Vector2(0, 0)
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	card_grid = create_2D_array()
 	populate_grid()
+	prepare_selector()
 	#print(card_grid)
 	#print("post shuffle")
 	#print_2D_array()
@@ -31,6 +32,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	# Check for directional input, move the selector icon
 	pass
 
 
@@ -91,7 +93,17 @@ func check_pair(card_a_grid_location: Vector2, card_b_grid_location: Vector2):
 		colour_match = true
 	if shape_match and colour_match:
 		full_match = true
+		card_grid[card_a_grid_location.x][card_a_grid_location.y].set_current_state(e_states.MATCHED)
+		card_grid[card_b_grid_location.x][card_b_grid_location.y].set_current_state(e_states.MATCHED)
 	return full_match
+
+
+func valid_selection(selected_card_grid_location: Vector2):
+	var valid_selection = false
+	var selected_card_state = card_grid[selected_card_grid_location.x][selected_card_grid_location.y].get_current_state()
+	if selected_card_state == e_states.FACE_DOWN or selected_card_state == e_states.FACE_UP:
+		valid_selection = true
+	return valid_selection
 
 
 func create_2D_array(): 
@@ -126,3 +138,14 @@ func shuffle_card_grid(num_of_shuffles: int):
 	
 	#return shuffled_2D_array 
 	pass
+
+
+func prepare_selector() -> void:
+	current_selector_position = Vector2(0, 0)
+	set_selector_position(current_selector_position)
+
+func set_selector_position(new_grid_pos: Vector2) -> void:
+	var temp_new_pixels = grid_to_pixel(new_grid_pos.x, new_grid_pos.y)
+	temp_new_pixels.x = temp_new_pixels.x - 5
+	temp_new_pixels.y = temp_new_pixels.y - 5
+	get_node("SelectionIcon").position = temp_new_pixels

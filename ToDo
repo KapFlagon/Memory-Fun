@@ -3,3 +3,5 @@
 > Touch, mouseclick, enter key, or space key: select and turn card
 > Accept keyboard input
 > Create a shuffle function for the card grid 2d array (try to implement Fisher-Yates aka Knuth Shuffle)
+> When selecting a card, need to iterate through the grid and check if one card is already face-up and not matched. If yes, compare the cards and check for match. If no, flip the card. 
+> When comparing cards, need to skip ones already with "matched" state
