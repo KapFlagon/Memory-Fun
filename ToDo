@@ -1,3 +1,5 @@
 > Make Cards Clickable in TestGameScreen 
 > Touch, mouseclick, enter key, or space key: select and turn card
-> Create a shuffle function for the card grid 2d array (try to implement Fisher-Yates aka Knuth Shuffle) [alternative: push all elements into a single array, shuffle that, then re-populate the 2D array]
+> Music and SFX
+> Connect difficulty screen to actual play screen
+> Connect grid size selection screen to actual play screen

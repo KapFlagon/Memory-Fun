@@ -13,12 +13,12 @@ __meta__ = {
 }
 
 [node name="GridManager" parent="." instance=ExtResource( 1 )]
-columns = 4
-rows = 2
+columns = 6
+rows = 3
 x_start = 10
 y_start = 10
 item_width = 100
 item_height = 130
 item_padding_x = 10
 item_padding_y = 10
-selected_difficulty = 1
+selected_difficulty = 2

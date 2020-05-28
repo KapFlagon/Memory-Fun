@@ -27,7 +27,9 @@ var current_selector_position := Vector2(0, 0)
 func _ready() -> void:
 	game_state = e_game_state.NEW
 	card_grid = create_2D_array()
-	populate_grid()
+	var card_1D_array = generate_cards()
+	card_1D_array = shuffle_cards(card_1D_array, 2)
+	populate_2D_grid(card_1D_array)
 	prepare_selector()
 
 
@@ -63,29 +65,37 @@ func create_card(card_params_array):
 	return new_card
 	
 	
-func populate_grid():
-	var card_counter = 0
-	var temp_card_params = randomize_card_params()
-	var temp_card 
-	# Each card should be added twice, so that there are always pairs
+
+func populate_2D_grid(card_1D_array):
 	for i in columns:
 		for j in rows:
-			# Check if new card template needs to be generated. 
-			if card_counter < 2:
-				card_counter = card_counter + 1
-				pass
-			else: 
-				temp_card_params = randomize_card_params()
-				card_counter = 1
-			temp_card = create_card(temp_card_params)
-			temp_card.set_position(grid_to_pixel(i, j))
-			add_child(temp_card)
-			card_grid[i][j] = temp_card
-	#print("pre shuffle")
-	#print_2D_array()
-	#card_grid = shuffle_card_grid(1)
-	
-	
+			card_grid[i][j] = card_1D_array.pop_back()
+			card_grid[i][j].set_position(grid_to_pixel(i, j))
+
+
+func generate_cards(): 
+	var card_counter = 0
+	var created_cards = []
+	var temp_card_params = randomize_card_params()
+	var temp_card 
+	var num_of_cards = columns * rows
+	# Each card should be added twice, so that there are always pairs
+	for n in num_of_cards:
+		# Check if new card template needs to be generated. 
+		if card_counter < 2:
+			card_counter = card_counter + 1
+			pass
+		else: 
+			temp_card_params = randomize_card_params()
+			card_counter = 1
+		temp_card = create_card(temp_card_params)
+		#temp_card.set_position(grid_to_pixel(i, j))
+		add_child(temp_card)
+		#card_grid[i][j] = temp_card
+		created_cards.append(temp_card)
+	return created_cards
+
+
 func grid_to_pixel(column, row):
 	var new_x = x_start + (item_width * column) + (item_padding_x * column)
 	var new_y = y_start + (item_height * row) + (item_padding_y * row)
@@ -190,13 +200,11 @@ func check_2D_array_state() -> void:
 		print("game over")
 
 
-func shuffle_card_grid(num_of_shuffles: int):
-	# https://bost.ocks.org/mike/shuffle/
-	var shuffled_2D_array
-	var total_items = columns * rows
-	
-	#return shuffled_2D_array 
-	pass
+func shuffle_cards(card_1D_array, num_of_shuffles: int):
+	# https://bost.ocks.org/mike/shuffle/  ? 
+	for n in range(num_of_shuffles): 
+		card_1D_array.shuffle()
+	return card_1D_array
 
 
 func prepare_selector() -> void:
