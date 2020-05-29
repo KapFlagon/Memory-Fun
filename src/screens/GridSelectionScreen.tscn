@@ -55,34 +55,44 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="8TileGridButton" type="Button" parent="VBox_GridSelection/GridContainer"]
+[node name="8TileGridButton" type="Button" parent="VBox_GridSelection/GridContainer" groups=[
+"GridSelectGroup",
+]]
 margin_right = 189.0
 margin_bottom = 51.0
 size_flags_horizontal = 3
 text = "8"
 
-[node name="12TileGridButton" type="Button" parent="VBox_GridSelection/GridContainer"]
+[node name="12TileGridButton" type="Button" parent="VBox_GridSelection/GridContainer" groups=[
+"GridSelectGroup",
+]]
 margin_left = 193.0
 margin_right = 382.0
 margin_bottom = 51.0
 size_flags_horizontal = 3
 text = "12"
 
-[node name="16TileGridButton" type="Button" parent="VBox_GridSelection/GridContainer"]
+[node name="16TileGridButton" type="Button" parent="VBox_GridSelection/GridContainer" groups=[
+"GridSelectGroup",
+]]
 margin_left = 386.0
 margin_right = 575.0
 margin_bottom = 51.0
 size_flags_horizontal = 3
 text = "16"
 
-[node name="20TileGridButton" type="Button" parent="VBox_GridSelection/GridContainer"]
+[node name="20TileGridButton" type="Button" parent="VBox_GridSelection/GridContainer" groups=[
+"GridSelectGroup",
+]]
 margin_top = 55.0
 margin_right = 189.0
 margin_bottom = 106.0
 size_flags_horizontal = 3
 text = "20"
 
-[node name="24TileGridButton" type="Button" parent="VBox_GridSelection/GridContainer"]
+[node name="24TileGridButton" type="Button" parent="VBox_GridSelection/GridContainer" groups=[
+"GridSelectGroup",
+]]
 margin_left = 193.0
 margin_top = 55.0
 margin_right = 382.0
@@ -90,7 +100,10 @@ margin_bottom = 106.0
 size_flags_horizontal = 3
 text = "24"
 
-[node name="CustomTileGridButton" type="Button" parent="VBox_GridSelection/GridContainer"]
+[node name="CustomTileGridButton" type="Button" parent="VBox_GridSelection/GridContainer" groups=[
+"GridSelectGroup",
+]]
+visible = false
 margin_left = 386.0
 margin_top = 55.0
 margin_right = 575.0

@@ -14,7 +14,7 @@ export var item_width: int
 export var item_height: int
 export var item_padding_x: int
 export var item_padding_y: int
-export var selected_difficulty: int
+var selected_difficulty: int
 
 var game_state = null
 var card_grid = []
@@ -26,6 +26,8 @@ var current_selector_position := Vector2(0, 0)
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	game_state = e_game_state.NEW
+	selected_difficulty = PlayerData.get_difficulty()
+	parse_grid_size()
 	card_grid = create_2D_array()
 	var card_1D_array = generate_cards()
 	card_1D_array = shuffle_cards(card_1D_array, 2)
@@ -249,3 +251,21 @@ func process_inputs() -> void:
 	elif game_state == e_game_state.WAITING:
 		# No input allowed
 		pass
+
+func parse_grid_size() -> void:
+	match PlayerData.get_grid_size():
+		8:
+			columns = 4
+			rows = 2
+		12:
+			columns = 4
+			rows = 3
+		16: 
+			columns = 4
+			rows = 4
+		20: 
+			columns = 4
+			rows = 5
+		24: 
+			columns = 4
+			rows = 6
