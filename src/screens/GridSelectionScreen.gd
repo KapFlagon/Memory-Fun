@@ -44,5 +44,5 @@ func _grid_button_pressed(button):
 	next_scene()
 
 func next_scene() -> void:
-	get_tree().change_scene("res://src/screens/TestGameScreen.tscn")
+	get_tree().change_scene("res://src/screens/GameScreen.tscn")
 	

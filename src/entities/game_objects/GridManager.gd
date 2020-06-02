@@ -264,8 +264,8 @@ func parse_grid_size() -> void:
 			columns = 4
 			rows = 4
 		20: 
-			columns = 4
-			rows = 5
+			columns = 5
+			rows = 4
 		24: 
-			columns = 4
-			rows = 6
+			columns = 6
+			rows = 4
