@@ -22,4 +22,3 @@ func get_origin_y():
 func set_selector_pos(new_pos: Vector2) -> void:
 	set_origin_x(new_pos.x)
 	set_origin_y(new_pos.y)
-	

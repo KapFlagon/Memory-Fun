@@ -1,6 +1,7 @@
-> Make Cards Clickable in TestGameScreen 
-> Touch, mouseclick, enter key, or space key: select and turn card
+> Expand Keyboard controls (tabbing for menu items, enter to select, etc.)
+> Add Touch controls
+> Add Mouse controls
 > Music and SFX
-> Connect difficulty screen to actual play screen
 > Connect grid size selection screen to actual play screen
-
+> Calculate padding and start position dynamically, so that the grid is always centered. 
+> Game over screen 

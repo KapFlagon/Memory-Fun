@@ -11,8 +11,6 @@ var img_file
 # functions 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	#current_state = e_states.BLANK
-	#init(e_shapes.CIRCLE, e_colours.BLUE)
 	pass # Replace with function body.
 
 func init_card(new_shape, new_colour) -> void:
@@ -102,3 +100,11 @@ func _on_Control_gui_input(event: InputEvent) -> void:
 
 func print_card() -> void:
 	print("position: " + str(position) + ", current_state: " + str(current_state) + ", Shape: " + str(shape) + ", Colour: " + str(colour))
+
+
+func get_width():
+	return $Border.get_size().x
+
+
+func get_height():
+	return $Border.get_size().y

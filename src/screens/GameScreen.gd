@@ -10,8 +10,7 @@ func _process(delta: float) -> void:
 
 
 func _on_ZoomInButton_button_up() -> void:
-	if current_zoom > 0:
-		zoom_in()
+	zoom_in()
 
 
 func _on_ZoomOutButton_button_up() -> void:

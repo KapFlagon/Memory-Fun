@@ -10,8 +10,9 @@ export var columns: int
 export var rows: int
 export var x_start: int
 export var y_start: int
-export var item_width: int
-export var item_height: int
+var item_width: int
+var item_height: int
+var item_scale: float 
 export var item_padding_x: int
 export var item_padding_y: int
 var selected_difficulty: int
@@ -30,6 +31,8 @@ func _ready() -> void:
 	parse_grid_size()
 	card_grid = create_2D_array()
 	var card_1D_array = generate_cards()
+	item_width = card_1D_array[0].get_width()
+	item_height = card_1D_array[0].get_height()
 	card_1D_array = shuffle_cards(card_1D_array, 2)
 	populate_2D_grid(card_1D_array)
 	prepare_selector()
@@ -64,6 +67,7 @@ func randomize_card_params():
 func create_card(card_params_array):
 	var new_card = CardPreLoad.instance()
 	new_card.init_card(card_params_array[0], card_params_array[1])
+	new_card.set_scale(Vector2(item_scale,item_scale))
 	return new_card
 	
 	
@@ -99,8 +103,10 @@ func generate_cards():
 
 
 func grid_to_pixel(column, row):
-	var new_x = x_start + (item_width * column) + (item_padding_x * column)
-	var new_y = y_start + (item_height * row) + (item_padding_y * row)
+	var scaled_width = item_width * item_scale
+	var scaled_height = item_height * item_scale
+	var new_x = x_start + (scaled_width * column) + (item_padding_x * column)
+	var new_y = y_start + (scaled_height * row) + (item_padding_y * row)
 	#print("x: " + str(new_x) + ", y: " + str(new_y))
 	return Vector2(new_x, new_y)
 	
@@ -210,6 +216,7 @@ func shuffle_cards(card_1D_array, num_of_shuffles: int):
 
 
 func prepare_selector() -> void:
+	get_node("SelectionIcon").set_scale(Vector2(item_scale, item_scale))
 	current_selector_position = Vector2(0, 0)
 	set_selector_position()
 	game_state = e_game_state.ONGOING
@@ -257,15 +264,20 @@ func parse_grid_size() -> void:
 		8:
 			columns = 4
 			rows = 2
+			item_scale = 0.85
 		12:
 			columns = 4
 			rows = 3
+			item_scale = 0.55
 		16: 
 			columns = 4
 			rows = 4
+			item_scale = 0.41
 		20: 
 			columns = 5
 			rows = 4
+			item_scale = 0.41
 		24: 
 			columns = 6
 			rows = 4
+			item_scale = 0.41
