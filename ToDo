@@ -2,6 +2,5 @@
 > Add Touch controls
 > Add Mouse controls
 > Music and SFX
-> Connect grid size selection screen to actual play screen
-> Calculate padding and start position dynamically, so that the grid is always centered. 
-> Game over screen 
+> Add a colour blind mode
+> Add functionality to settings screen 

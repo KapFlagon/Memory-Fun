@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://src/entities/game_objects/GridManager.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/entities/ui/Hud.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/screens/GameScreen.gd" type="Script" id=3]
 
 [node name="GameScreen" type="Node2D"]
@@ -19,9 +20,11 @@ position = Vector2( 400, 240 )
 current = true
 
 [node name="GridManager" parent="." instance=ExtResource( 1 )]
-columns = 6
-rows = 3
-x_start = 10
-y_start = 10
 item_padding_x = 10
 item_padding_y = 10
+
+[node name="Hud" parent="." instance=ExtResource( 2 )]
+margin_left = 460.0
+margin_top = 446.263
+margin_right = 460.0
+margin_bottom = 446.263

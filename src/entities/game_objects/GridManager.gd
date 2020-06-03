@@ -6,16 +6,17 @@ enum e_difficulties {EASY, MEDIUM, HARD}
 
 
 # Export Variables for Grid
-export var columns: int
-export var rows: int
-export var x_start: int
-export var y_start: int
+var columns: int
+var rows: int
+var x_start: int
+var y_start: int
 var item_width: int
 var item_height: int
 var item_scale: float 
 export var item_padding_x: int
 export var item_padding_y: int
 var selected_difficulty: int
+onready var screen_size = get_viewport().get_visible_rect().size
 
 var game_state = null
 var card_grid = []
@@ -34,6 +35,7 @@ func _ready() -> void:
 	item_width = card_1D_array[0].get_width()
 	item_height = card_1D_array[0].get_height()
 	card_1D_array = shuffle_cards(card_1D_array, 2)
+	calculate_dimensions()
 	populate_2D_grid(card_1D_array)
 	prepare_selector()
 
@@ -105,8 +107,10 @@ func generate_cards():
 func grid_to_pixel(column, row):
 	var scaled_width = item_width * item_scale
 	var scaled_height = item_height * item_scale
-	var new_x = x_start + (scaled_width * column) + (item_padding_x * column)
-	var new_y = y_start + (scaled_height * row) + (item_padding_y * row)
+	var scaled_padding_x = item_padding_x * item_scale
+	var scaled_padding_y = item_padding_y * item_scale
+	var new_x = x_start + (scaled_width * column) + (scaled_padding_x * column)
+	var new_y = y_start + (scaled_height * row) + (scaled_padding_y * row)
 	#print("x: " + str(new_x) + ", y: " + str(new_y))
 	return Vector2(new_x, new_y)
 	
@@ -205,7 +209,8 @@ func check_2D_array_state() -> void:
 	print("matched_count:" + str(matched_count))
 	if matched_count == (columns * rows):
 		game_state = e_game_state.COMPLETED
-		print("game over")
+		#PlayerData.set_game_time(get_node("Hud").get_str_elapsed_time()) 
+		get_tree().change_scene("res://src/screens/GameOverScreen.tscn")
 
 
 func shuffle_cards(card_1D_array, num_of_shuffles: int):
@@ -281,3 +286,16 @@ func parse_grid_size() -> void:
 			columns = 6
 			rows = 4
 			item_scale = 0.41
+
+
+func calculate_dimensions() -> void:
+	var scaled_item_width = item_width * item_scale
+	var scaled_item_height = item_height * item_scale
+	var scaled_padding_x = item_padding_x * item_scale
+	var scaled_padding_y = item_padding_y * item_scale
+	var play_width = (columns * scaled_item_width) + ((columns - 1) * scaled_padding_x)
+	var play_height = (rows * scaled_item_height) + ((rows - 1) * scaled_padding_y)
+	var dead_space_width = screen_size.x - play_width
+	var dead_space_height = screen_size.y - play_height
+	x_start = dead_space_width / 2
+	y_start = dead_space_height / 2

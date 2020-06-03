@@ -1,3 +1,82 @@
-[gd_scene format=2]
+[gd_scene load_steps=4 format=2]
 
-[node name="GameOverScreen" type="Node2D"]
+[ext_resource path="res://src/themes/Theme_01.tres" type="Theme" id=1]
+[ext_resource path="res://src/screens/GameOverScreen.gd" type="Script" id=2]
+[ext_resource path="res://src/entities/ui/ExitButton.tscn" type="PackedScene" id=4]
+
+[node name="GameOverScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.172549, 0.545098, 0.509804, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBox" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -208.5
+margin_top = -176.0
+margin_right = 208.5
+margin_bottom = 176.0
+size_flags_stretch_ratio = 0.0
+theme = ExtResource( 1 )
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameOverText" type="Label" parent="VBox"]
+margin_top = 46.0
+margin_right = 417.0
+margin_bottom = 91.0
+text = "You Win! Good Job!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBox"]
+margin_top = 95.0
+margin_right = 417.0
+margin_bottom = 140.0
+
+[node name="StatPrompt" type="Label" parent="VBox/HBoxContainer"]
+margin_right = 309.0
+margin_bottom = 45.0
+text = "Time elapsed: "
+align = 2
+
+[node name="StatText" type="Label" parent="VBox/HBoxContainer"]
+margin_left = 313.0
+margin_right = 313.0
+margin_bottom = 45.0
+
+[node name="PlayAgainButton" type="Button" parent="VBox"]
+margin_top = 144.0
+margin_right = 417.0
+margin_bottom = 195.0
+text = "Play again"
+
+[node name="NewSettings" type="Button" parent="VBox"]
+margin_top = 199.0
+margin_right = 417.0
+margin_bottom = 250.0
+text = "Change difficulty"
+
+[node name="ExitButton" parent="VBox" instance=ExtResource( 4 )]
+margin_top = 254.0
+margin_right = 417.0
+margin_bottom = 305.0
+[connection signal="button_up" from="VBox/PlayAgainButton" to="." method="_on_PlayAgainButton_button_up"]

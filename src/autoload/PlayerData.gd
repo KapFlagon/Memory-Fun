@@ -2,7 +2,8 @@ extends Node
 
 var difficulty := 0 setget set_difficulty, get_difficulty
 var grid_size := 8 setget set_grid_size, get_grid_size
-var game_time := 0 setget set_game_time, get_game_time
+var game_time setget set_game_time, get_game_time
+var background_colour := 0 setget set_background_colour, get_background_colour
 
 
 func set_difficulty(new_difficulty: int) -> void:
@@ -27,3 +28,11 @@ func set_game_time(new_game_time) -> void:
 
 func get_game_time(): 
 	return game_time
+
+
+func set_background_colour(new_colour) -> void: 
+	background_colour = new_colour
+
+
+func get_background_colour():
+	return background_colour

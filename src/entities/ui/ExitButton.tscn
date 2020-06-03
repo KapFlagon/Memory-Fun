@@ -7,7 +7,7 @@ margin_top = 230.0
 margin_right = 474.0
 margin_bottom = 281.0
 size_flags_horizontal = 5
-text = "Exit"
+text = "Exit Game"
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
