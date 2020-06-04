@@ -9,6 +9,7 @@ enum e_difficulty {EASY, MEDIUM, HARD}
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	get_node("ColorRect").set_frame_color(PlayerData.get_background_colour())
 	for button in get_tree().get_nodes_in_group("DifficultyGroup"):
 		button.connect("button_up", self, "_difficulty_button_pressed", [button]) 
 	#pass # Replace with function body.

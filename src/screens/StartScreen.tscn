@@ -40,9 +40,9 @@ __meta__ = {
 }
 
 [node name="Title" type="Label" parent="VBox_MainMenu"]
-margin_top = 71.0
+margin_top = 98.0
 margin_right = 417.0
-margin_bottom = 116.0
+margin_bottom = 143.0
 text = "Memory Fun!"
 align = 1
 __meta__ = {
@@ -50,8 +50,13 @@ __meta__ = {
 }
 
 [node name="StartButton" parent="VBox_MainMenu" instance=ExtResource( 5 )]
+margin_top = 147.0
+margin_bottom = 198.0
 
 [node name="OptionsButton" parent="VBox_MainMenu" instance=ExtResource( 6 )]
+margin_top = 202.0
+margin_bottom = 253.0
 
 [node name="ExitButton" parent="VBox_MainMenu" instance=ExtResource( 4 )]
+visible = false
 margin_right = 417.0

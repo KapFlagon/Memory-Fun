@@ -1,6 +1,6 @@
 > Expand Keyboard controls (tabbing for menu items, enter to select, etc.)
 > Add Touch controls
 > Add Mouse controls
-> Music and SFX
 > Add a colour blind mode
-> Add functionality to settings screen 
+> Prepare for HTML distribution
+> Create an audio manager for music and sfx, so that it is triggered from one location and music is carried between scenes

@@ -2,7 +2,7 @@
 
 [ext_resource path="res://src/themes/Theme_01.tres" type="Theme" id=1]
 [ext_resource path="res://src/themes/Theme_01_small.tres" type="Theme" id=2]
-[ext_resource path="res://src/screens/StartScreen.gd" type="Script" id=3]
+[ext_resource path="res://src/screens/OptionsScreen.gd" type="Script" id=3]
 [ext_resource path="res://src/entities/ui/CancelButton.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/entities/ui/SubmitOptionsButton.tscn" type="PackedScene" id=5]
 
@@ -137,3 +137,6 @@ tick_count = 10
 [node name="SubmitOptionsButton" parent="VBox_Options/GridContainer" instance=ExtResource( 5 )]
 
 [node name="CancelButton" parent="VBox_Options/GridContainer" instance=ExtResource( 4 )]
+script = null
+[connection signal="button_up" from="VBox_Options/GridContainer/SubmitOptionsButton" to="." method="_on_SubmitOptionsButton_button_up"]
+[connection signal="button_up" from="VBox_Options/GridContainer/CancelButton" to="." method="_on_CancelButton_button_up"]

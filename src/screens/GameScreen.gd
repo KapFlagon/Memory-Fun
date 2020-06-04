@@ -4,6 +4,10 @@ var current_zoom
 var zoom_factor = 0.25
 
 
+func _ready() -> void:
+	get_node("ColorRect").set_frame_color(PlayerData.get_background_colour())
+
+
 func _process(delta: float) -> void:
 	# Check for zoom input
 	process_inputs()
