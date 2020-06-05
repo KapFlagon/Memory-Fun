@@ -20,10 +20,12 @@ func _ready() -> void:
 
 
 func _on_BackButton_button_up() -> void:
+	AudioManager.play_rand_sfx()
 	get_tree().change_scene("res://src/screens/DifficultySelectionScreen.tscn")
 
 
 func _grid_button_pressed(button):
+	AudioManager.play_rand_sfx()
 	if button.name == "8TileGridButton":
 		print("8")
 		PlayerData.set_grid_size(8)

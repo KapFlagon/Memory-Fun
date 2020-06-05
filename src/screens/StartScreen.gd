@@ -9,9 +9,9 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	get_node("ColorRect").set_frame_color(PlayerData.get_background_colour())
-	if PlayerData.initialized == false:
-		PlayerData.check_music()
-		PlayerData.initialized = true
+	if AudioManager.initialized == false:
+		AudioManager.check_music()
+		AudioManager.initialized = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -14,4 +14,5 @@ func _ready() -> void:
 	
 
 func _on_StartButton_button_up() -> void:
+	AudioManager.play_rand_sfx()
 	get_tree().change_scene("res://src/screens/DifficultySelectionScreen.tscn")

@@ -245,6 +245,7 @@ func set_selector_position() -> void:
 
 func process_inputs() -> void:
 	if game_state == e_game_state.ONGOING:
+		
 		if Input.is_action_just_pressed("ui_right"):
 			update_selection_icon_location(Vector2(1,0))
 		if Input.is_action_just_pressed("ui_left"):
@@ -254,7 +255,8 @@ func process_inputs() -> void:
 		if Input.is_action_just_pressed("ui_down"):
 			update_selection_icon_location(Vector2(0,1))
 		if Input.is_action_just_released("ui_accept") or Input.is_action_just_released("ui_select"):
-			print("ui_accept or ui_select detected")
+			AudioManager.play_rand_sfx()
+			#print("ui_accept or ui_select detected")
 			var valid_selection = validate_selection(current_selector_position)
 			if valid_selection:
 				flip_chosen_card(current_selector_position)

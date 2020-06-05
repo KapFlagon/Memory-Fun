@@ -11,5 +11,5 @@ dest_files=[ "res://.import/SFX_02.ogg-879fe129ba1ae455bf86f5f90497cd7b.oggstr" 
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

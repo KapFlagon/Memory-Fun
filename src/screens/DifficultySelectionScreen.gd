@@ -20,12 +20,14 @@ func _ready() -> void:
 #	pass
 
 func _on_BackButton_button_up() -> void:
+	AudioManager.play_rand_sfx()
 	get_tree().change_scene("res://src/screens/StartScreen.tscn")
 
 func next_scene() -> void: 
 	get_tree().change_scene("res://src/screens/GridSelectionScreen.tscn")
 
 func _difficulty_button_pressed(button):
+	AudioManager.play_rand_sfx()
 	if button.name == "EasyDifButton":
 		PlayerData.set_difficulty(e_difficulty.EASY)
 	elif button.name == "MedDifButton":

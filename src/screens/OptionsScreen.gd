@@ -7,11 +7,13 @@ func _ready() -> void:
 
 
 func _on_SubmitOptionsButton_button_up() -> void:
+	AudioManager.play_rand_sfx()
 	set_player_data()
 	change_screen()
 
 
 func _on_CancelButton_button_up() -> void:
+	AudioManager.play_rand_sfx()
 	change_screen()
 
 
@@ -21,15 +23,15 @@ func change_screen() -> void:
 
 func get_player_data() -> void:
 	get_node("VBox_Options/GridContainer/ColorPickerButton").set_pick_color(PlayerData.get_background_colour())
-	get_node("VBox_Options/GridContainer/SfxOnChckbx").pressed = PlayerData.get_sfx_on()
-	get_node("VBox_Options/GridContainer/SfxVol_Slider").set_value(PlayerData.get_sfx_vol())
-	get_node("VBox_Options/GridContainer/MusicOnChckbx").pressed = PlayerData.get_music_on()
-	get_node("VBox_Options/GridContainer/MusicVol_Slider").set_value(PlayerData.get_music_vol())
+	get_node("VBox_Options/GridContainer/SfxOnChckbx").pressed = AudioManager.get_sfx_on()
+	get_node("VBox_Options/GridContainer/SfxVol_Slider").set_value(AudioManager.get_sfx_vol())
+	get_node("VBox_Options/GridContainer/MusicOnChckbx").pressed = AudioManager.get_music_on()
+	get_node("VBox_Options/GridContainer/MusicVol_Slider").set_value(AudioManager.get_music_vol())
 
 func set_player_data() -> void: 
 	PlayerData.set_background_colour(get_node("VBox_Options/GridContainer/ColorPickerButton").get_pick_color())
-	PlayerData.set_sfx_on(get_node("VBox_Options/GridContainer/SfxOnChckbx").pressed)
-	PlayerData.set_sfx_vol(get_node("VBox_Options/GridContainer/SfxVol_Slider").get_value())
-	PlayerData.set_music_on(get_node("VBox_Options/GridContainer/MusicOnChckbx").pressed)
-	PlayerData.set_music_vol(get_node("VBox_Options/GridContainer/MusicVol_Slider").get_value())
-	PlayerData.check_music()
+	AudioManager.set_sfx_on(get_node("VBox_Options/GridContainer/SfxOnChckbx").pressed)
+	AudioManager.set_sfx_vol(get_node("VBox_Options/GridContainer/SfxVol_Slider").get_value())
+	AudioManager.set_music_on(get_node("VBox_Options/GridContainer/MusicOnChckbx").pressed)
+	AudioManager.set_music_vol(get_node("VBox_Options/GridContainer/MusicVol_Slider").get_value())
+	AudioManager.check_music()

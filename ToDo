@@ -3,5 +3,4 @@
 > Add Mouse controls
 > Add a colour blind mode
 > Prepare for HTML distribution
-> Create an audio manager for music and sfx, so that it is triggered from one location and music is carried between scenes
 > Audio sliders are on linear scale, but audio stream uses db scale. Need to make a calculation method for this. 
