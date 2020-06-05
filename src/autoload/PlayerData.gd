@@ -8,6 +8,7 @@ var music_on := true setget set_music_on, get_music_on
 var music_vol := 100 setget set_music_vol, get_music_vol
 var sfx_on := true setget set_sfx_on, get_sfx_on
 var sfx_vol := 100 setget set_sfx_vol, get_sfx_vol
+var initialized := false
 
 
 func set_difficulty(new_difficulty: int) -> void:
@@ -51,7 +52,7 @@ func get_music_on():
 
 
 func set_music_vol(val) -> void:
-	music_vol = val
+	music_vol = val 
 
 
 func get_music_vol():
@@ -72,3 +73,20 @@ func set_sfx_vol(val) -> void:
 
 func get_sfx_vol():
 	return sfx_vol
+
+func check_music() -> void:
+	if get_music_on():
+		var temp_vol = lin_to_db(get_music_vol())
+		get_node("Music").set_volume_db(temp_vol)
+		var current_position = get_node("Music").is_playing()
+		if current_position == false:
+			get_node("Music").play(0)
+	else: 
+		get_node("Music").stop()
+
+
+func lin_to_db(val):
+	var output = val / 100.0 
+	output = output * 80
+	output = output - 80
+	return output

@@ -15,6 +15,5 @@ func _on_NewVariants_button_up() -> void:
 
 func victory_sound() -> void: 
 	if PlayerData.get_sfx_on():
-		var temp_vol = PlayerData.get_sfx_vol() / 100
-		get_node("VictorySound").set_volume_db(temp_vol)
+		get_node("VictorySound").set_volume_db(PlayerData.get_sfx_vol())
 		get_node("VictorySound").play()

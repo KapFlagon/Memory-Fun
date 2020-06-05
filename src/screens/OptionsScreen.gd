@@ -21,14 +21,15 @@ func change_screen() -> void:
 
 func get_player_data() -> void:
 	get_node("VBox_Options/GridContainer/ColorPickerButton").set_pick_color(PlayerData.get_background_colour())
-	get_node("VBox_Options/GridContainer/SfxOnChckbx").toggle_mode = PlayerData.get_sfx_on()
+	get_node("VBox_Options/GridContainer/SfxOnChckbx").pressed = PlayerData.get_sfx_on()
 	get_node("VBox_Options/GridContainer/SfxVol_Slider").set_value(PlayerData.get_sfx_vol())
-	get_node("VBox_Options/GridContainer/MusicOnChckbx").toggle_mode = PlayerData.get_music_on()
+	get_node("VBox_Options/GridContainer/MusicOnChckbx").pressed = PlayerData.get_music_on()
 	get_node("VBox_Options/GridContainer/MusicVol_Slider").set_value(PlayerData.get_music_vol())
 
 func set_player_data() -> void: 
 	PlayerData.set_background_colour(get_node("VBox_Options/GridContainer/ColorPickerButton").get_pick_color())
-	PlayerData.set_sfx_on(get_node("VBox_Options/GridContainer/SfxOnChckbx").toggle_mode)
+	PlayerData.set_sfx_on(get_node("VBox_Options/GridContainer/SfxOnChckbx").pressed)
 	PlayerData.set_sfx_vol(get_node("VBox_Options/GridContainer/SfxVol_Slider").get_value())
-	PlayerData.set_music_on(get_node("VBox_Options/GridContainer/MusicOnChckbx").toggle_mode)
+	PlayerData.set_music_on(get_node("VBox_Options/GridContainer/MusicOnChckbx").pressed)
 	PlayerData.set_music_vol(get_node("VBox_Options/GridContainer/MusicVol_Slider").get_value())
+	PlayerData.check_music()

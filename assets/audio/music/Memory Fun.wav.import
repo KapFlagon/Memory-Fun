@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Memory Fun.wav-00d90c010272934649a79252f835a1b9.sample"
+
+[deps]
+
+source_file="res://assets/audio/music/Memory Fun.wav"
+dest_files=[ "res://.import/Memory Fun.wav-00d90c010272934649a79252f835a1b9.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
