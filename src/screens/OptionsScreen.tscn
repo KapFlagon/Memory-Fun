@@ -97,8 +97,9 @@ margin_left = 195.0
 margin_top = 75.0
 margin_right = 273.0
 margin_bottom = 91.0
+min_value = -80.0
+max_value = 0.0
 step = 5.0
-value = 100.0
 tick_count = 10
 
 [node name="MusicOn_Label" type="Label" parent="VBox_Options/GridContainer"]
@@ -130,13 +131,19 @@ margin_left = 195.0
 margin_top = 144.0
 margin_right = 273.0
 margin_bottom = 160.0
+min_value = -80.0
+max_value = 0.0
 step = 5.0
-value = 100.0
 tick_count = 10
 
 [node name="SubmitOptionsButton" parent="VBox_Options/GridContainer" instance=ExtResource( 5 )]
 
 [node name="CancelButton" parent="VBox_Options/GridContainer" instance=ExtResource( 4 )]
 script = null
+[connection signal="color_changed" from="VBox_Options/GridContainer/ColorPickerButton" to="." method="_on_ColorPickerButton_color_changed"]
+[connection signal="toggled" from="VBox_Options/GridContainer/SfxOnChckbx" to="." method="_on_SfxOnChckbx_toggled"]
+[connection signal="value_changed" from="VBox_Options/GridContainer/SfxVol_Slider" to="." method="_on_SfxVol_Slider_value_changed"]
+[connection signal="toggled" from="VBox_Options/GridContainer/MusicOnChckbx" to="." method="_on_MusicOnChckbx_toggled"]
+[connection signal="value_changed" from="VBox_Options/GridContainer/MusicVol_Slider" to="." method="_on_MusicVol_Slider_value_changed"]
 [connection signal="button_up" from="VBox_Options/GridContainer/SubmitOptionsButton" to="." method="_on_SubmitOptionsButton_button_up"]
 [connection signal="button_up" from="VBox_Options/GridContainer/CancelButton" to="." method="_on_CancelButton_button_up"]
