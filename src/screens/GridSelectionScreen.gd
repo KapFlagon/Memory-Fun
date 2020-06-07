@@ -27,19 +27,14 @@ func _on_BackButton_button_up() -> void:
 func _grid_button_pressed(button):
 	AudioManager.play_rand_sfx()
 	if button.name == "8TileGridButton":
-		print("8")
 		PlayerData.set_grid_size(8)
 	elif button.name == "12TileGridButton":
-		print("12")
 		PlayerData.set_grid_size(12)
 	elif button.name == "16TileGridButton":
-		print("16")
 		PlayerData.set_grid_size(16)
 	elif button.name == "20TileGridButton":
-		print("20")
 		PlayerData.set_grid_size(20)
 	elif button.name == "24TileGridButton":
-		print("24")
 		PlayerData.set_grid_size(24)
 	else:
 		print("custom")

@@ -1,6 +1,5 @@
 > Expand Keyboard controls (tabbing for menu items, enter to select, etc.)
-> Add Touch controls
-> Add Mouse controls
 > Add a colour blind mode
 > Prepare for HTML distribution
 > Audio sliders are on linear scale, but audio stream uses db scale. Need to make a calculation method for this. 
+> Make volume sliders respond in real time. 

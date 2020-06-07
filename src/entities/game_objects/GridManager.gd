@@ -46,6 +46,22 @@ func _process(delta: float) -> void:
 	process_inputs()
 
 
+func scale_width(): 
+	return item_width * item_scale
+
+
+func scale_height(): 
+	return item_height * item_scale
+
+
+func scale_item_padding_x():
+	return item_padding_x * item_scale
+
+
+func scale_item_padding_y(): 
+	return item_padding_y * item_scale
+
+
 func randomize_card_params(): 
 	var tempArray = []
 	var shape_pool = 0
@@ -105,20 +121,28 @@ func generate_cards():
 
 
 func grid_to_pixel(column, row):
-	var scaled_width = item_width * item_scale
-	var scaled_height = item_height * item_scale
-	var scaled_padding_x = item_padding_x * item_scale
-	var scaled_padding_y = item_padding_y * item_scale
-	var new_x = x_start + (scaled_width * column) + (scaled_padding_x * column)
-	var new_y = y_start + (scaled_height * row) + (scaled_padding_y * row)
+	var scaled_width = scale_width()
+	var scaled_height = scale_height()
+	var scaled_padding_x = scale_item_padding_x()
+	var scaled_padding_y = scale_item_padding_y()
+	var new_x = x_start + ((scaled_width + scaled_padding_x) * column)
+	var new_y = y_start + ((scaled_height + scaled_padding_y) * row)
 	#print("x: " + str(new_x) + ", y: " + str(new_y))
 	return Vector2(new_x, new_y)
 	
 	
-func pixel_to_grid(xPos, yPos):
-	pass
-	
-	
+func pixel_to_grid(pos : Vector2):
+	var scaled_width = scale_width()
+	var scaled_height = scale_height()
+	var scaled_padding_x = scale_item_padding_x()
+	var scaled_padding_y = scale_item_padding_y()
+	var calc_col = floor((pos.x - x_start) / (scaled_padding_x + scaled_width))
+	#print("mouse pos x: " + str(pos.x) + " column calc: " + str(calc_col))
+	var calc_row = floor((pos.y  - y_start - scaled_padding_y) / scaled_height)
+	#print("mouse pos y: " + str(pos.y) + " row calc: " + str(calc_row))
+	return Vector2(calc_col, calc_row)
+
+
 func check_pair(card_a_grid_location: Vector2, card_b_grid_location: Vector2): 
 	var full_match = false
 	var colour_match = false
@@ -166,6 +190,7 @@ func print_2D_array():
 			print("grid number " + str(i) + ", " + str(j))
 			card_grid[i][j].print_card()
 
+
 func check_2D_array_matches(): 
 	var face_up_count = 0
 	var card_a_grid_pos = null
@@ -206,7 +231,7 @@ func check_2D_array_state() -> void:
 		for j in rows: 
 			if card_grid[i][j].get_current_state() == e_states.MATCHED:
 				matched_count = matched_count + 1 
-	print("matched_count:" + str(matched_count))
+	#print("matched_count:" + str(matched_count))
 	if matched_count == (columns * rows):
 		game_state = e_game_state.COMPLETED
 		#PlayerData.set_game_time(get_node("Hud").get_str_elapsed_time()) 
@@ -227,13 +252,10 @@ func prepare_selector() -> void:
 	game_state = e_game_state.ONGOING
 
 
-func update_selection_icon_location(location_change: Vector2) -> void:
-	var tempVec2 = current_selector_position
-	tempVec2.x = tempVec2.x + location_change.x
-	tempVec2.y = tempVec2.y + location_change.y
-	if tempVec2.x >= 0 and tempVec2.y >= 0:
-		if tempVec2.x < columns and tempVec2.y < rows:
-			current_selector_position = tempVec2
+func update_selection_icon_location(new_location: Vector2) -> void:
+	if new_location.x >= 0 and new_location.x < columns:
+		if new_location.y >= 0 and new_location.y < rows:
+			current_selector_position = new_location
 			set_selector_position()
 
 func set_selector_position() -> void:
@@ -245,16 +267,24 @@ func set_selector_position() -> void:
 
 func process_inputs() -> void:
 	if game_state == e_game_state.ONGOING:
-		
+		var new_location = Vector2(0, 0) 
+		var right_movement = Vector2(1, 0)
+		var left_movement = Vector2(-1, 0)
+		var up_movement = Vector2(0, -1)
+		var down_movement = Vector2(0, 1)
 		if Input.is_action_just_pressed("ui_right"):
-			update_selection_icon_location(Vector2(1,0))
+			new_location = current_selector_position + right_movement
+			update_selection_icon_location(new_location)
 		if Input.is_action_just_pressed("ui_left"):
-			update_selection_icon_location(Vector2(-1,0))
+			new_location = current_selector_position + left_movement
+			update_selection_icon_location(new_location)
 		if Input.is_action_just_pressed("ui_up"):
-			update_selection_icon_location(Vector2(0,-1))
+			new_location = current_selector_position + up_movement
+			update_selection_icon_location(new_location)
 		if Input.is_action_just_pressed("ui_down"):
-			update_selection_icon_location(Vector2(0,1))
-		if Input.is_action_just_released("ui_accept") or Input.is_action_just_released("ui_select"):
+			new_location = current_selector_position + down_movement
+			update_selection_icon_location(new_location)
+		if Input.is_action_just_pressed("ui_accept"): #or Input.is_action_just_released("ui_select"):
 			AudioManager.play_rand_sfx()
 			#print("ui_accept or ui_select detected")
 			var valid_selection = validate_selection(current_selector_position)
@@ -262,6 +292,8 @@ func process_inputs() -> void:
 				flip_chosen_card(current_selector_position)
 		if Input.is_action_just_released("ui_end"): 
 			print()
+		if Input.is_action_just_pressed("ui_touch"):
+			process_touch()
 	elif game_state == e_game_state.WAITING:
 		# No input allowed
 		pass
@@ -291,13 +323,22 @@ func parse_grid_size() -> void:
 
 
 func calculate_dimensions() -> void:
-	var scaled_item_width = item_width * item_scale
-	var scaled_item_height = item_height * item_scale
-	var scaled_padding_x = item_padding_x * item_scale
-	var scaled_padding_y = item_padding_y * item_scale
+	var scaled_item_width = scale_width()
+	var scaled_item_height = scale_height()
+	var scaled_padding_x = scale_item_padding_x()
+	var scaled_padding_y = scale_item_padding_y()
 	var play_width = (columns * scaled_item_width) + ((columns - 1) * scaled_padding_x)
 	var play_height = (rows * scaled_item_height) + ((rows - 1) * scaled_padding_y)
 	var dead_space_width = screen_size.x - play_width
 	var dead_space_height = screen_size.y - play_height
 	x_start = dead_space_width / 2
 	y_start = dead_space_height / 2
+
+
+func process_touch() -> void:
+	var input_position = get_global_mouse_position()
+	var new_cursor_grid = pixel_to_grid(input_position)
+	update_selection_icon_location(new_cursor_grid)
+	var valid_selection = validate_selection(current_selector_position)
+	if valid_selection:
+		flip_chosen_card(current_selector_position)
