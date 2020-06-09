@@ -27,9 +27,6 @@ var current_selector_position := Vector2(0, 0)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if PlayerData.game_paused: 
-		restore_paused_game()
-	else:
 		new_game()
 
 
@@ -80,8 +77,7 @@ func create_card(card_params_array):
 	new_card.init_card(card_params_array[0], card_params_array[1])
 	new_card.set_scale(Vector2(item_scale,item_scale))
 	return new_card
-	
-	
+
 
 func populate_2D_grid(card_1D_array):
 	for i in columns:
@@ -146,8 +142,6 @@ func check_pair(card_a_grid_location: Vector2, card_b_grid_location: Vector2):
 		colour_match = true
 	if shape_match and colour_match:
 		full_match = true
-		#card_grid[card_a_grid_location.x][card_a_grid_location.y].set_current_state(e_states.MATCHED)
-		#card_grid[card_b_grid_location.x][card_b_grid_location.y].set_current_state(e_states.MATCHED)
 	return full_match
 
 
@@ -217,7 +211,6 @@ func check_2D_array_matches():
 			card_grid[card_b_grid_pos.x][card_b_grid_pos.y].set_current_state(e_states.FACE_DOWN)
 
 
-
 func check_2D_array_state() -> void: 
 	var matched_count = 0
 	for i in columns:
@@ -227,7 +220,6 @@ func check_2D_array_state() -> void:
 	#print("matched_count:" + str(matched_count))
 	if matched_count == (columns * rows):
 		game_state = e_game_state.COMPLETED
-		#PlayerData.set_game_time(get_node("Hud").get_str_elapsed_time()) 
 		get_tree().change_scene("res://src/screens/GameOverScreen.tscn")
 
 
@@ -250,6 +242,7 @@ func update_selection_icon_location(new_location: Vector2) -> void:
 		if new_location.y >= 0 and new_location.y < rows:
 			current_selector_position = new_location
 			set_selector_position()
+
 
 func set_selector_position() -> void:
 	var temp_new_pixels = grid_to_pixel(current_selector_position.x, current_selector_position.y)
@@ -359,9 +352,3 @@ func restore_paused_game() -> void:
 	prepare_selector()
 	current_selector_position = PlayerData.get_paused_selector_pos()
 	set_selector_position()
-
-
-func _on_PopupDialog_about_to_show() -> void:
-	#PlayerData.set_paused_grid(card_grid)
-	PlayerData.set_paused_scene(1)
-	#PlayerData.set_paused_selector_pos(current_selector_position) 

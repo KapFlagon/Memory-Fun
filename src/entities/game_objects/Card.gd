@@ -92,12 +92,6 @@ func update_card_visibility() -> void:
 		get_node("FaceSprite").show()
 
 
-func _on_Control_gui_input(event: InputEvent) -> void:
-	# Detect mouse click / Enter key
-	# Detect 
-	pass # Replace with function body.
-
-
 func print_card() -> void:
 	print("position: " + str(position) + ", current_state: " + str(current_state) + ", Shape: " + str(shape) + ", Colour: " + str(colour))
 

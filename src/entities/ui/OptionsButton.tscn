@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://src/entities/ui/OptionsButton.gd" type="Script" id=1]
+[ext_resource path="res://src/screens/OptionsPopup.tscn" type="PackedScene" id=2]
 
 [node name="OptionsButton" type="Button"]
 margin_top = 175.0
@@ -11,4 +12,7 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="OptionsPopup" parent="." instance=ExtResource( 2 )]
 [connection signal="button_up" from="." to="." method="_on_OptionsButton_button_up"]
+[connection signal="popup_submitted" from="OptionsPopup" to="." method="_on_OptionsPopup_popup_submitted"]

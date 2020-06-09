@@ -60,3 +60,4 @@ margin_bottom = 253.0
 [node name="ExitButton" parent="VBox_MainMenu" instance=ExtResource( 4 )]
 visible = false
 margin_right = 417.0
+[connection signal="options_submitted" from="VBox_MainMenu/OptionsButton" to="." method="_on_OptionsButton_options_submitted"]

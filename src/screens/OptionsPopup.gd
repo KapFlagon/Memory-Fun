@@ -1,4 +1,4 @@
-extends Control
+extends PopupDialog
 
 var original_background_colour
 var original_sfx_on
@@ -12,29 +12,27 @@ var new_music_on
 var new_music_vol
 
 
+signal popup_submitted
+signal popup_cancel
+
+
 func _ready() -> void:
-	get_node("ColorRect").set_frame_color(PlayerData.get_background_colour())
+	get_node("PopupBackground").set_frame_color(PlayerData.get_background_colour())
 	get_config_data()
 
 
 func _on_SubmitOptionsButton_button_up() -> void:
 	AudioManager.play_rand_sfx()
 	set_config_data()
-	change_screen()
+	hide()
+	emit_signal("popup_submitted")
 
 
 func _on_CancelButton_button_up() -> void:
 	use_original_data()
 	AudioManager.play_rand_sfx()
-	change_screen()
-
-
-func change_screen() -> void: 
-	if PlayerData.get_game_paused():
-		
-		get_tree().paused = false
-	else:
-		get_tree().change_scene("res://src/screens/StartScreen.tscn")
+	hide()
+	emit_signal("popup_cancel")
 
 
 func get_config_data() -> void:
@@ -55,6 +53,7 @@ func set_config_data() -> void:
 
 
 func use_original_data() -> void:
+	get_node("PopupBackground").set_frame_color(original_background_colour)
 	get_node("VBox_Options/GridContainer/ColorPickerButton").set_pick_color(original_background_colour)
 	get_node("VBox_Options/GridContainer/SfxOnChckbx").pressed = original_sfx_on
 	get_node("VBox_Options/GridContainer/SfxVol_Slider").set_value(original_sfx_vol)
@@ -64,7 +63,7 @@ func use_original_data() -> void:
 
 func _on_ColorPickerButton_color_changed(color: Color) -> void:
 	new_background_colour = get_node("VBox_Options/GridContainer/ColorPickerButton").get_pick_color()
-	get_node("ColorRect").set_frame_color(color)
+	get_node("PopupBackground").set_frame_color(color)
 
 
 func _on_SfxOnChckbx_toggled(button_pressed: bool) -> void:

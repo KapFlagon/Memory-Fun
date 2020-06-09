@@ -15,3 +15,7 @@ func _on_NewVariants_button_up() -> void:
 	AudioManager.play_rand_sfx()
 	get_tree().change_scene("res://src/screens/DifficultySelectionScreen.tscn")
 
+
+
+func _on_OptionsButton_options_submitted() -> void:
+	get_node("ColorRect").set_frame_color(PlayerData.get_background_colour())

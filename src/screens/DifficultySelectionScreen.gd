@@ -1,9 +1,6 @@
 extends Control
 
 
-# Declare member variables here. Examples:
-# var a: int = 2
-# var b: String = "text"
 enum e_difficulty {EASY, MEDIUM, HARD}
 
 
@@ -12,12 +9,12 @@ func _ready() -> void:
 	get_node("ColorRect").set_frame_color(PlayerData.get_background_colour())
 	for button in get_tree().get_nodes_in_group("DifficultyGroup"):
 		button.connect("button_up", self, "_difficulty_button_pressed", [button]) 
-	#pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta: float) -> void:
 #	pass
+
 
 func _on_BackButton_button_up() -> void:
 	AudioManager.play_rand_sfx()

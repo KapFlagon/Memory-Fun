@@ -1,7 +1,9 @@
 extends Node2D
 
+
 var origin_x: int setget set_origin_x, get_origin_x
 var origin_y: int setget set_origin_y, get_origin_y
+
 
 func set_origin_x(new_origin_x) -> void:
 	origin_x = new_origin_x

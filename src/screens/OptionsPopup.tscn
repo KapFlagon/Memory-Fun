@@ -2,23 +2,33 @@
 
 [ext_resource path="res://src/themes/Theme_01.tres" type="Theme" id=1]
 [ext_resource path="res://src/themes/Theme_01_small.tres" type="Theme" id=2]
-[ext_resource path="res://src/screens/OptionsScreen.gd" type="Script" id=3]
+[ext_resource path="res://src/screens/OptionsPopup.gd" type="Script" id=3]
 [ext_resource path="res://src/entities/ui/CancelButton.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/entities/ui/SubmitOptionsButton.tscn" type="PackedScene" id=5]
 
-[node name="OptionsScreen" type="Control"]
+[node name="OptionsPopup" type="PopupDialog"]
 pause_mode = 2
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -249.5
+margin_top = -159.0
+margin_right = 249.5
+margin_bottom = 159.0
 theme = ExtResource( 1 )
+popup_exclusive = true
 script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="ColorRect" type="ColorRect" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="PopupBackground" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -180.5
+margin_top = -127.5
+margin_right = 180.5
+margin_bottom = 127.5
 color = Color( 0.172549, 0.545098, 0.509804, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -29,10 +39,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -244.0
-margin_top = -176.0
-margin_right = 244.0
-margin_bottom = 176.0
+margin_left = -243.5
+margin_top = -159.0
+margin_right = 244.5
+margin_bottom = 159.0
 size_flags_stretch_ratio = 0.0
 theme = ExtResource( 1 )
 alignment = 1
@@ -41,9 +51,9 @@ __meta__ = {
 }
 
 [node name="Options" type="Label" parent="VBox_Options"]
-margin_top = 53.0
+margin_top = 36.0
 margin_right = 488.0
-margin_bottom = 98.0
+margin_bottom = 81.0
 text = "Options"
 align = 1
 __meta__ = {
@@ -52,9 +62,9 @@ __meta__ = {
 
 [node name="GridContainer" type="GridContainer" parent="VBox_Options"]
 margin_left = 107.0
-margin_top = 102.0
+margin_top = 85.0
 margin_right = 380.0
-margin_bottom = 298.0
+margin_bottom = 281.0
 size_flags_horizontal = 4
 theme = ExtResource( 2 )
 columns = 2
@@ -140,7 +150,6 @@ tick_count = 10
 [node name="SubmitOptionsButton" parent="VBox_Options/GridContainer" instance=ExtResource( 5 )]
 
 [node name="CancelButton" parent="VBox_Options/GridContainer" instance=ExtResource( 4 )]
-script = null
 [connection signal="color_changed" from="VBox_Options/GridContainer/ColorPickerButton" to="." method="_on_ColorPickerButton_color_changed"]
 [connection signal="toggled" from="VBox_Options/GridContainer/SfxOnChckbx" to="." method="_on_SfxOnChckbx_toggled"]
 [connection signal="value_changed" from="VBox_Options/GridContainer/SfxVol_Slider" to="." method="_on_SfxVol_Slider_value_changed"]
