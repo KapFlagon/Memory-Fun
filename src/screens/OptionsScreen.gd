@@ -30,7 +30,11 @@ func _on_CancelButton_button_up() -> void:
 
 
 func change_screen() -> void: 
-	get_tree().change_scene("res://src/screens/StartScreen.tscn")
+	if PlayerData.get_game_paused():
+		
+		get_tree().paused = false
+	else:
+		get_tree().change_scene("res://src/screens/StartScreen.tscn")
 
 
 func get_config_data() -> void:

@@ -27,17 +27,10 @@ var current_selector_position := Vector2(0, 0)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	game_state = e_game_state.NEW
-	selected_difficulty = PlayerData.get_difficulty()
-	parse_grid_size()
-	card_grid = create_2D_array()
-	var card_1D_array = generate_cards()
-	item_width = card_1D_array[0].get_width()
-	item_height = card_1D_array[0].get_height()
-	card_1D_array = shuffle_cards(card_1D_array, 2)
-	calculate_dimensions()
-	populate_2D_grid(card_1D_array)
-	prepare_selector()
+	if PlayerData.game_paused: 
+		restore_paused_game()
+	else:
+		new_game()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -342,3 +335,33 @@ func process_touch() -> void:
 	var valid_selection = validate_selection(current_selector_position)
 	if valid_selection:
 		flip_chosen_card(current_selector_position)
+
+
+func new_game() -> void: 
+	game_state = e_game_state.NEW
+	selected_difficulty = PlayerData.get_difficulty()
+	parse_grid_size()
+	card_grid = create_2D_array()
+	var card_1D_array = generate_cards()
+	item_width = card_1D_array[0].get_width()
+	item_height = card_1D_array[0].get_height()
+	card_1D_array = shuffle_cards(card_1D_array, 2)
+	calculate_dimensions()
+	populate_2D_grid(card_1D_array)
+	prepare_selector()
+
+
+func restore_paused_game() -> void: 
+	card_grid = PlayerData.get_paused_grid()
+	parse_grid_size()
+	print_2D_array()
+	calculate_dimensions()
+	prepare_selector()
+	current_selector_position = PlayerData.get_paused_selector_pos()
+	set_selector_position()
+
+
+func _on_PopupDialog_about_to_show() -> void:
+	#PlayerData.set_paused_grid(card_grid)
+	PlayerData.set_paused_scene(1)
+	#PlayerData.set_paused_selector_pos(current_selector_position) 

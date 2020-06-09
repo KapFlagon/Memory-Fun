@@ -17,4 +17,6 @@ func _ready() -> void:
 
 
 func _on_CancelButton_button_up() -> void:
+	if get_tree().paused:
+		get_tree().paused = false
 	get_tree().change_scene("res://src/screens/StartScreen.tscn")

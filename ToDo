@@ -1,3 +1,5 @@
 > Expand Keyboard controls (tabbing for menu items, enter to select, etc.)
 > Add a colour blind mode
 > Prepare for HTML distribution
+> Add Pause menu to navigate back to settings, quit to main menu.
+> Add function to store current game state during pause, and allow it to revert if unpaused after going to different screen (e.g. options)
