@@ -65,6 +65,7 @@ margin_top = 127.0
 margin_right = 353.0
 margin_bottom = 154.0
 text = "Main Menu"
+[connection signal="about_to_show" from="." to="." method="_on_PauseDialog_about_to_show"]
 [connection signal="popup_hide" from="." to="." method="_on_PauseDialog_popup_hide"]
 [connection signal="button_up" from="VBoxContainer/ResumeButton" to="." method="_on_ResumeButton_button_up"]
 [connection signal="options_submitted" from="VBoxContainer/OptionsButton" to="." method="_on_OptionsButton_options_submitted"]

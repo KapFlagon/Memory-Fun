@@ -32,3 +32,4 @@ margin_bottom = 446.263
 
 [node name="PauseDialog" parent="." instance=ExtResource( 4 )]
 [connection signal="pause_options_submitted" from="PauseDialog" to="." method="_on_PauseDialog_pause_options_submitted"]
+[connection signal="unpaused" from="PauseDialog" to="Hud" method="_on_PauseDialog_unpaused"]
