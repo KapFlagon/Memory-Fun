@@ -1,3 +1,4 @@
 > Expand Keyboard controls (tabbing for menu items, enter to select, etc.)
 > Add a colour blind mode
 > In "Options" screen, add swatches to display palette used by cards.
+> Add further mouse click validation so that card is not flipped if clicking outside bounds of card grid. 

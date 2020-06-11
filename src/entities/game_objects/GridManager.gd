@@ -52,26 +52,6 @@ func scale_item_padding_y():
 	return item_padding_y * item_scale
 
 
-func randomize_card_params(): 
-	var tempArray = []
-	var shape_pool = 0
-	var colour_pool = 0
-	if selected_difficulty == e_difficulties.EASY:
-		shape_pool = 3
-		colour_pool = 1
-	elif selected_difficulty == e_difficulties.MEDIUM:
-		shape_pool = e_shapes.size()
-		colour_pool = 3
-	else: 
-		shape_pool = e_shapes.size()
-		colour_pool = e_colours.size()
-	random.randomize()
-	tempArray.append(random.randi_range(0, shape_pool - 1))  
-	random.randomize()
-	tempArray.append(random.randi_range(0, colour_pool - 1))
-	return tempArray
-
-
 func create_card(card_params_array):
 	var new_card = CardPreLoad.instance()
 	new_card.init_card(card_params_array[0], card_params_array[1])
@@ -89,7 +69,8 @@ func populate_2D_grid(card_1D_array):
 func generate_cards(): 
 	var card_counter = 0
 	var created_cards = []
-	var temp_card_params = randomize_card_params()
+	get_node("RandomBag").initialize(selected_difficulty)
+	var temp_card_params = get_node("RandomBag").pull_from_bag()
 	var temp_card 
 	var num_of_cards = columns * rows
 	# Each card should be added twice, so that there are always pairs
@@ -97,14 +78,11 @@ func generate_cards():
 		# Check if new card template needs to be generated. 
 		if card_counter < 2:
 			card_counter = card_counter + 1
-			pass
 		else: 
-			temp_card_params = randomize_card_params()
+			temp_card_params = get_node("RandomBag").pull_from_bag()
 			card_counter = 1
 		temp_card = create_card(temp_card_params)
-		#temp_card.set_position(grid_to_pixel(i, j))
 		add_child(temp_card)
-		#card_grid[i][j] = temp_card
 		created_cards.append(temp_card)
 	return created_cards
 
@@ -342,13 +320,3 @@ func new_game() -> void:
 	calculate_dimensions()
 	populate_2D_grid(card_1D_array)
 	prepare_selector()
-
-
-func restore_paused_game() -> void: 
-	card_grid = PlayerData.get_paused_grid()
-	parse_grid_size()
-	print_2D_array()
-	calculate_dimensions()
-	prepare_selector()
-	current_selector_position = PlayerData.get_paused_selector_pos()
-	set_selector_position()
