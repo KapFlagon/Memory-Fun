@@ -215,11 +215,16 @@ func prepare_selector() -> void:
 	game_state = e_game_state.ONGOING
 
 
-func update_selection_icon_location(new_location: Vector2) -> void:
+func update_selection_icon_location(new_location: Vector2):
 	if new_location.x >= 0 and new_location.x < columns:
 		if new_location.y >= 0 and new_location.y < rows:
 			current_selector_position = new_location
 			set_selector_position()
+			return true
+		else:
+			 return false
+	else:
+		 return false
 
 
 func set_selector_position() -> void:
@@ -302,9 +307,9 @@ func calculate_dimensions() -> void:
 func process_touch() -> void:
 	var input_position = get_global_mouse_position()
 	var new_cursor_grid = pixel_to_grid(input_position)
-	update_selection_icon_location(new_cursor_grid)
+	var valid_touch = update_selection_icon_location(new_cursor_grid)
 	var valid_selection = validate_selection(current_selector_position)
-	if valid_selection:
+	if valid_touch and valid_selection:
 		flip_chosen_card(current_selector_position)
 
 
