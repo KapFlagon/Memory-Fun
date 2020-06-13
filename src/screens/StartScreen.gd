@@ -16,3 +16,7 @@ func _ready() -> void:
 
 func _on_OptionsButton_options_submitted() -> void:
 	get_node("ColorRect").set_frame_color(PlayerData.get_background_colour())
+
+
+func _on_CreditsButton_button_up() -> void:
+	get_tree().change_scene("res://src/screens/CreditsScreen.tscn")
