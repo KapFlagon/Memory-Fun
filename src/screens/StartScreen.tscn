@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/themes/Theme_01.tres" type="Theme" id=1]
+[ext_resource path="res://src/themes/Theme_01_small.tres" type="Theme" id=2]
 [ext_resource path="res://src/screens/StartScreen.gd" type="Script" id=3]
 [ext_resource path="res://src/entities/ui/ExitButton.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/entities/ui/StartButton.tscn" type="PackedScene" id=5]
@@ -40,9 +41,9 @@ __meta__ = {
 }
 
 [node name="Title" type="Label" parent="VBox_MainMenu"]
-margin_top = 71.0
+margin_top = 27.0
 margin_right = 417.0
-margin_bottom = 116.0
+margin_bottom = 72.0
 text = "Memory Fun!"
 align = 1
 __meta__ = {
@@ -50,17 +51,43 @@ __meta__ = {
 }
 
 [node name="StartButton" parent="VBox_MainMenu" instance=ExtResource( 5 )]
+margin_top = 76.0
+margin_bottom = 127.0
 
 [node name="OptionsButton" parent="VBox_MainMenu" instance=ExtResource( 6 )]
+margin_top = 131.0
+margin_bottom = 182.0
 
 [node name="ExitButton" parent="VBox_MainMenu" instance=ExtResource( 4 )]
 visible = false
 margin_right = 417.0
 
-[node name="CreditsButton" type="Button" parent="VBox_MainMenu"]
-margin_top = 230.0
+[node name="HowToPlayButton" type="Button" parent="VBox_MainMenu"]
+margin_top = 186.0
 margin_right = 417.0
-margin_bottom = 281.0
+margin_bottom = 237.0
+text = "How to Play"
+
+[node name="CreditsButton" type="Button" parent="VBox_MainMenu"]
+margin_top = 241.0
+margin_right = 417.0
+margin_bottom = 292.0
 text = "Credits"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBox_MainMenu"]
+margin_left = 83.0
+margin_top = 296.0
+margin_right = 334.0
+margin_bottom = 325.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="ColourBlindCheckBox" type="CheckBox" parent="VBox_MainMenu/HBoxContainer"]
+margin_right = 251.0
+margin_bottom = 29.0
+theme = ExtResource( 2 )
+text = "Enable Colorblind Mode"
+align = 1
 [connection signal="options_submitted" from="VBox_MainMenu/OptionsButton" to="." method="_on_OptionsButton_options_submitted"]
 [connection signal="button_up" from="VBox_MainMenu/CreditsButton" to="." method="_on_CreditsButton_button_up"]
+[connection signal="toggled" from="VBox_MainMenu/HBoxContainer/ColourBlindCheckBox" to="." method="_on_CheckBox_toggled"]

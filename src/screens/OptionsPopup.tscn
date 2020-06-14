@@ -12,10 +12,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -249.5
-margin_top = -159.0
-margin_right = 249.5
-margin_bottom = 159.0
+margin_left = -249.0
+margin_top = -185.0
+margin_right = 250.0
+margin_bottom = 193.0
 theme = ExtResource( 1 )
 popup_exclusive = true
 script = ExtResource( 3 )
@@ -26,9 +26,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -180.5
-margin_top = -127.5
+margin_top = -147.0
 margin_right = 180.5
-margin_bottom = 127.5
+margin_bottom = 147.0
 color = Color( 0.172549, 0.545098, 0.509804, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -39,10 +39,12 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -243.5
-margin_top = -159.0
-margin_right = 244.5
-margin_bottom = 159.0
+margin_left = -180.5
+margin_top = -143.0
+margin_right = 180.5
+margin_bottom = 143.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 size_flags_stretch_ratio = 0.0
 theme = ExtResource( 1 )
 alignment = 1
@@ -51,9 +53,9 @@ __meta__ = {
 }
 
 [node name="Options" type="Label" parent="VBox_Options"]
-margin_top = 36.0
-margin_right = 488.0
-margin_bottom = 81.0
+margin_top = 4.0
+margin_right = 361.0
+margin_bottom = 49.0
 text = "Options"
 align = 1
 __meta__ = {
@@ -61,95 +63,119 @@ __meta__ = {
 }
 
 [node name="GridContainer" type="GridContainer" parent="VBox_Options"]
-margin_left = 107.0
-margin_top = 85.0
-margin_right = 380.0
-margin_bottom = 281.0
+margin_left = 25.0
+margin_top = 53.0
+margin_right = 335.0
+margin_bottom = 282.0
 size_flags_horizontal = 4
 theme = ExtResource( 2 )
 columns = 2
 
+[node name="Label" type="Label" parent="VBox_Options/GridContainer"]
+margin_top = 4.0
+margin_right = 228.0
+margin_bottom = 25.0
+text = "Enable Colorblind Mode:"
+
+[node name="ColourBLindChkBx" type="CheckBox" parent="VBox_Options/GridContainer"]
+margin_left = 232.0
+margin_right = 310.0
+margin_bottom = 29.0
+theme = ExtResource( 2 )
+align = 1
+
 [node name="BckgrndColLabel" type="Label" parent="VBox_Options/GridContainer"]
-margin_top = 3.0
-margin_right = 191.0
-margin_bottom = 24.0
+margin_top = 36.0
+margin_right = 228.0
+margin_bottom = 57.0
 text = "Background Colour:"
 align = 1
 
 [node name="ColorPickerButton" type="ColorPickerButton" parent="VBox_Options/GridContainer"]
-margin_left = 195.0
-margin_right = 273.0
-margin_bottom = 27.0
+margin_left = 232.0
+margin_top = 33.0
+margin_right = 310.0
+margin_bottom = 60.0
 color = Color( 0.172549, 0.545098, 0.509804, 1 )
 
 [node name="SfxOn_Label" type="Label" parent="VBox_Options/GridContainer"]
-margin_top = 40.0
-margin_right = 191.0
-margin_bottom = 61.0
+margin_top = 73.0
+margin_right = 228.0
+margin_bottom = 94.0
 text = "Sound FX On:"
 align = 1
 
 [node name="SfxOnChckbx" type="CheckButton" parent="VBox_Options/GridContainer"]
-margin_left = 195.0
-margin_top = 31.0
-margin_right = 273.0
-margin_bottom = 71.0
+margin_left = 232.0
+margin_top = 64.0
+margin_right = 310.0
+margin_bottom = 104.0
 pressed = true
 
 [node name="SfxVol_Label" type="Label" parent="VBox_Options/GridContainer"]
-margin_top = 75.0
-margin_right = 191.0
-margin_bottom = 96.0
+margin_top = 108.0
+margin_right = 228.0
+margin_bottom = 129.0
 text = "Sound Volume:"
 align = 1
 
 [node name="SfxVol_Slider" type="HSlider" parent="VBox_Options/GridContainer"]
-margin_left = 195.0
-margin_top = 75.0
-margin_right = 273.0
-margin_bottom = 91.0
+margin_left = 232.0
+margin_top = 108.0
+margin_right = 310.0
+margin_bottom = 124.0
 min_value = -80.0
 max_value = 0.0
 step = 5.0
 tick_count = 10
 
 [node name="MusicOn_Label" type="Label" parent="VBox_Options/GridContainer"]
-margin_top = 109.0
-margin_right = 191.0
-margin_bottom = 130.0
+margin_top = 142.0
+margin_right = 228.0
+margin_bottom = 163.0
 text = "Music On:"
 align = 1
 
 [node name="MusicOnChckbx" type="CheckButton" parent="VBox_Options/GridContainer"]
-margin_left = 195.0
-margin_top = 100.0
-margin_right = 273.0
-margin_bottom = 140.0
+margin_left = 232.0
+margin_top = 133.0
+margin_right = 310.0
+margin_bottom = 173.0
 pressed = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="MusicVol_Label" type="Label" parent="VBox_Options/GridContainer"]
-margin_top = 144.0
-margin_right = 191.0
-margin_bottom = 165.0
+margin_top = 177.0
+margin_right = 228.0
+margin_bottom = 198.0
 text = "Music Volume:"
 align = 1
 
 [node name="MusicVol_Slider" type="HSlider" parent="VBox_Options/GridContainer"]
-margin_left = 195.0
-margin_top = 144.0
-margin_right = 273.0
-margin_bottom = 160.0
+margin_left = 232.0
+margin_top = 177.0
+margin_right = 310.0
+margin_bottom = 193.0
 min_value = -80.0
 max_value = 0.0
 step = 5.0
 tick_count = 10
 
 [node name="SubmitOptionsButton" parent="VBox_Options/GridContainer" instance=ExtResource( 5 )]
+margin_left = 71.0
+margin_top = 202.0
+margin_right = 156.0
+margin_bottom = 229.0
 
 [node name="CancelButton" parent="VBox_Options/GridContainer" instance=ExtResource( 4 )]
+margin_left = 232.0
+margin_top = 202.0
+margin_right = 310.0
+margin_bottom = 229.0
+[connection signal="about_to_show" from="." to="." method="_on_OptionsPopup_about_to_show"]
+[connection signal="toggled" from="VBox_Options/GridContainer/ColourBLindChkBx" to="." method="_on_ColourBLindChkBx_toggled"]
 [connection signal="color_changed" from="VBox_Options/GridContainer/ColorPickerButton" to="." method="_on_ColorPickerButton_color_changed"]
 [connection signal="toggled" from="VBox_Options/GridContainer/SfxOnChckbx" to="." method="_on_SfxOnChckbx_toggled"]
 [connection signal="value_changed" from="VBox_Options/GridContainer/SfxVol_Slider" to="." method="_on_SfxVol_Slider_value_changed"]

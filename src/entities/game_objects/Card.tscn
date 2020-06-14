@@ -32,3 +32,6 @@ texture = ExtResource( 2 )
 [node name="FaceSprite" type="Sprite" parent="."]
 position = Vector2( 100, 130 )
 scale = Vector2( 0.9, 0.857143 )
+
+[node name="ColourblindSprite" type="Sprite" parent="."]
+visible = false
