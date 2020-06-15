@@ -1,6 +1,4 @@
+> How to play screen with instructions.
+> Leaderboards with persistent data (prepped for web).
 > Expand Keyboard controls (tabbing for menu items, enter to select, etc.)
-> Add a colourblind mode:
-- Need the Card Colours enum to also assign background icons incase of switch to colourblind mode. 
-- Visibility of colour rect and background icons need to be able to switch depending on current colourblind setting.
-- In colourblind mode, all cards will have white foreground colour.
 > In "Options" screen, add swatches to display palette used by cards.

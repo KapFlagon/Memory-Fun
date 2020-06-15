@@ -22,6 +22,7 @@ func process_inputs() -> void:
 
 func _on_PauseDialog_pause_options_submitted() -> void:
 	get_node("ColorRect").set_frame_color(PlayerData.get_background_colour())
+	get_node("GridManager").update_grid_colour_blind()
 
 
 #func _on_MainMenuButton_button_up() -> void:

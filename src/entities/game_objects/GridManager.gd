@@ -325,3 +325,9 @@ func new_game() -> void:
 	calculate_dimensions()
 	populate_2D_grid(card_1D_array)
 	prepare_selector()
+
+
+func update_grid_colour_blind() -> void:
+	for i in columns:
+		for j in rows: 
+			card_grid[i][j].update_card_visibility()

@@ -34,4 +34,5 @@ position = Vector2( 100, 130 )
 scale = Vector2( 0.9, 0.857143 )
 
 [node name="ColourblindSprite" type="Sprite" parent="."]
-visible = false
+position = Vector2( 100, 130 )
+scale = Vector2( 0.9, 0.857 )

@@ -9,11 +9,6 @@ func _ready() -> void:
 		AudioManager.initialized = true
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta: float) -> void:
-#	pass
-
-
 func _on_OptionsButton_options_submitted() -> void:
 	get_node("ColorRect").set_frame_color(PlayerData.get_background_colour())
 

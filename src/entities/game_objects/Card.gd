@@ -5,6 +5,7 @@ export (int) var current_state setget set_current_state, get_current_state
 export (int) var shape setget set_shape, get_shape
 export (int) var colour setget set_colour, get_colour
 
+
 var img_file
 
 
@@ -41,6 +42,7 @@ func get_shape():
 func set_colour(new_colour): 
 	colour = new_colour
 	load_colour_resource()
+	load_colour_blind_resource()
 
 
 func get_colour():
@@ -81,14 +83,45 @@ func load_colour_resource() -> void:
 			get_node("FaceColour").color = Color(0.40, 1, 0, 1)
 
 
+func load_colour_blind_resource() -> void: 
+	match colour:
+		e_colours.WHITE: 
+			get_node("ColourblindSprite").texture = load("res://assets/images/ColourBlind_Lines_Point.png")
+		e_colours.YELLOW:
+			get_node("ColourblindSprite").texture = load("res://assets/images/ColourBlind_Lines_X.png")
+		e_colours.RED:
+			get_node("ColourblindSprite").texture = load("res://assets/images/ColourBlind_Lines_Plus.png")
+		e_colours.BLUE:
+			get_node("ColourblindSprite").texture = load("res://assets/images/ColourBlind_Lines_V.png")
+		e_colours.ORANGE:
+			get_node("ColourblindSprite").texture = load("res://assets/images/ColourBlind_Lines_H.png")
+		e_colours.PURPLE:
+			get_node("ColourblindSprite").texture = load("res://assets/images/ColourBlind_Lines_Diag_LR.png")
+		e_colours.GREEN:
+			get_node("ColourblindSprite").texture = load("res://assets/images/ColourBlind_Lines_Diag_RL.png")
+
+
+func colour_blind_mode_on() -> void: 
+	if PlayerData.get_colour_blind_mode_on():
+		get_node("FaceColour").color = Color(1, 1, 1, 1)
+	else: 
+		load_colour_resource()
+
+
 func update_card_visibility() -> void:
+	colour_blind_mode_on()
 	if current_state == e_states.FACE_DOWN:
 		get_node("BackSprite").show()
 		get_node("FaceColour").hide()
 		get_node("FaceSprite").hide()
+		get_node("ColourblindSprite").hide()
 	elif current_state == e_states.FACE_UP or current_state == e_states.MATCHED:
 		get_node("BackSprite").hide()
 		get_node("FaceColour").show()
+		if PlayerData.get_colour_blind_mode_on():
+			get_node("ColourblindSprite").show()
+		else:
+			get_node("ColourblindSprite").hide()
 		get_node("FaceSprite").show()
 
 
