@@ -38,4 +38,7 @@ func _grid_button_pressed(button):
 
 func next_scene() -> void:
 	get_tree().change_scene("res://src/screens/GameScreen.tscn")
-	
+
+
+func _on_MainMenu_button_up() -> void:
+	get_tree().change_scene("res://src/screens/StartScreen.tscn")

@@ -111,11 +111,24 @@ margin_bottom = 106.0
 size_flags_horizontal = 3
 text = "Custom"
 
-[node name="BackButton" type="Button" parent="VBox_GridSelection"]
-margin_left = 232.0
+[node name="HBoxContainer" type="HBoxContainer" parent="VBox_GridSelection"]
+margin_left = 58.0
 margin_top = 237.0
-margin_right = 343.0
+margin_right = 516.0
 margin_bottom = 288.0
 size_flags_horizontal = 4
-text = "Back"
-[connection signal="button_up" from="VBox_GridSelection/BackButton" to="." method="_on_BackButton_button_up"]
+size_flags_vertical = 4
+
+[node name="BackButton" type="Button" parent="VBox_GridSelection/HBoxContainer"]
+margin_right = 225.0
+margin_bottom = 51.0
+size_flags_horizontal = 3
+text = "Difficulty"
+
+[node name="MainMenu" type="Button" parent="VBox_GridSelection/HBoxContainer"]
+margin_left = 229.0
+margin_right = 458.0
+margin_bottom = 51.0
+text = "Main Menu"
+[connection signal="button_up" from="VBox_GridSelection/HBoxContainer/BackButton" to="." method="_on_BackButton_button_up"]
+[connection signal="button_up" from="VBox_GridSelection/HBoxContainer/MainMenu" to="." method="_on_MainMenu_button_up"]

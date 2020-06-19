@@ -40,9 +40,9 @@ __meta__ = {
 }
 
 [node name="GameOverText" type="Label" parent="VBox"]
-margin_top = 46.0
+margin_top = 19.0
 margin_right = 558.0
-margin_bottom = 91.0
+margin_bottom = 64.0
 text = "You Win! Good Job!"
 align = 1
 __meta__ = {
@@ -50,9 +50,9 @@ __meta__ = {
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBox"]
-margin_top = 95.0
+margin_top = 68.0
 margin_right = 558.0
-margin_bottom = 140.0
+margin_bottom = 113.0
 alignment = 1
 
 [node name="StatPrompt" type="Label" parent="VBox/HBoxContainer"]
@@ -68,15 +68,15 @@ margin_right = 447.0
 margin_bottom = 45.0
 
 [node name="PlayAgainButton" type="Button" parent="VBox"]
-margin_top = 144.0
+margin_top = 117.0
 margin_right = 558.0
-margin_bottom = 195.0
+margin_bottom = 168.0
 text = "Play again"
 
 [node name="NewVariants" type="Button" parent="VBox"]
-margin_top = 199.0
+margin_top = 172.0
 margin_right = 558.0
-margin_bottom = 250.0
+margin_bottom = 223.0
 text = "Change Grid or Difficulty"
 
 [node name="ExitButton" parent="VBox" instance=ExtResource( 4 )]
@@ -86,12 +86,19 @@ margin_right = 417.0
 margin_bottom = 305.0
 
 [node name="OptionsButton" parent="VBox" instance=ExtResource( 5 )]
-margin_top = 254.0
+margin_top = 227.0
 margin_right = 558.0
-margin_bottom = 305.0
+margin_bottom = 278.0
+
+[node name="MainMenuButton" type="Button" parent="VBox"]
+margin_top = 282.0
+margin_right = 558.0
+margin_bottom = 333.0
+text = "Main Menu"
 
 [node name="VictorySound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 [connection signal="button_up" from="VBox/PlayAgainButton" to="." method="_on_PlayAgainButton_button_up"]
 [connection signal="button_up" from="VBox/NewVariants" to="." method="_on_NewVariants_button_up"]
 [connection signal="options_submitted" from="VBox/OptionsButton" to="." method="_on_OptionsButton_options_submitted"]
+[connection signal="button_up" from="VBox/MainMenuButton" to="." method="_on_MainMenuButton_button_up"]
