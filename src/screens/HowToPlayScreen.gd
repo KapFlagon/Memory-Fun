@@ -17,14 +17,14 @@ func _on_Button_MainMenu_button_up() -> void:
 
 func update_button_visibility() -> void: 
 	if current_page == 1:
-		get_node("VBoxContainer/HBox_Buttons/Button_Back").disabled = true
-		get_node("VBoxContainer/HBox_Buttons/Button_Next").disabled = false
+		get_node("HBox_Buttons/Button_Back").disabled = true
+		get_node("HBox_Buttons/Button_Next").disabled = false
 	elif current_page == 2: 
-		get_node("VBoxContainer/HBox_Buttons/Button_Back").disabled = false
-		get_node("VBoxContainer/HBox_Buttons/Button_Next").disabled = false
+		get_node("HBox_Buttons/Button_Back").disabled = false
+		get_node("HBox_Buttons/Button_Next").disabled = false
 	else: 
-		get_node("VBoxContainer/HBox_Buttons/Button_Back").disabled = false
-		get_node("VBoxContainer/HBox_Buttons/Button_Next").disabled = true
+		get_node("HBox_Buttons/Button_Back").disabled = false
+		get_node("HBox_Buttons/Button_Next").disabled = true
 
 
 func _on_Button_Back_button_up() -> void:
@@ -42,11 +42,11 @@ func _on_Button_Next_button_up() -> void:
 func update_display() -> void:
 	# clear current textures before performing further assignments? 
 	var text_1
-	var img_1
+	var img_1 = null
 	var text_2
-	var img_2
+	var img_2 = null
 	var text_3
-	var img_3
+	var img_3 = null
 	# Page 1
 	if current_page == 1:
 		var game_start_text = "Select a difficulty level and a grid size to begin."
@@ -86,4 +86,11 @@ func update_display() -> void:
 	get_node("VBoxContainer/HBox_2/Txt_2").set_text(text_2)
 	get_node("VBoxContainer/HBox_3/Txt_3").set_text(text_3)
 	
+	if img_1 != null:
+		pass
+		
+	if img_2 != null: 
+		pass
+	if img_3 != null: 
+		pass
 	

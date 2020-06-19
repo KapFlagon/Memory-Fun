@@ -2,3 +2,5 @@
 > Leaderboards with persistent data (prepped for web).
 > Expand Keyboard controls (tabbing for menu items, enter to select, etc.)
 > In "Options" screen, add swatches to display palette used by cards.
+> Remember to change config file from RES to USER 
+> Test config saving via cookies in browser

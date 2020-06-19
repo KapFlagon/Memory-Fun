@@ -28,6 +28,7 @@ config/icon="res://icon.png"
 
 PlayerData="*res://src/autoload/PlayerData.tscn"
 AudioManager="*res://src/autoload/AudioManager.tscn"
+Config="*res://src/entities/scenelessScripts/Config.gd"
 
 [display]
 

@@ -19,7 +19,10 @@ func _on_CreditsButton_button_up() -> void:
 
 func _on_CheckBox_toggled(button_pressed: bool) -> void:
 	PlayerData.set_colour_blind_mode_on(button_pressed)
-	get_node("ColorRect").set_frame_color(PlayerData.get_background_colour())
+	Config.save_config()
+	var sfx_on = AudioManager.get_sfx_on()
+	if sfx_on:
+		AudioManager.play_rand_sfx()
 
 
 func _on_HowToPlayButton_button_up() -> void:

@@ -36,7 +36,6 @@ func get_sfx_on():
 
 func set_sfx_vol(val) -> void:
 	sfx_vol = val
-	play_rand_sfx()
 
 
 func get_sfx_vol():

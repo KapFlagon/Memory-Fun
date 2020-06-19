@@ -49,6 +49,7 @@ func set_config_data() -> void:
 	AudioManager.set_music_on(get_node("VBox_Options/GridContainer/MusicOnChckbx").pressed)
 	AudioManager.set_music_vol(get_node("VBox_Options/GridContainer/MusicVol_Slider").get_value())
 	AudioManager.check_music()
+	Config.save_config()
 
 
 func use_original_data() -> void:
@@ -69,10 +70,15 @@ func _on_ColorPickerButton_color_changed(color: Color) -> void:
 func _on_SfxOnChckbx_toggled(button_pressed: bool) -> void:
 	new_sfx_on = button_pressed
 	AudioManager.set_sfx_on(new_sfx_on)
+	if new_sfx_on:
+		AudioManager.play_rand_sfx()
 
 
 func _on_SfxVol_Slider_value_changed(value: float) -> void:
 	AudioManager.set_sfx_vol(value)
+	var sfx_on = AudioManager.get_sfx_on()
+	if sfx_on:
+		AudioManager.play_rand_sfx()
 
 
 func _on_MusicOnChckbx_toggled(button_pressed: bool) -> void:
@@ -92,3 +98,6 @@ func _on_OptionsPopup_about_to_show() -> void:
 func _on_ColourBLindChkBx_toggled(button_pressed: bool) -> void:
 	new_colour_blind_mode = button_pressed
 	PlayerData.set_colour_blind_mode_on(new_colour_blind_mode)
+	var sfx_on = AudioManager.get_sfx_on()
+	if sfx_on:
+		AudioManager.play_rand_sfx()
