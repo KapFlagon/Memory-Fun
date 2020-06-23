@@ -1,9 +1,6 @@
 extends CardBase
 
 
-enum e_difficulties {EASY, MEDIUM, HARD}
-
-
 var shape_pool = 0
 var colour_pool = 0
 var full_bag = []
@@ -15,10 +12,10 @@ func _ready() -> void:
 
 
 func initialize(difficulty: int) -> void: 
-	if difficulty == e_difficulties.EASY:
+	if difficulty == PlayerData.e_difficulty.EASY:
 		shape_pool = 3
 		colour_pool = 1
-	elif difficulty == e_difficulties.MEDIUM:
+	elif difficulty == PlayerData.e_difficulty.MEDIUM:
 		shape_pool = e_shapes.size()
 		colour_pool = 3
 	else: 

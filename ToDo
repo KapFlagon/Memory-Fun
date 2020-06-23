@@ -1,5 +1,4 @@
-> How to play screen with instructions.
-> Leaderboards with persistent data (prepped for web).
+> Local high score with persistent data (prepped for web).
 > Expand Keyboard controls (tabbing for menu items, enter to select, etc.)
 > In "Options" screen, add swatches to display palette used by cards.
 > Remember to change config file from RES to USER 

@@ -1,8 +1,12 @@
 extends Node
 
+
+enum e_difficulty {EASY, MEDIUM, HARD}
+
+
 var difficulty setget set_difficulty, get_difficulty
 var grid_size  setget set_grid_size, get_grid_size
-var game_time setget set_game_time, get_game_time
+var game_time_secs setget set_game_time_secs, get_game_time_secs
 var background_colour setget set_background_colour, get_background_colour
 var colour_blind_mode_on setget set_colour_blind_mode_on, get_colour_blind_mode_on
 
@@ -34,12 +38,17 @@ func get_grid_size():
 	return grid_size
 
 
-func set_game_time(new_game_time) -> void:
-	game_time = new_game_time
+func get_game_time_str():
+	var game_time_str = secs_to_string(game_time_secs)
+	return game_time_str
 
 
-func get_game_time(): 
-	return game_time
+func set_game_time_secs(val) -> void:
+	game_time_secs = val
+
+
+func get_game_time_secs():
+	return game_time_secs
 
 
 func set_background_colour(new_colour: Color) -> void: 
@@ -56,3 +65,10 @@ func set_colour_blind_mode_on(val: bool) -> void:
 
 func get_colour_blind_mode_on():
 	return colour_blind_mode_on
+
+
+func secs_to_string(elapsed_time):
+	var minutes = elapsed_time / 60
+	var seconds = elapsed_time % 60
+	var str_elapsed_time = "%02d : %02d" % [minutes, seconds]
+	return str_elapsed_time

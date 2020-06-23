@@ -2,7 +2,6 @@ extends CardBase
 
 
 enum e_game_state {NEW, ONGOING, WAITING, COMPLETED}
-enum e_difficulties {EASY, MEDIUM, HARD}
 
 
 # Export Variables for Grid

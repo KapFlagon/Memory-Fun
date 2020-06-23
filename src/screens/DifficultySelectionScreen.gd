@@ -1,9 +1,6 @@
 extends Control
 
 
-enum e_difficulty {EASY, MEDIUM, HARD}
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	get_node("ColorRect").set_frame_color(PlayerData.get_background_colour())
@@ -29,11 +26,11 @@ func next_scene() -> void:
 func _difficulty_button_pressed(button):
 	AudioManager.play_rand_sfx()
 	if button.name == "EasyDifButton":
-		PlayerData.set_difficulty(e_difficulty.EASY)
+		PlayerData.set_difficulty(PlayerData.e_difficulty.EASY) 
 	elif button.name == "MedDifButton":
-		PlayerData.set_difficulty(e_difficulty.MEDIUM)
+		PlayerData.set_difficulty(PlayerData.e_difficulty.MEDIUM)
 	else:
-		PlayerData.set_difficulty(e_difficulty.HARD)
+		PlayerData.set_difficulty(PlayerData.e_difficulty.HARD)
 	next_scene()
 
 
