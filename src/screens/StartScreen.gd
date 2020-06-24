@@ -27,3 +27,7 @@ func _on_CheckBox_toggled(button_pressed: bool) -> void:
 
 func _on_HowToPlayButton_button_up() -> void:
 	get_tree().change_scene("res://src/screens/HowToPlayScreen.tscn")
+
+
+func _on_HighScoreButton_button_up() -> void:
+	get_tree().change_scene("res://src/screens/HighScoreScreen.tscn")

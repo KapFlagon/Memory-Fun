@@ -6,8 +6,8 @@ var dict_master = {}
 var dict_easy = {}
 var dict_medium = {}
 var dict_hard = {}
-# Dictionary: Key is difficulty, value is:
-	# Dictionary: Key is grid number, value is: 
+# dict_master: Key is difficulty, value is:
+	# dict_difficulty: Key is grid number, value is: 
 		#array: each index is a score rank, each entry is:
 			#array: index 0 is name, index 1 is time
 
@@ -28,11 +28,13 @@ func create_defaults() -> void:
 	for score_rank in range(5):
 	# Iterates from 0 to 4
 		array_dummy_grid.append(array_dummy_entry.duplicate())
+	
 	for grid_size in [8, 12, 16, 20, 24]:
 		# Loop iterates 5 times with 'grid_size' as 8, 12, etc.
-		dict_easy[grid_size] = dict_dummy.duplicate()
-		dict_medium[grid_size] = dict_dummy.duplicate()
-		dict_hard[grid_size] = dict_dummy.duplicate()
+		dict_dummy[grid_size] = array_dummy_grid.duplicate()
+	dict_easy = dict_dummy.duplicate()
+	dict_medium = dict_dummy.duplicate()
+	dict_hard = dict_dummy.duplicate()
 	dict_master[0] = dict_easy
 	dict_master[1] = dict_medium
 	dict_master[2] = dict_hard
@@ -44,7 +46,7 @@ func load_scores():
 	dict_master = save_game_file.get_var(true)
 	dict_easy = dict_master[0]
 	dict_medium = dict_master[1]
-	dict_hard = dict_hard[2]
+	dict_hard = dict_master[2]
 
 
 func save_scores():
@@ -75,3 +77,10 @@ class ScoreSorter:
 		if score_entry_a[1] > score_entry_b[1]:
 			return true
 		return false
+
+
+func secs_to_string(elapsed_time):
+	var minutes = elapsed_time / 60
+	var seconds = elapsed_time % 60
+	var str_elapsed_time = "%02d:%02d" % [minutes, seconds]
+	return str_elapsed_time

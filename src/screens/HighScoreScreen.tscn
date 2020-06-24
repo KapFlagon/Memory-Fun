@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://HighScoreScreen.gd" type="Script" id=1]
+[ext_resource path="res://src/screens/HighScoreScreen.gd" type="Script" id=1]
 
 [node name="HighScoreScreen" type="Control"]
 anchor_right = 1.0
@@ -14,3 +14,1194 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0.172549, 0.545098, 0.509804, 1 )
+
+[node name="Title" type="Label" parent="."]
+anchor_right = 1.0
+margin_bottom = 51.0
+text = "High Scores"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TabContainer" type="TabContainer" parent="."]
+anchor_left = 0.044
+anchor_top = 0.135
+anchor_right = 0.956
+anchor_bottom = 0.865
+margin_left = 0.299995
+margin_top = 0.199997
+margin_right = -0.300049
+margin_bottom = -0.200043
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Easy" type="GridContainer" parent="TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+columns = 3
+
+[node name="Grid_08" type="VBoxContainer" parent="TabContainer/Easy"]
+margin_right = 47.0
+margin_bottom = 104.0
+
+[node name="Label" type="Label" parent="TabContainer/Easy/Grid_08"]
+margin_right = 47.0
+margin_bottom = 14.0
+text = "8 Grid"
+
+[node name="First" type="HBoxContainer" parent="TabContainer/Easy/Grid_08"]
+margin_top = 18.0
+margin_right = 47.0
+margin_bottom = 32.0
+
+[node name="Name" type="Label" parent="TabContainer/Easy/Grid_08/First"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Easy/Grid_08/First"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Second" type="HBoxContainer" parent="TabContainer/Easy/Grid_08"]
+margin_top = 36.0
+margin_right = 47.0
+margin_bottom = 50.0
+
+[node name="Name" type="Label" parent="TabContainer/Easy/Grid_08/Second"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Easy/Grid_08/Second"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Third" type="HBoxContainer" parent="TabContainer/Easy/Grid_08"]
+margin_top = 54.0
+margin_right = 47.0
+margin_bottom = 68.0
+
+[node name="Name" type="Label" parent="TabContainer/Easy/Grid_08/Third"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Easy/Grid_08/Third"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Fourth" type="HBoxContainer" parent="TabContainer/Easy/Grid_08"]
+margin_top = 72.0
+margin_right = 47.0
+margin_bottom = 86.0
+
+[node name="Name" type="Label" parent="TabContainer/Easy/Grid_08/Fourth"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Easy/Grid_08/Fourth"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Fifth" type="HBoxContainer" parent="TabContainer/Easy/Grid_08"]
+margin_top = 90.0
+margin_right = 47.0
+margin_bottom = 104.0
+
+[node name="Name" type="Label" parent="TabContainer/Easy/Grid_08/Fifth"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Easy/Grid_08/Fifth"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Grid_12" type="VBoxContainer" parent="TabContainer/Easy"]
+margin_left = 51.0
+margin_right = 98.0
+margin_bottom = 104.0
+
+[node name="Label" type="Label" parent="TabContainer/Easy/Grid_12"]
+margin_right = 47.0
+margin_bottom = 14.0
+text = "12 Grid"
+
+[node name="First" type="HBoxContainer" parent="TabContainer/Easy/Grid_12"]
+margin_top = 18.0
+margin_right = 47.0
+margin_bottom = 32.0
+
+[node name="Name" type="Label" parent="TabContainer/Easy/Grid_12/First"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Easy/Grid_12/First"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Second" type="HBoxContainer" parent="TabContainer/Easy/Grid_12"]
+margin_top = 36.0
+margin_right = 47.0
+margin_bottom = 50.0
+
+[node name="Name" type="Label" parent="TabContainer/Easy/Grid_12/Second"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Easy/Grid_12/Second"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Third" type="HBoxContainer" parent="TabContainer/Easy/Grid_12"]
+margin_top = 54.0
+margin_right = 47.0
+margin_bottom = 68.0
+
+[node name="Name" type="Label" parent="TabContainer/Easy/Grid_12/Third"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Easy/Grid_12/Third"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Fourth" type="HBoxContainer" parent="TabContainer/Easy/Grid_12"]
+margin_top = 72.0
+margin_right = 47.0
+margin_bottom = 86.0
+
+[node name="Name" type="Label" parent="TabContainer/Easy/Grid_12/Fourth"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Easy/Grid_12/Fourth"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Fifth" type="HBoxContainer" parent="TabContainer/Easy/Grid_12"]
+margin_top = 90.0
+margin_right = 47.0
+margin_bottom = 104.0
+
+[node name="Name" type="Label" parent="TabContainer/Easy/Grid_12/Fifth"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Easy/Grid_12/Fifth"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Grid_16" type="VBoxContainer" parent="TabContainer/Easy"]
+margin_left = 102.0
+margin_right = 149.0
+margin_bottom = 104.0
+
+[node name="Label" type="Label" parent="TabContainer/Easy/Grid_16"]
+margin_right = 47.0
+margin_bottom = 14.0
+text = "16 Grid"
+
+[node name="First" type="HBoxContainer" parent="TabContainer/Easy/Grid_16"]
+margin_top = 18.0
+margin_right = 47.0
+margin_bottom = 32.0
+
+[node name="Name" type="Label" parent="TabContainer/Easy/Grid_16/First"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Easy/Grid_16/First"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Second" type="HBoxContainer" parent="TabContainer/Easy/Grid_16"]
+margin_top = 36.0
+margin_right = 47.0
+margin_bottom = 50.0
+
+[node name="Name" type="Label" parent="TabContainer/Easy/Grid_16/Second"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Easy/Grid_16/Second"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Third" type="HBoxContainer" parent="TabContainer/Easy/Grid_16"]
+margin_top = 54.0
+margin_right = 47.0
+margin_bottom = 68.0
+
+[node name="Name" type="Label" parent="TabContainer/Easy/Grid_16/Third"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Easy/Grid_16/Third"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Fourth" type="HBoxContainer" parent="TabContainer/Easy/Grid_16"]
+margin_top = 72.0
+margin_right = 47.0
+margin_bottom = 86.0
+
+[node name="Name" type="Label" parent="TabContainer/Easy/Grid_16/Fourth"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Easy/Grid_16/Fourth"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Fifth" type="HBoxContainer" parent="TabContainer/Easy/Grid_16"]
+margin_top = 90.0
+margin_right = 47.0
+margin_bottom = 104.0
+
+[node name="Name" type="Label" parent="TabContainer/Easy/Grid_16/Fifth"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Easy/Grid_16/Fifth"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Grid_20" type="VBoxContainer" parent="TabContainer/Easy"]
+margin_top = 108.0
+margin_right = 47.0
+margin_bottom = 212.0
+
+[node name="Label" type="Label" parent="TabContainer/Easy/Grid_20"]
+margin_right = 47.0
+margin_bottom = 14.0
+text = "20 Grid"
+
+[node name="First" type="HBoxContainer" parent="TabContainer/Easy/Grid_20"]
+margin_top = 18.0
+margin_right = 47.0
+margin_bottom = 32.0
+
+[node name="Name" type="Label" parent="TabContainer/Easy/Grid_20/First"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Easy/Grid_20/First"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Second" type="HBoxContainer" parent="TabContainer/Easy/Grid_20"]
+margin_top = 36.0
+margin_right = 47.0
+margin_bottom = 50.0
+
+[node name="Name" type="Label" parent="TabContainer/Easy/Grid_20/Second"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Easy/Grid_20/Second"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Third" type="HBoxContainer" parent="TabContainer/Easy/Grid_20"]
+margin_top = 54.0
+margin_right = 47.0
+margin_bottom = 68.0
+
+[node name="Name" type="Label" parent="TabContainer/Easy/Grid_20/Third"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Easy/Grid_20/Third"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Fourth" type="HBoxContainer" parent="TabContainer/Easy/Grid_20"]
+margin_top = 72.0
+margin_right = 47.0
+margin_bottom = 86.0
+
+[node name="Name" type="Label" parent="TabContainer/Easy/Grid_20/Fourth"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Easy/Grid_20/Fourth"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Fifth" type="HBoxContainer" parent="TabContainer/Easy/Grid_20"]
+margin_top = 90.0
+margin_right = 47.0
+margin_bottom = 104.0
+
+[node name="Name" type="Label" parent="TabContainer/Easy/Grid_20/Fifth"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Easy/Grid_20/Fifth"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Grid_24" type="VBoxContainer" parent="TabContainer/Easy"]
+margin_left = 51.0
+margin_top = 108.0
+margin_right = 98.0
+margin_bottom = 212.0
+
+[node name="Label" type="Label" parent="TabContainer/Easy/Grid_24"]
+margin_right = 47.0
+margin_bottom = 14.0
+text = "24 Grid"
+
+[node name="First" type="HBoxContainer" parent="TabContainer/Easy/Grid_24"]
+margin_top = 18.0
+margin_right = 47.0
+margin_bottom = 32.0
+
+[node name="Name" type="Label" parent="TabContainer/Easy/Grid_24/First"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Easy/Grid_24/First"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Second" type="HBoxContainer" parent="TabContainer/Easy/Grid_24"]
+margin_top = 36.0
+margin_right = 47.0
+margin_bottom = 50.0
+
+[node name="Name" type="Label" parent="TabContainer/Easy/Grid_24/Second"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Easy/Grid_24/Second"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Third" type="HBoxContainer" parent="TabContainer/Easy/Grid_24"]
+margin_top = 54.0
+margin_right = 47.0
+margin_bottom = 68.0
+
+[node name="Name" type="Label" parent="TabContainer/Easy/Grid_24/Third"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Easy/Grid_24/Third"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Fourth" type="HBoxContainer" parent="TabContainer/Easy/Grid_24"]
+margin_top = 72.0
+margin_right = 47.0
+margin_bottom = 86.0
+
+[node name="Name" type="Label" parent="TabContainer/Easy/Grid_24/Fourth"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Easy/Grid_24/Fourth"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Fifth" type="HBoxContainer" parent="TabContainer/Easy/Grid_24"]
+margin_top = 90.0
+margin_right = 47.0
+margin_bottom = 104.0
+
+[node name="Name" type="Label" parent="TabContainer/Easy/Grid_24/Fifth"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Easy/Grid_24/Fifth"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Medium" type="GridContainer" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+columns = 3
+
+[node name="Grid_08" type="VBoxContainer" parent="TabContainer/Medium"]
+margin_right = 47.0
+margin_bottom = 104.0
+
+[node name="Label" type="Label" parent="TabContainer/Medium/Grid_08"]
+margin_right = 47.0
+margin_bottom = 14.0
+text = "8 Grid"
+
+[node name="First" type="HBoxContainer" parent="TabContainer/Medium/Grid_08"]
+margin_top = 18.0
+margin_right = 47.0
+margin_bottom = 32.0
+
+[node name="Name" type="Label" parent="TabContainer/Medium/Grid_08/First"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Medium/Grid_08/First"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Second" type="HBoxContainer" parent="TabContainer/Medium/Grid_08"]
+margin_top = 36.0
+margin_right = 47.0
+margin_bottom = 50.0
+
+[node name="Name" type="Label" parent="TabContainer/Medium/Grid_08/Second"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Medium/Grid_08/Second"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Third" type="HBoxContainer" parent="TabContainer/Medium/Grid_08"]
+margin_top = 54.0
+margin_right = 47.0
+margin_bottom = 68.0
+
+[node name="Name" type="Label" parent="TabContainer/Medium/Grid_08/Third"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Medium/Grid_08/Third"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Fourth" type="HBoxContainer" parent="TabContainer/Medium/Grid_08"]
+margin_top = 72.0
+margin_right = 47.0
+margin_bottom = 86.0
+
+[node name="Name" type="Label" parent="TabContainer/Medium/Grid_08/Fourth"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Medium/Grid_08/Fourth"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Fifth" type="HBoxContainer" parent="TabContainer/Medium/Grid_08"]
+margin_top = 90.0
+margin_right = 47.0
+margin_bottom = 104.0
+
+[node name="Name" type="Label" parent="TabContainer/Medium/Grid_08/Fifth"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Medium/Grid_08/Fifth"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Grid_12" type="VBoxContainer" parent="TabContainer/Medium"]
+margin_left = 51.0
+margin_right = 98.0
+margin_bottom = 104.0
+
+[node name="Label" type="Label" parent="TabContainer/Medium/Grid_12"]
+margin_right = 47.0
+margin_bottom = 14.0
+text = "12 Grid"
+
+[node name="First" type="HBoxContainer" parent="TabContainer/Medium/Grid_12"]
+margin_top = 18.0
+margin_right = 47.0
+margin_bottom = 32.0
+
+[node name="Name" type="Label" parent="TabContainer/Medium/Grid_12/First"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Medium/Grid_12/First"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Second" type="HBoxContainer" parent="TabContainer/Medium/Grid_12"]
+margin_top = 36.0
+margin_right = 47.0
+margin_bottom = 50.0
+
+[node name="Name" type="Label" parent="TabContainer/Medium/Grid_12/Second"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Medium/Grid_12/Second"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Third" type="HBoxContainer" parent="TabContainer/Medium/Grid_12"]
+margin_top = 54.0
+margin_right = 47.0
+margin_bottom = 68.0
+
+[node name="Name" type="Label" parent="TabContainer/Medium/Grid_12/Third"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Medium/Grid_12/Third"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Fourth" type="HBoxContainer" parent="TabContainer/Medium/Grid_12"]
+margin_top = 72.0
+margin_right = 47.0
+margin_bottom = 86.0
+
+[node name="Name" type="Label" parent="TabContainer/Medium/Grid_12/Fourth"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Medium/Grid_12/Fourth"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Fifth" type="HBoxContainer" parent="TabContainer/Medium/Grid_12"]
+margin_top = 90.0
+margin_right = 47.0
+margin_bottom = 104.0
+
+[node name="Name" type="Label" parent="TabContainer/Medium/Grid_12/Fifth"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Medium/Grid_12/Fifth"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Grid_16" type="VBoxContainer" parent="TabContainer/Medium"]
+margin_left = 102.0
+margin_right = 149.0
+margin_bottom = 104.0
+
+[node name="Label" type="Label" parent="TabContainer/Medium/Grid_16"]
+margin_right = 47.0
+margin_bottom = 14.0
+text = "16 Grid"
+
+[node name="First" type="HBoxContainer" parent="TabContainer/Medium/Grid_16"]
+margin_top = 18.0
+margin_right = 47.0
+margin_bottom = 32.0
+
+[node name="Name" type="Label" parent="TabContainer/Medium/Grid_16/First"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Medium/Grid_16/First"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Second" type="HBoxContainer" parent="TabContainer/Medium/Grid_16"]
+margin_top = 36.0
+margin_right = 47.0
+margin_bottom = 50.0
+
+[node name="Name" type="Label" parent="TabContainer/Medium/Grid_16/Second"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Medium/Grid_16/Second"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Third" type="HBoxContainer" parent="TabContainer/Medium/Grid_16"]
+margin_top = 54.0
+margin_right = 47.0
+margin_bottom = 68.0
+
+[node name="Name" type="Label" parent="TabContainer/Medium/Grid_16/Third"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Medium/Grid_16/Third"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Fourth" type="HBoxContainer" parent="TabContainer/Medium/Grid_16"]
+margin_top = 72.0
+margin_right = 47.0
+margin_bottom = 86.0
+
+[node name="Name" type="Label" parent="TabContainer/Medium/Grid_16/Fourth"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Medium/Grid_16/Fourth"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Fifth" type="HBoxContainer" parent="TabContainer/Medium/Grid_16"]
+margin_top = 90.0
+margin_right = 47.0
+margin_bottom = 104.0
+
+[node name="Name" type="Label" parent="TabContainer/Medium/Grid_16/Fifth"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Medium/Grid_16/Fifth"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Grid_20" type="VBoxContainer" parent="TabContainer/Medium"]
+margin_top = 108.0
+margin_right = 47.0
+margin_bottom = 212.0
+
+[node name="Label" type="Label" parent="TabContainer/Medium/Grid_20"]
+margin_right = 47.0
+margin_bottom = 14.0
+text = "20 Grid"
+
+[node name="First" type="HBoxContainer" parent="TabContainer/Medium/Grid_20"]
+margin_top = 18.0
+margin_right = 47.0
+margin_bottom = 32.0
+
+[node name="Name" type="Label" parent="TabContainer/Medium/Grid_20/First"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Medium/Grid_20/First"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Second" type="HBoxContainer" parent="TabContainer/Medium/Grid_20"]
+margin_top = 36.0
+margin_right = 47.0
+margin_bottom = 50.0
+
+[node name="Name" type="Label" parent="TabContainer/Medium/Grid_20/Second"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Medium/Grid_20/Second"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Third" type="HBoxContainer" parent="TabContainer/Medium/Grid_20"]
+margin_top = 54.0
+margin_right = 47.0
+margin_bottom = 68.0
+
+[node name="Name" type="Label" parent="TabContainer/Medium/Grid_20/Third"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Medium/Grid_20/Third"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Fourth" type="HBoxContainer" parent="TabContainer/Medium/Grid_20"]
+margin_top = 72.0
+margin_right = 47.0
+margin_bottom = 86.0
+
+[node name="Name" type="Label" parent="TabContainer/Medium/Grid_20/Fourth"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Medium/Grid_20/Fourth"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Fifth" type="HBoxContainer" parent="TabContainer/Medium/Grid_20"]
+margin_top = 90.0
+margin_right = 47.0
+margin_bottom = 104.0
+
+[node name="Name" type="Label" parent="TabContainer/Medium/Grid_20/Fifth"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Medium/Grid_20/Fifth"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Grid_24" type="VBoxContainer" parent="TabContainer/Medium"]
+margin_left = 51.0
+margin_top = 108.0
+margin_right = 98.0
+margin_bottom = 212.0
+
+[node name="Label" type="Label" parent="TabContainer/Medium/Grid_24"]
+margin_right = 47.0
+margin_bottom = 14.0
+text = "24 Grid"
+
+[node name="First" type="HBoxContainer" parent="TabContainer/Medium/Grid_24"]
+margin_top = 18.0
+margin_right = 47.0
+margin_bottom = 32.0
+
+[node name="Name" type="Label" parent="TabContainer/Medium/Grid_24/First"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Medium/Grid_24/First"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Second" type="HBoxContainer" parent="TabContainer/Medium/Grid_24"]
+margin_top = 36.0
+margin_right = 47.0
+margin_bottom = 50.0
+
+[node name="Name" type="Label" parent="TabContainer/Medium/Grid_24/Second"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Medium/Grid_24/Second"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Third" type="HBoxContainer" parent="TabContainer/Medium/Grid_24"]
+margin_top = 54.0
+margin_right = 47.0
+margin_bottom = 68.0
+
+[node name="Name" type="Label" parent="TabContainer/Medium/Grid_24/Third"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Medium/Grid_24/Third"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Fourth" type="HBoxContainer" parent="TabContainer/Medium/Grid_24"]
+margin_top = 72.0
+margin_right = 47.0
+margin_bottom = 86.0
+
+[node name="Name" type="Label" parent="TabContainer/Medium/Grid_24/Fourth"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Medium/Grid_24/Fourth"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Fifth" type="HBoxContainer" parent="TabContainer/Medium/Grid_24"]
+margin_top = 90.0
+margin_right = 47.0
+margin_bottom = 104.0
+
+[node name="Name" type="Label" parent="TabContainer/Medium/Grid_24/Fifth"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Medium/Grid_24/Fifth"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Hard" type="GridContainer" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+columns = 3
+
+[node name="Grid_08" type="VBoxContainer" parent="TabContainer/Hard"]
+margin_right = 47.0
+margin_bottom = 104.0
+
+[node name="Label" type="Label" parent="TabContainer/Hard/Grid_08"]
+margin_right = 47.0
+margin_bottom = 14.0
+text = "8 Grid"
+
+[node name="First" type="HBoxContainer" parent="TabContainer/Hard/Grid_08"]
+margin_top = 18.0
+margin_right = 47.0
+margin_bottom = 32.0
+
+[node name="Name" type="Label" parent="TabContainer/Hard/Grid_08/First"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Hard/Grid_08/First"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Second" type="HBoxContainer" parent="TabContainer/Hard/Grid_08"]
+margin_top = 36.0
+margin_right = 47.0
+margin_bottom = 50.0
+
+[node name="Name" type="Label" parent="TabContainer/Hard/Grid_08/Second"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Hard/Grid_08/Second"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Third" type="HBoxContainer" parent="TabContainer/Hard/Grid_08"]
+margin_top = 54.0
+margin_right = 47.0
+margin_bottom = 68.0
+
+[node name="Name" type="Label" parent="TabContainer/Hard/Grid_08/Third"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Hard/Grid_08/Third"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Fourth" type="HBoxContainer" parent="TabContainer/Hard/Grid_08"]
+margin_top = 72.0
+margin_right = 47.0
+margin_bottom = 86.0
+
+[node name="Name" type="Label" parent="TabContainer/Hard/Grid_08/Fourth"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Hard/Grid_08/Fourth"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Fifth" type="HBoxContainer" parent="TabContainer/Hard/Grid_08"]
+margin_top = 90.0
+margin_right = 47.0
+margin_bottom = 104.0
+
+[node name="Name" type="Label" parent="TabContainer/Hard/Grid_08/Fifth"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Hard/Grid_08/Fifth"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Grid_12" type="VBoxContainer" parent="TabContainer/Hard"]
+margin_left = 51.0
+margin_right = 98.0
+margin_bottom = 104.0
+
+[node name="Label" type="Label" parent="TabContainer/Hard/Grid_12"]
+margin_right = 47.0
+margin_bottom = 14.0
+text = "12 Grid"
+
+[node name="First" type="HBoxContainer" parent="TabContainer/Hard/Grid_12"]
+margin_top = 18.0
+margin_right = 47.0
+margin_bottom = 32.0
+
+[node name="Name" type="Label" parent="TabContainer/Hard/Grid_12/First"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Hard/Grid_12/First"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Second" type="HBoxContainer" parent="TabContainer/Hard/Grid_12"]
+margin_top = 36.0
+margin_right = 47.0
+margin_bottom = 50.0
+
+[node name="Name" type="Label" parent="TabContainer/Hard/Grid_12/Second"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Hard/Grid_12/Second"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Third" type="HBoxContainer" parent="TabContainer/Hard/Grid_12"]
+margin_top = 54.0
+margin_right = 47.0
+margin_bottom = 68.0
+
+[node name="Name" type="Label" parent="TabContainer/Hard/Grid_12/Third"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Hard/Grid_12/Third"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Fourth" type="HBoxContainer" parent="TabContainer/Hard/Grid_12"]
+margin_top = 72.0
+margin_right = 47.0
+margin_bottom = 86.0
+
+[node name="Name" type="Label" parent="TabContainer/Hard/Grid_12/Fourth"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Hard/Grid_12/Fourth"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Fifth" type="HBoxContainer" parent="TabContainer/Hard/Grid_12"]
+margin_top = 90.0
+margin_right = 47.0
+margin_bottom = 104.0
+
+[node name="Name" type="Label" parent="TabContainer/Hard/Grid_12/Fifth"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Hard/Grid_12/Fifth"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Grid_16" type="VBoxContainer" parent="TabContainer/Hard"]
+margin_left = 102.0
+margin_right = 149.0
+margin_bottom = 104.0
+
+[node name="Label" type="Label" parent="TabContainer/Hard/Grid_16"]
+margin_right = 47.0
+margin_bottom = 14.0
+text = "16 Grid"
+
+[node name="First" type="HBoxContainer" parent="TabContainer/Hard/Grid_16"]
+margin_top = 18.0
+margin_right = 47.0
+margin_bottom = 32.0
+
+[node name="Name" type="Label" parent="TabContainer/Hard/Grid_16/First"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Hard/Grid_16/First"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Second" type="HBoxContainer" parent="TabContainer/Hard/Grid_16"]
+margin_top = 36.0
+margin_right = 47.0
+margin_bottom = 50.0
+
+[node name="Name" type="Label" parent="TabContainer/Hard/Grid_16/Second"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Hard/Grid_16/Second"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Third" type="HBoxContainer" parent="TabContainer/Hard/Grid_16"]
+margin_top = 54.0
+margin_right = 47.0
+margin_bottom = 68.0
+
+[node name="Name" type="Label" parent="TabContainer/Hard/Grid_16/Third"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Hard/Grid_16/Third"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Fourth" type="HBoxContainer" parent="TabContainer/Hard/Grid_16"]
+margin_top = 72.0
+margin_right = 47.0
+margin_bottom = 86.0
+
+[node name="Name" type="Label" parent="TabContainer/Hard/Grid_16/Fourth"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Hard/Grid_16/Fourth"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Fifth" type="HBoxContainer" parent="TabContainer/Hard/Grid_16"]
+margin_top = 90.0
+margin_right = 47.0
+margin_bottom = 104.0
+
+[node name="Name" type="Label" parent="TabContainer/Hard/Grid_16/Fifth"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Hard/Grid_16/Fifth"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Grid_20" type="VBoxContainer" parent="TabContainer/Hard"]
+margin_top = 108.0
+margin_right = 47.0
+margin_bottom = 212.0
+
+[node name="Label" type="Label" parent="TabContainer/Hard/Grid_20"]
+margin_right = 47.0
+margin_bottom = 14.0
+text = "20 Grid"
+
+[node name="First" type="HBoxContainer" parent="TabContainer/Hard/Grid_20"]
+margin_top = 18.0
+margin_right = 47.0
+margin_bottom = 32.0
+
+[node name="Name" type="Label" parent="TabContainer/Hard/Grid_20/First"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Hard/Grid_20/First"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Second" type="HBoxContainer" parent="TabContainer/Hard/Grid_20"]
+margin_top = 36.0
+margin_right = 47.0
+margin_bottom = 50.0
+
+[node name="Name" type="Label" parent="TabContainer/Hard/Grid_20/Second"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Hard/Grid_20/Second"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Third" type="HBoxContainer" parent="TabContainer/Hard/Grid_20"]
+margin_top = 54.0
+margin_right = 47.0
+margin_bottom = 68.0
+
+[node name="Name" type="Label" parent="TabContainer/Hard/Grid_20/Third"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Hard/Grid_20/Third"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Fourth" type="HBoxContainer" parent="TabContainer/Hard/Grid_20"]
+margin_top = 72.0
+margin_right = 47.0
+margin_bottom = 86.0
+
+[node name="Name" type="Label" parent="TabContainer/Hard/Grid_20/Fourth"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Hard/Grid_20/Fourth"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Fifth" type="HBoxContainer" parent="TabContainer/Hard/Grid_20"]
+margin_top = 90.0
+margin_right = 47.0
+margin_bottom = 104.0
+
+[node name="Name" type="Label" parent="TabContainer/Hard/Grid_20/Fifth"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Hard/Grid_20/Fifth"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Grid_24" type="VBoxContainer" parent="TabContainer/Hard"]
+margin_left = 51.0
+margin_top = 108.0
+margin_right = 98.0
+margin_bottom = 212.0
+
+[node name="Label" type="Label" parent="TabContainer/Hard/Grid_24"]
+margin_right = 47.0
+margin_bottom = 14.0
+text = "24 Grid"
+
+[node name="First" type="HBoxContainer" parent="TabContainer/Hard/Grid_24"]
+margin_top = 18.0
+margin_right = 47.0
+margin_bottom = 32.0
+
+[node name="Name" type="Label" parent="TabContainer/Hard/Grid_24/First"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Hard/Grid_24/First"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Second" type="HBoxContainer" parent="TabContainer/Hard/Grid_24"]
+margin_top = 36.0
+margin_right = 47.0
+margin_bottom = 50.0
+
+[node name="Name" type="Label" parent="TabContainer/Hard/Grid_24/Second"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Hard/Grid_24/Second"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Third" type="HBoxContainer" parent="TabContainer/Hard/Grid_24"]
+margin_top = 54.0
+margin_right = 47.0
+margin_bottom = 68.0
+
+[node name="Name" type="Label" parent="TabContainer/Hard/Grid_24/Third"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Hard/Grid_24/Third"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Fourth" type="HBoxContainer" parent="TabContainer/Hard/Grid_24"]
+margin_top = 72.0
+margin_right = 47.0
+margin_bottom = 86.0
+
+[node name="Name" type="Label" parent="TabContainer/Hard/Grid_24/Fourth"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Hard/Grid_24/Fourth"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Fifth" type="HBoxContainer" parent="TabContainer/Hard/Grid_24"]
+margin_top = 90.0
+margin_right = 47.0
+margin_bottom = 104.0
+
+[node name="Name" type="Label" parent="TabContainer/Hard/Grid_24/Fifth"]
+margin_bottom = 14.0
+
+[node name="Score" type="Label" parent="TabContainer/Hard/Grid_24/Fifth"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="MainMenuButton" type="Button" parent="."]
+anchor_left = 0.216
+anchor_top = 0.912
+anchor_right = 0.784
+anchor_bottom = 0.975
+margin_left = 0.199997
+margin_top = 0.23996
+margin_right = -0.200012
+text = "Main Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_up" from="MainMenuButton" to="." method="_on_MainMenuButton_button_up"]

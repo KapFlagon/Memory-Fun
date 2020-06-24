@@ -70,5 +70,5 @@ func get_colour_blind_mode_on():
 func secs_to_string(elapsed_time):
 	var minutes = elapsed_time / 60
 	var seconds = elapsed_time % 60
-	var str_elapsed_time = "%02d : %02d" % [minutes, seconds]
+	var str_elapsed_time = "%02d:%02d" % [minutes, seconds]
 	return str_elapsed_time
