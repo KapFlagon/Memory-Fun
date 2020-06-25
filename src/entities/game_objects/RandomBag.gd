@@ -39,6 +39,7 @@ func pull_from_bag():
 
 
 func refill_bag(num_of_shuffles: int) -> void: 
+	randomize()
 	for i in num_of_shuffles:
 		full_bag.shuffle()
 	current_bag = full_bag.duplicate(true)

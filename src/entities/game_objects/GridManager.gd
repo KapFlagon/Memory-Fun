@@ -20,7 +20,6 @@ onready var screen_size = get_viewport().get_visible_rect().size
 var game_state = null
 var card_grid = []
 var CardPreLoad = preload("res://src/entities/game_objects/Card.tscn")
-var random = RandomNumberGenerator.new()
 var current_selector_position := Vector2(0, 0)
 
 
