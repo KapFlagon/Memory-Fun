@@ -32,6 +32,7 @@ func _grid_button_pressed(button):
 		PlayerData.set_grid_size(24)
 	else:
 		print("custom")
+		pass
 		# New scene for specifying custom grid
 	next_scene()
 

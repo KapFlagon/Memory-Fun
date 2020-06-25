@@ -1,7 +1,8 @@
 extends Node
 
 
-const FILE_PATH = "res://config.cfg"
+#const FILE_PATH = "res://config.cfg"
+const FILE_PATH = "user://config.cfg"
 
 
 var config_file = ConfigFile.new()

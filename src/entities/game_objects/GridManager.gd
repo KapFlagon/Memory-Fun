@@ -151,7 +151,7 @@ func create_2D_array():
 func print_2D_array(): 
 	for i in columns:
 		for j in rows:
-			print("grid number " + str(i) + ", " + str(j))
+			#"grid number " + str(i) + ", " + str(j))
 			card_grid[i][j].print_card()
 
 
@@ -259,7 +259,8 @@ func process_inputs() -> void:
 			if valid_selection:
 				flip_chosen_card(current_selector_position)
 		if Input.is_action_just_released("ui_end"): 
-			print()
+			#print()
+			pass
 		if Input.is_action_just_pressed("ui_touch"):
 			process_touch()
 	elif game_state == e_game_state.WAITING:
