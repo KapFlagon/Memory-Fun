@@ -36,8 +36,11 @@ func create_defaults() -> void:
 	dict_medium = dict_dummy.duplicate()
 	dict_hard = dict_dummy.duplicate()
 	dict_master[0] = dict_easy
+	print("easy mode scores: " + str(dict_easy))
 	dict_master[1] = dict_medium
+	print("medium mode scores: " + str(dict_medium))
 	dict_master[2] = dict_hard
+	print("hard mode scores: " + str(dict_hard))
 
 
 func load_scores():
@@ -45,8 +48,11 @@ func load_scores():
 	save_game_file.open(file_path, File.READ)
 	dict_master = save_game_file.get_var(true)
 	dict_easy = dict_master[0]
+	print("easy mode scores: " + str(dict_easy))
 	dict_medium = dict_master[1]
+	print("medium mode scores: " + str(dict_medium))
 	dict_hard = dict_master[2]
+	print("hard mode scores: " + str(dict_hard))
 
 
 func save_scores():
@@ -58,14 +64,17 @@ func save_scores():
 func new_score(name: String, score: int, difficulty: int, grid_size: int) -> void:
 	var new_entry_array = [name, score]
 	if difficulty == PlayerData.e_difficulty.EASY:
+		print("New score, Easy mode")
 		dict_easy.get(grid_size).append(new_entry_array)
 		dict_easy.get(grid_size).sort_custom(ScoreSorter, "sort_descending")
 		dict_easy.get(grid_size).pop_back()
 	elif difficulty == PlayerData.e_difficulty.MEDIUM:
+		print("New score, Medium mode")
 		dict_medium.get(grid_size).append(new_entry_array)
 		dict_medium.get(grid_size).sort_custom(ScoreSorter, "sort_descending")
 		dict_medium.get(grid_size).pop_back()
 	else: # Hard mode
+		print("New score, Hard mode")
 		dict_hard.get(grid_size).append(new_entry_array)
 		dict_hard.get(grid_size).sort_custom(ScoreSorter, "sort_descending")
 		dict_hard.get(grid_size).pop_back()

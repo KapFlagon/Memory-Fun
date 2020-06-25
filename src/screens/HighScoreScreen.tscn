@@ -1,10 +1,13 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://src/screens/HighScoreScreen.gd" type="Script" id=1]
+[ext_resource path="res://src/themes/Theme_01_small.tres" type="Theme" id=2]
+[ext_resource path="res://src/themes/Theme_01.tres" type="Theme" id=3]
 
 [node name="HighScoreScreen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = ExtResource( 3 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -26,1180 +29,1218 @@ __meta__ = {
 }
 
 [node name="TabContainer" type="TabContainer" parent="."]
-anchor_left = 0.044
-anchor_top = 0.135
-anchor_right = 0.956
-anchor_bottom = 0.865
-margin_left = 0.299995
-margin_top = 0.199997
-margin_right = -0.300049
-margin_bottom = -0.200043
+anchor_left = 0.500625
+anchor_top = 0.459375
+anchor_right = 0.500625
+anchor_bottom = 0.501042
+margin_left = -312.5
+margin_top = -169.5
+margin_right = 312.5
+margin_bottom = 169.5
+theme = ExtResource( 2 )
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="Easy" type="GridContainer" parent="TabContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
-margin_top = 32.0
+margin_top = 39.0
 margin_right = -4.0
 margin_bottom = -4.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 columns = 3
 
 [node name="Grid_08" type="VBoxContainer" parent="TabContainer/Easy"]
-margin_right = 47.0
-margin_bottom = 104.0
+margin_right = 203.0
+margin_bottom = 156.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="TabContainer/Easy/Grid_08"]
-margin_right = 47.0
-margin_bottom = 14.0
+margin_right = 203.0
+margin_bottom = 21.0
 text = "8 Grid"
 
 [node name="First" type="HBoxContainer" parent="TabContainer/Easy/Grid_08"]
-margin_top = 18.0
-margin_right = 47.0
-margin_bottom = 32.0
+margin_top = 25.0
+margin_right = 203.0
+margin_bottom = 46.0
 
 [node name="Name" type="Label" parent="TabContainer/Easy/Grid_08/First"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Easy/Grid_08/First"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Second" type="HBoxContainer" parent="TabContainer/Easy/Grid_08"]
-margin_top = 36.0
-margin_right = 47.0
-margin_bottom = 50.0
+margin_top = 50.0
+margin_right = 203.0
+margin_bottom = 71.0
 
 [node name="Name" type="Label" parent="TabContainer/Easy/Grid_08/Second"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Easy/Grid_08/Second"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Third" type="HBoxContainer" parent="TabContainer/Easy/Grid_08"]
-margin_top = 54.0
-margin_right = 47.0
-margin_bottom = 68.0
+margin_top = 75.0
+margin_right = 203.0
+margin_bottom = 96.0
 
 [node name="Name" type="Label" parent="TabContainer/Easy/Grid_08/Third"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Easy/Grid_08/Third"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Fourth" type="HBoxContainer" parent="TabContainer/Easy/Grid_08"]
-margin_top = 72.0
-margin_right = 47.0
-margin_bottom = 86.0
+margin_top = 100.0
+margin_right = 203.0
+margin_bottom = 121.0
 
 [node name="Name" type="Label" parent="TabContainer/Easy/Grid_08/Fourth"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Easy/Grid_08/Fourth"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Fifth" type="HBoxContainer" parent="TabContainer/Easy/Grid_08"]
-margin_top = 90.0
-margin_right = 47.0
-margin_bottom = 104.0
+margin_top = 125.0
+margin_right = 203.0
+margin_bottom = 146.0
 
 [node name="Name" type="Label" parent="TabContainer/Easy/Grid_08/Fifth"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Easy/Grid_08/Fifth"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Grid_12" type="VBoxContainer" parent="TabContainer/Easy"]
-margin_left = 51.0
-margin_right = 98.0
-margin_bottom = 104.0
+margin_left = 207.0
+margin_right = 410.0
+margin_bottom = 156.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="TabContainer/Easy/Grid_12"]
-margin_right = 47.0
-margin_bottom = 14.0
+margin_right = 203.0
+margin_bottom = 21.0
 text = "12 Grid"
 
 [node name="First" type="HBoxContainer" parent="TabContainer/Easy/Grid_12"]
-margin_top = 18.0
-margin_right = 47.0
-margin_bottom = 32.0
+margin_top = 25.0
+margin_right = 203.0
+margin_bottom = 46.0
 
 [node name="Name" type="Label" parent="TabContainer/Easy/Grid_12/First"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Easy/Grid_12/First"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Second" type="HBoxContainer" parent="TabContainer/Easy/Grid_12"]
-margin_top = 36.0
-margin_right = 47.0
-margin_bottom = 50.0
+margin_top = 50.0
+margin_right = 203.0
+margin_bottom = 71.0
 
 [node name="Name" type="Label" parent="TabContainer/Easy/Grid_12/Second"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Easy/Grid_12/Second"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Third" type="HBoxContainer" parent="TabContainer/Easy/Grid_12"]
-margin_top = 54.0
-margin_right = 47.0
-margin_bottom = 68.0
+margin_top = 75.0
+margin_right = 203.0
+margin_bottom = 96.0
 
 [node name="Name" type="Label" parent="TabContainer/Easy/Grid_12/Third"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Easy/Grid_12/Third"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Fourth" type="HBoxContainer" parent="TabContainer/Easy/Grid_12"]
-margin_top = 72.0
-margin_right = 47.0
-margin_bottom = 86.0
+margin_top = 100.0
+margin_right = 203.0
+margin_bottom = 121.0
 
 [node name="Name" type="Label" parent="TabContainer/Easy/Grid_12/Fourth"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Easy/Grid_12/Fourth"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Fifth" type="HBoxContainer" parent="TabContainer/Easy/Grid_12"]
-margin_top = 90.0
-margin_right = 47.0
-margin_bottom = 104.0
+margin_top = 125.0
+margin_right = 203.0
+margin_bottom = 146.0
 
 [node name="Name" type="Label" parent="TabContainer/Easy/Grid_12/Fifth"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Easy/Grid_12/Fifth"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Grid_16" type="VBoxContainer" parent="TabContainer/Easy"]
-margin_left = 102.0
-margin_right = 149.0
-margin_bottom = 104.0
+margin_left = 414.0
+margin_right = 617.0
+margin_bottom = 156.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="TabContainer/Easy/Grid_16"]
-margin_right = 47.0
-margin_bottom = 14.0
+margin_right = 203.0
+margin_bottom = 21.0
 text = "16 Grid"
 
 [node name="First" type="HBoxContainer" parent="TabContainer/Easy/Grid_16"]
-margin_top = 18.0
-margin_right = 47.0
-margin_bottom = 32.0
+margin_top = 25.0
+margin_right = 203.0
+margin_bottom = 46.0
 
 [node name="Name" type="Label" parent="TabContainer/Easy/Grid_16/First"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Easy/Grid_16/First"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Second" type="HBoxContainer" parent="TabContainer/Easy/Grid_16"]
-margin_top = 36.0
-margin_right = 47.0
-margin_bottom = 50.0
+margin_top = 50.0
+margin_right = 203.0
+margin_bottom = 71.0
 
 [node name="Name" type="Label" parent="TabContainer/Easy/Grid_16/Second"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Easy/Grid_16/Second"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Third" type="HBoxContainer" parent="TabContainer/Easy/Grid_16"]
-margin_top = 54.0
-margin_right = 47.0
-margin_bottom = 68.0
+margin_top = 75.0
+margin_right = 203.0
+margin_bottom = 96.0
 
 [node name="Name" type="Label" parent="TabContainer/Easy/Grid_16/Third"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Easy/Grid_16/Third"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Fourth" type="HBoxContainer" parent="TabContainer/Easy/Grid_16"]
-margin_top = 72.0
-margin_right = 47.0
-margin_bottom = 86.0
+margin_top = 100.0
+margin_right = 203.0
+margin_bottom = 121.0
 
 [node name="Name" type="Label" parent="TabContainer/Easy/Grid_16/Fourth"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Easy/Grid_16/Fourth"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Fifth" type="HBoxContainer" parent="TabContainer/Easy/Grid_16"]
-margin_top = 90.0
-margin_right = 47.0
-margin_bottom = 104.0
+margin_top = 125.0
+margin_right = 203.0
+margin_bottom = 146.0
 
 [node name="Name" type="Label" parent="TabContainer/Easy/Grid_16/Fifth"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Easy/Grid_16/Fifth"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Grid_20" type="VBoxContainer" parent="TabContainer/Easy"]
-margin_top = 108.0
-margin_right = 47.0
-margin_bottom = 212.0
+margin_top = 160.0
+margin_right = 203.0
+margin_bottom = 316.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="TabContainer/Easy/Grid_20"]
-margin_right = 47.0
-margin_bottom = 14.0
+margin_right = 203.0
+margin_bottom = 21.0
 text = "20 Grid"
 
 [node name="First" type="HBoxContainer" parent="TabContainer/Easy/Grid_20"]
-margin_top = 18.0
-margin_right = 47.0
-margin_bottom = 32.0
+margin_top = 25.0
+margin_right = 203.0
+margin_bottom = 46.0
 
 [node name="Name" type="Label" parent="TabContainer/Easy/Grid_20/First"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Easy/Grid_20/First"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Second" type="HBoxContainer" parent="TabContainer/Easy/Grid_20"]
-margin_top = 36.0
-margin_right = 47.0
-margin_bottom = 50.0
+margin_top = 50.0
+margin_right = 203.0
+margin_bottom = 71.0
 
 [node name="Name" type="Label" parent="TabContainer/Easy/Grid_20/Second"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Easy/Grid_20/Second"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Third" type="HBoxContainer" parent="TabContainer/Easy/Grid_20"]
-margin_top = 54.0
-margin_right = 47.0
-margin_bottom = 68.0
+margin_top = 75.0
+margin_right = 203.0
+margin_bottom = 96.0
 
 [node name="Name" type="Label" parent="TabContainer/Easy/Grid_20/Third"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Easy/Grid_20/Third"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Fourth" type="HBoxContainer" parent="TabContainer/Easy/Grid_20"]
-margin_top = 72.0
-margin_right = 47.0
-margin_bottom = 86.0
+margin_top = 100.0
+margin_right = 203.0
+margin_bottom = 121.0
 
 [node name="Name" type="Label" parent="TabContainer/Easy/Grid_20/Fourth"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Easy/Grid_20/Fourth"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Fifth" type="HBoxContainer" parent="TabContainer/Easy/Grid_20"]
-margin_top = 90.0
-margin_right = 47.0
-margin_bottom = 104.0
+margin_top = 125.0
+margin_right = 203.0
+margin_bottom = 146.0
 
 [node name="Name" type="Label" parent="TabContainer/Easy/Grid_20/Fifth"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Easy/Grid_20/Fifth"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Grid_24" type="VBoxContainer" parent="TabContainer/Easy"]
-margin_left = 51.0
-margin_top = 108.0
-margin_right = 98.0
-margin_bottom = 212.0
+margin_left = 207.0
+margin_top = 160.0
+margin_right = 410.0
+margin_bottom = 316.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="TabContainer/Easy/Grid_24"]
-margin_right = 47.0
-margin_bottom = 14.0
+margin_right = 203.0
+margin_bottom = 21.0
 text = "24 Grid"
 
 [node name="First" type="HBoxContainer" parent="TabContainer/Easy/Grid_24"]
-margin_top = 18.0
-margin_right = 47.0
-margin_bottom = 32.0
+margin_top = 25.0
+margin_right = 203.0
+margin_bottom = 46.0
 
 [node name="Name" type="Label" parent="TabContainer/Easy/Grid_24/First"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Easy/Grid_24/First"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Second" type="HBoxContainer" parent="TabContainer/Easy/Grid_24"]
-margin_top = 36.0
-margin_right = 47.0
-margin_bottom = 50.0
+margin_top = 50.0
+margin_right = 203.0
+margin_bottom = 71.0
 
 [node name="Name" type="Label" parent="TabContainer/Easy/Grid_24/Second"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Easy/Grid_24/Second"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Third" type="HBoxContainer" parent="TabContainer/Easy/Grid_24"]
-margin_top = 54.0
-margin_right = 47.0
-margin_bottom = 68.0
+margin_top = 75.0
+margin_right = 203.0
+margin_bottom = 96.0
 
 [node name="Name" type="Label" parent="TabContainer/Easy/Grid_24/Third"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Easy/Grid_24/Third"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Fourth" type="HBoxContainer" parent="TabContainer/Easy/Grid_24"]
-margin_top = 72.0
-margin_right = 47.0
-margin_bottom = 86.0
+margin_top = 100.0
+margin_right = 203.0
+margin_bottom = 121.0
 
 [node name="Name" type="Label" parent="TabContainer/Easy/Grid_24/Fourth"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Easy/Grid_24/Fourth"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Fifth" type="HBoxContainer" parent="TabContainer/Easy/Grid_24"]
-margin_top = 90.0
-margin_right = 47.0
-margin_bottom = 104.0
+margin_top = 125.0
+margin_right = 203.0
+margin_bottom = 146.0
 
 [node name="Name" type="Label" parent="TabContainer/Easy/Grid_24/Fifth"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Easy/Grid_24/Fifth"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Medium" type="GridContainer" parent="TabContainer"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
-margin_top = 32.0
+margin_top = 39.0
 margin_right = -4.0
 margin_bottom = -4.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 columns = 3
 
 [node name="Grid_08" type="VBoxContainer" parent="TabContainer/Medium"]
-margin_right = 47.0
-margin_bottom = 104.0
+margin_right = 203.0
+margin_bottom = 156.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="TabContainer/Medium/Grid_08"]
-margin_right = 47.0
-margin_bottom = 14.0
+margin_right = 203.0
+margin_bottom = 21.0
 text = "8 Grid"
 
 [node name="First" type="HBoxContainer" parent="TabContainer/Medium/Grid_08"]
-margin_top = 18.0
-margin_right = 47.0
-margin_bottom = 32.0
+margin_top = 25.0
+margin_right = 203.0
+margin_bottom = 46.0
 
 [node name="Name" type="Label" parent="TabContainer/Medium/Grid_08/First"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Medium/Grid_08/First"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Second" type="HBoxContainer" parent="TabContainer/Medium/Grid_08"]
-margin_top = 36.0
-margin_right = 47.0
-margin_bottom = 50.0
+margin_top = 50.0
+margin_right = 203.0
+margin_bottom = 71.0
 
 [node name="Name" type="Label" parent="TabContainer/Medium/Grid_08/Second"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Medium/Grid_08/Second"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Third" type="HBoxContainer" parent="TabContainer/Medium/Grid_08"]
-margin_top = 54.0
-margin_right = 47.0
-margin_bottom = 68.0
+margin_top = 75.0
+margin_right = 203.0
+margin_bottom = 96.0
 
 [node name="Name" type="Label" parent="TabContainer/Medium/Grid_08/Third"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Medium/Grid_08/Third"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Fourth" type="HBoxContainer" parent="TabContainer/Medium/Grid_08"]
-margin_top = 72.0
-margin_right = 47.0
-margin_bottom = 86.0
+margin_top = 100.0
+margin_right = 203.0
+margin_bottom = 121.0
 
 [node name="Name" type="Label" parent="TabContainer/Medium/Grid_08/Fourth"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Medium/Grid_08/Fourth"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Fifth" type="HBoxContainer" parent="TabContainer/Medium/Grid_08"]
-margin_top = 90.0
-margin_right = 47.0
-margin_bottom = 104.0
+margin_top = 125.0
+margin_right = 203.0
+margin_bottom = 146.0
 
 [node name="Name" type="Label" parent="TabContainer/Medium/Grid_08/Fifth"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Medium/Grid_08/Fifth"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Grid_12" type="VBoxContainer" parent="TabContainer/Medium"]
-margin_left = 51.0
-margin_right = 98.0
-margin_bottom = 104.0
+margin_left = 207.0
+margin_right = 410.0
+margin_bottom = 156.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="TabContainer/Medium/Grid_12"]
-margin_right = 47.0
-margin_bottom = 14.0
+margin_right = 203.0
+margin_bottom = 21.0
 text = "12 Grid"
 
 [node name="First" type="HBoxContainer" parent="TabContainer/Medium/Grid_12"]
-margin_top = 18.0
-margin_right = 47.0
-margin_bottom = 32.0
+margin_top = 25.0
+margin_right = 203.0
+margin_bottom = 46.0
 
 [node name="Name" type="Label" parent="TabContainer/Medium/Grid_12/First"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Medium/Grid_12/First"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Second" type="HBoxContainer" parent="TabContainer/Medium/Grid_12"]
-margin_top = 36.0
-margin_right = 47.0
-margin_bottom = 50.0
+margin_top = 50.0
+margin_right = 203.0
+margin_bottom = 71.0
 
 [node name="Name" type="Label" parent="TabContainer/Medium/Grid_12/Second"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Medium/Grid_12/Second"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Third" type="HBoxContainer" parent="TabContainer/Medium/Grid_12"]
-margin_top = 54.0
-margin_right = 47.0
-margin_bottom = 68.0
+margin_top = 75.0
+margin_right = 203.0
+margin_bottom = 96.0
 
 [node name="Name" type="Label" parent="TabContainer/Medium/Grid_12/Third"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Medium/Grid_12/Third"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Fourth" type="HBoxContainer" parent="TabContainer/Medium/Grid_12"]
-margin_top = 72.0
-margin_right = 47.0
-margin_bottom = 86.0
+margin_top = 100.0
+margin_right = 203.0
+margin_bottom = 121.0
 
 [node name="Name" type="Label" parent="TabContainer/Medium/Grid_12/Fourth"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Medium/Grid_12/Fourth"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Fifth" type="HBoxContainer" parent="TabContainer/Medium/Grid_12"]
-margin_top = 90.0
-margin_right = 47.0
-margin_bottom = 104.0
+margin_top = 125.0
+margin_right = 203.0
+margin_bottom = 146.0
 
 [node name="Name" type="Label" parent="TabContainer/Medium/Grid_12/Fifth"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Medium/Grid_12/Fifth"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Grid_16" type="VBoxContainer" parent="TabContainer/Medium"]
-margin_left = 102.0
-margin_right = 149.0
-margin_bottom = 104.0
+margin_left = 414.0
+margin_right = 617.0
+margin_bottom = 156.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="TabContainer/Medium/Grid_16"]
-margin_right = 47.0
-margin_bottom = 14.0
+margin_right = 203.0
+margin_bottom = 21.0
 text = "16 Grid"
 
 [node name="First" type="HBoxContainer" parent="TabContainer/Medium/Grid_16"]
-margin_top = 18.0
-margin_right = 47.0
-margin_bottom = 32.0
+margin_top = 25.0
+margin_right = 203.0
+margin_bottom = 46.0
 
 [node name="Name" type="Label" parent="TabContainer/Medium/Grid_16/First"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Medium/Grid_16/First"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Second" type="HBoxContainer" parent="TabContainer/Medium/Grid_16"]
-margin_top = 36.0
-margin_right = 47.0
-margin_bottom = 50.0
+margin_top = 50.0
+margin_right = 203.0
+margin_bottom = 71.0
 
 [node name="Name" type="Label" parent="TabContainer/Medium/Grid_16/Second"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Medium/Grid_16/Second"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Third" type="HBoxContainer" parent="TabContainer/Medium/Grid_16"]
-margin_top = 54.0
-margin_right = 47.0
-margin_bottom = 68.0
+margin_top = 75.0
+margin_right = 203.0
+margin_bottom = 96.0
 
 [node name="Name" type="Label" parent="TabContainer/Medium/Grid_16/Third"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Medium/Grid_16/Third"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Fourth" type="HBoxContainer" parent="TabContainer/Medium/Grid_16"]
-margin_top = 72.0
-margin_right = 47.0
-margin_bottom = 86.0
+margin_top = 100.0
+margin_right = 203.0
+margin_bottom = 121.0
 
 [node name="Name" type="Label" parent="TabContainer/Medium/Grid_16/Fourth"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Medium/Grid_16/Fourth"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Fifth" type="HBoxContainer" parent="TabContainer/Medium/Grid_16"]
-margin_top = 90.0
-margin_right = 47.0
-margin_bottom = 104.0
+margin_top = 125.0
+margin_right = 203.0
+margin_bottom = 146.0
 
 [node name="Name" type="Label" parent="TabContainer/Medium/Grid_16/Fifth"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Medium/Grid_16/Fifth"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Grid_20" type="VBoxContainer" parent="TabContainer/Medium"]
-margin_top = 108.0
-margin_right = 47.0
-margin_bottom = 212.0
+margin_top = 160.0
+margin_right = 203.0
+margin_bottom = 316.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="TabContainer/Medium/Grid_20"]
-margin_right = 47.0
-margin_bottom = 14.0
+margin_right = 203.0
+margin_bottom = 21.0
 text = "20 Grid"
 
 [node name="First" type="HBoxContainer" parent="TabContainer/Medium/Grid_20"]
-margin_top = 18.0
-margin_right = 47.0
-margin_bottom = 32.0
+margin_top = 25.0
+margin_right = 203.0
+margin_bottom = 46.0
 
 [node name="Name" type="Label" parent="TabContainer/Medium/Grid_20/First"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Medium/Grid_20/First"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Second" type="HBoxContainer" parent="TabContainer/Medium/Grid_20"]
-margin_top = 36.0
-margin_right = 47.0
-margin_bottom = 50.0
+margin_top = 50.0
+margin_right = 203.0
+margin_bottom = 71.0
 
 [node name="Name" type="Label" parent="TabContainer/Medium/Grid_20/Second"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Medium/Grid_20/Second"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Third" type="HBoxContainer" parent="TabContainer/Medium/Grid_20"]
-margin_top = 54.0
-margin_right = 47.0
-margin_bottom = 68.0
+margin_top = 75.0
+margin_right = 203.0
+margin_bottom = 96.0
 
 [node name="Name" type="Label" parent="TabContainer/Medium/Grid_20/Third"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Medium/Grid_20/Third"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Fourth" type="HBoxContainer" parent="TabContainer/Medium/Grid_20"]
-margin_top = 72.0
-margin_right = 47.0
-margin_bottom = 86.0
+margin_top = 100.0
+margin_right = 203.0
+margin_bottom = 121.0
 
 [node name="Name" type="Label" parent="TabContainer/Medium/Grid_20/Fourth"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Medium/Grid_20/Fourth"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Fifth" type="HBoxContainer" parent="TabContainer/Medium/Grid_20"]
-margin_top = 90.0
-margin_right = 47.0
-margin_bottom = 104.0
+margin_top = 125.0
+margin_right = 203.0
+margin_bottom = 146.0
 
 [node name="Name" type="Label" parent="TabContainer/Medium/Grid_20/Fifth"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Medium/Grid_20/Fifth"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Grid_24" type="VBoxContainer" parent="TabContainer/Medium"]
-margin_left = 51.0
-margin_top = 108.0
-margin_right = 98.0
-margin_bottom = 212.0
+margin_left = 207.0
+margin_top = 160.0
+margin_right = 410.0
+margin_bottom = 316.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="TabContainer/Medium/Grid_24"]
-margin_right = 47.0
-margin_bottom = 14.0
+margin_right = 203.0
+margin_bottom = 21.0
 text = "24 Grid"
 
 [node name="First" type="HBoxContainer" parent="TabContainer/Medium/Grid_24"]
-margin_top = 18.0
-margin_right = 47.0
-margin_bottom = 32.0
+margin_top = 25.0
+margin_right = 203.0
+margin_bottom = 46.0
 
 [node name="Name" type="Label" parent="TabContainer/Medium/Grid_24/First"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Medium/Grid_24/First"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Second" type="HBoxContainer" parent="TabContainer/Medium/Grid_24"]
-margin_top = 36.0
-margin_right = 47.0
-margin_bottom = 50.0
+margin_top = 50.0
+margin_right = 203.0
+margin_bottom = 71.0
 
 [node name="Name" type="Label" parent="TabContainer/Medium/Grid_24/Second"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Medium/Grid_24/Second"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Third" type="HBoxContainer" parent="TabContainer/Medium/Grid_24"]
-margin_top = 54.0
-margin_right = 47.0
-margin_bottom = 68.0
+margin_top = 75.0
+margin_right = 203.0
+margin_bottom = 96.0
 
 [node name="Name" type="Label" parent="TabContainer/Medium/Grid_24/Third"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Medium/Grid_24/Third"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Fourth" type="HBoxContainer" parent="TabContainer/Medium/Grid_24"]
-margin_top = 72.0
-margin_right = 47.0
-margin_bottom = 86.0
+margin_top = 100.0
+margin_right = 203.0
+margin_bottom = 121.0
 
 [node name="Name" type="Label" parent="TabContainer/Medium/Grid_24/Fourth"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Medium/Grid_24/Fourth"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Fifth" type="HBoxContainer" parent="TabContainer/Medium/Grid_24"]
-margin_top = 90.0
-margin_right = 47.0
-margin_bottom = 104.0
+margin_top = 125.0
+margin_right = 203.0
+margin_bottom = 146.0
 
 [node name="Name" type="Label" parent="TabContainer/Medium/Grid_24/Fifth"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Medium/Grid_24/Fifth"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Hard" type="GridContainer" parent="TabContainer"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
-margin_top = 32.0
+margin_top = 39.0
 margin_right = -4.0
 margin_bottom = -4.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 columns = 3
 
 [node name="Grid_08" type="VBoxContainer" parent="TabContainer/Hard"]
-margin_right = 47.0
-margin_bottom = 104.0
+margin_right = 65.0
+margin_bottom = 146.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="TabContainer/Hard/Grid_08"]
-margin_right = 47.0
-margin_bottom = 14.0
+margin_right = 65.0
+margin_bottom = 21.0
 text = "8 Grid"
 
 [node name="First" type="HBoxContainer" parent="TabContainer/Hard/Grid_08"]
-margin_top = 18.0
-margin_right = 47.0
-margin_bottom = 32.0
+margin_top = 25.0
+margin_right = 65.0
+margin_bottom = 46.0
 
 [node name="Name" type="Label" parent="TabContainer/Hard/Grid_08/First"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Hard/Grid_08/First"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Second" type="HBoxContainer" parent="TabContainer/Hard/Grid_08"]
-margin_top = 36.0
-margin_right = 47.0
-margin_bottom = 50.0
+margin_top = 50.0
+margin_right = 65.0
+margin_bottom = 71.0
 
 [node name="Name" type="Label" parent="TabContainer/Hard/Grid_08/Second"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Hard/Grid_08/Second"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Third" type="HBoxContainer" parent="TabContainer/Hard/Grid_08"]
-margin_top = 54.0
-margin_right = 47.0
-margin_bottom = 68.0
+margin_top = 75.0
+margin_right = 65.0
+margin_bottom = 96.0
 
 [node name="Name" type="Label" parent="TabContainer/Hard/Grid_08/Third"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Hard/Grid_08/Third"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Fourth" type="HBoxContainer" parent="TabContainer/Hard/Grid_08"]
-margin_top = 72.0
-margin_right = 47.0
-margin_bottom = 86.0
+margin_top = 100.0
+margin_right = 65.0
+margin_bottom = 121.0
 
 [node name="Name" type="Label" parent="TabContainer/Hard/Grid_08/Fourth"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Hard/Grid_08/Fourth"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Fifth" type="HBoxContainer" parent="TabContainer/Hard/Grid_08"]
-margin_top = 90.0
-margin_right = 47.0
-margin_bottom = 104.0
+margin_top = 125.0
+margin_right = 65.0
+margin_bottom = 146.0
 
 [node name="Name" type="Label" parent="TabContainer/Hard/Grid_08/Fifth"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Hard/Grid_08/Fifth"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Grid_12" type="VBoxContainer" parent="TabContainer/Hard"]
-margin_left = 51.0
-margin_right = 98.0
-margin_bottom = 104.0
+margin_left = 69.0
+margin_right = 134.0
+margin_bottom = 146.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="TabContainer/Hard/Grid_12"]
-margin_right = 47.0
-margin_bottom = 14.0
+margin_right = 65.0
+margin_bottom = 21.0
 text = "12 Grid"
 
 [node name="First" type="HBoxContainer" parent="TabContainer/Hard/Grid_12"]
-margin_top = 18.0
-margin_right = 47.0
-margin_bottom = 32.0
+margin_top = 25.0
+margin_right = 65.0
+margin_bottom = 46.0
 
 [node name="Name" type="Label" parent="TabContainer/Hard/Grid_12/First"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Hard/Grid_12/First"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Second" type="HBoxContainer" parent="TabContainer/Hard/Grid_12"]
-margin_top = 36.0
-margin_right = 47.0
-margin_bottom = 50.0
+margin_top = 50.0
+margin_right = 65.0
+margin_bottom = 71.0
 
 [node name="Name" type="Label" parent="TabContainer/Hard/Grid_12/Second"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Hard/Grid_12/Second"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Third" type="HBoxContainer" parent="TabContainer/Hard/Grid_12"]
-margin_top = 54.0
-margin_right = 47.0
-margin_bottom = 68.0
+margin_top = 75.0
+margin_right = 65.0
+margin_bottom = 96.0
 
 [node name="Name" type="Label" parent="TabContainer/Hard/Grid_12/Third"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Hard/Grid_12/Third"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Fourth" type="HBoxContainer" parent="TabContainer/Hard/Grid_12"]
-margin_top = 72.0
-margin_right = 47.0
-margin_bottom = 86.0
+margin_top = 100.0
+margin_right = 65.0
+margin_bottom = 121.0
 
 [node name="Name" type="Label" parent="TabContainer/Hard/Grid_12/Fourth"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Hard/Grid_12/Fourth"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Fifth" type="HBoxContainer" parent="TabContainer/Hard/Grid_12"]
-margin_top = 90.0
-margin_right = 47.0
-margin_bottom = 104.0
+margin_top = 125.0
+margin_right = 65.0
+margin_bottom = 146.0
 
 [node name="Name" type="Label" parent="TabContainer/Hard/Grid_12/Fifth"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Hard/Grid_12/Fifth"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Grid_16" type="VBoxContainer" parent="TabContainer/Hard"]
-margin_left = 102.0
-margin_right = 149.0
-margin_bottom = 104.0
+margin_left = 138.0
+margin_right = 198.0
+margin_bottom = 146.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="TabContainer/Hard/Grid_16"]
-margin_right = 47.0
-margin_bottom = 14.0
+margin_right = 60.0
+margin_bottom = 21.0
 text = "16 Grid"
 
 [node name="First" type="HBoxContainer" parent="TabContainer/Hard/Grid_16"]
-margin_top = 18.0
-margin_right = 47.0
-margin_bottom = 32.0
+margin_top = 25.0
+margin_right = 60.0
+margin_bottom = 46.0
 
 [node name="Name" type="Label" parent="TabContainer/Hard/Grid_16/First"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Hard/Grid_16/First"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Second" type="HBoxContainer" parent="TabContainer/Hard/Grid_16"]
-margin_top = 36.0
-margin_right = 47.0
-margin_bottom = 50.0
+margin_top = 50.0
+margin_right = 60.0
+margin_bottom = 71.0
 
 [node name="Name" type="Label" parent="TabContainer/Hard/Grid_16/Second"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Hard/Grid_16/Second"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Third" type="HBoxContainer" parent="TabContainer/Hard/Grid_16"]
-margin_top = 54.0
-margin_right = 47.0
-margin_bottom = 68.0
+margin_top = 75.0
+margin_right = 60.0
+margin_bottom = 96.0
 
 [node name="Name" type="Label" parent="TabContainer/Hard/Grid_16/Third"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Hard/Grid_16/Third"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Fourth" type="HBoxContainer" parent="TabContainer/Hard/Grid_16"]
-margin_top = 72.0
-margin_right = 47.0
-margin_bottom = 86.0
+margin_top = 100.0
+margin_right = 60.0
+margin_bottom = 121.0
 
 [node name="Name" type="Label" parent="TabContainer/Hard/Grid_16/Fourth"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Hard/Grid_16/Fourth"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Fifth" type="HBoxContainer" parent="TabContainer/Hard/Grid_16"]
-margin_top = 90.0
-margin_right = 47.0
-margin_bottom = 104.0
+margin_top = 125.0
+margin_right = 60.0
+margin_bottom = 146.0
 
 [node name="Name" type="Label" parent="TabContainer/Hard/Grid_16/Fifth"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Hard/Grid_16/Fifth"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Grid_20" type="VBoxContainer" parent="TabContainer/Hard"]
-margin_top = 108.0
-margin_right = 47.0
-margin_bottom = 212.0
+margin_top = 150.0
+margin_right = 65.0
+margin_bottom = 296.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="TabContainer/Hard/Grid_20"]
-margin_right = 47.0
-margin_bottom = 14.0
+margin_right = 65.0
+margin_bottom = 21.0
 text = "20 Grid"
 
 [node name="First" type="HBoxContainer" parent="TabContainer/Hard/Grid_20"]
-margin_top = 18.0
-margin_right = 47.0
-margin_bottom = 32.0
+margin_top = 25.0
+margin_right = 65.0
+margin_bottom = 46.0
 
 [node name="Name" type="Label" parent="TabContainer/Hard/Grid_20/First"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Hard/Grid_20/First"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Second" type="HBoxContainer" parent="TabContainer/Hard/Grid_20"]
-margin_top = 36.0
-margin_right = 47.0
-margin_bottom = 50.0
+margin_top = 50.0
+margin_right = 65.0
+margin_bottom = 71.0
 
 [node name="Name" type="Label" parent="TabContainer/Hard/Grid_20/Second"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Hard/Grid_20/Second"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Third" type="HBoxContainer" parent="TabContainer/Hard/Grid_20"]
-margin_top = 54.0
-margin_right = 47.0
-margin_bottom = 68.0
+margin_top = 75.0
+margin_right = 65.0
+margin_bottom = 96.0
 
 [node name="Name" type="Label" parent="TabContainer/Hard/Grid_20/Third"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Hard/Grid_20/Third"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Fourth" type="HBoxContainer" parent="TabContainer/Hard/Grid_20"]
-margin_top = 72.0
-margin_right = 47.0
-margin_bottom = 86.0
+margin_top = 100.0
+margin_right = 65.0
+margin_bottom = 121.0
 
 [node name="Name" type="Label" parent="TabContainer/Hard/Grid_20/Fourth"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Hard/Grid_20/Fourth"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Fifth" type="HBoxContainer" parent="TabContainer/Hard/Grid_20"]
-margin_top = 90.0
-margin_right = 47.0
-margin_bottom = 104.0
+margin_top = 125.0
+margin_right = 65.0
+margin_bottom = 146.0
 
 [node name="Name" type="Label" parent="TabContainer/Hard/Grid_20/Fifth"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Hard/Grid_20/Fifth"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Grid_24" type="VBoxContainer" parent="TabContainer/Hard"]
-margin_left = 51.0
-margin_top = 108.0
-margin_right = 98.0
-margin_bottom = 212.0
+margin_left = 69.0
+margin_top = 150.0
+margin_right = 134.0
+margin_bottom = 296.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="TabContainer/Hard/Grid_24"]
-margin_right = 47.0
-margin_bottom = 14.0
+margin_right = 65.0
+margin_bottom = 21.0
 text = "24 Grid"
 
 [node name="First" type="HBoxContainer" parent="TabContainer/Hard/Grid_24"]
-margin_top = 18.0
-margin_right = 47.0
-margin_bottom = 32.0
+margin_top = 25.0
+margin_right = 65.0
+margin_bottom = 46.0
 
 [node name="Name" type="Label" parent="TabContainer/Hard/Grid_24/First"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Hard/Grid_24/First"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Second" type="HBoxContainer" parent="TabContainer/Hard/Grid_24"]
-margin_top = 36.0
-margin_right = 47.0
-margin_bottom = 50.0
+margin_top = 50.0
+margin_right = 65.0
+margin_bottom = 71.0
 
 [node name="Name" type="Label" parent="TabContainer/Hard/Grid_24/Second"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Hard/Grid_24/Second"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Third" type="HBoxContainer" parent="TabContainer/Hard/Grid_24"]
-margin_top = 54.0
-margin_right = 47.0
-margin_bottom = 68.0
+margin_top = 75.0
+margin_right = 65.0
+margin_bottom = 96.0
 
 [node name="Name" type="Label" parent="TabContainer/Hard/Grid_24/Third"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Hard/Grid_24/Third"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Fourth" type="HBoxContainer" parent="TabContainer/Hard/Grid_24"]
-margin_top = 72.0
-margin_right = 47.0
-margin_bottom = 86.0
+margin_top = 100.0
+margin_right = 65.0
+margin_bottom = 121.0
 
 [node name="Name" type="Label" parent="TabContainer/Hard/Grid_24/Fourth"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Hard/Grid_24/Fourth"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Fifth" type="HBoxContainer" parent="TabContainer/Hard/Grid_24"]
-margin_top = 90.0
-margin_right = 47.0
-margin_bottom = 104.0
+margin_top = 125.0
+margin_right = 65.0
+margin_bottom = 146.0
 
 [node name="Name" type="Label" parent="TabContainer/Hard/Grid_24/Fifth"]
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="Score" type="Label" parent="TabContainer/Hard/Grid_24/Fifth"]
 margin_left = 4.0
 margin_right = 4.0
-margin_bottom = 14.0
+margin_bottom = 21.0
 
 [node name="MainMenuButton" type="Button" parent="."]
 anchor_left = 0.216
-anchor_top = 0.912
+anchor_top = 0.875
 anchor_right = 0.784
-anchor_bottom = 0.975
+anchor_bottom = 0.981
 margin_left = 0.199997
-margin_top = 0.23996
+margin_top = -6.10352e-05
 margin_right = -0.200012
+margin_bottom = 0.119934
 text = "Main Menu"
 __meta__ = {
 "_edit_use_anchors_": false

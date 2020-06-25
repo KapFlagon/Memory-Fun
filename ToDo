@@ -1,6 +1,3 @@
-> Local high score with persistent data (prepped for web).
-- Hide/show relevant data based on tab selection
-- Format the High Score Screen
 > Expand Keyboard controls (tabbing for menu items, enter to select, etc.)
 > In "Options" screen, add swatches to display palette used by cards.
 > Remember to change config file from RES to USER 

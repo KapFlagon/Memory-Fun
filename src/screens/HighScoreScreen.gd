@@ -29,16 +29,19 @@ func populate_tables() -> void:
 	
 	for i_difficulty in range (3):
 		var temp_node_path_1
-		if i_difficulty == 0: #easy
-			temp_node_path_1 = node_difficulty_easy
-		elif i_difficulty == 1: #medium
-			temp_node_path_1 = node_difficulty_medium
-		else: #2 hard
-			temp_node_path_1 = node_difficulty_hard
+
 			
 		for grid_size in [8, 12, 16, 20, 24]:
 			# Loop iterates 5 times with 'grid_size' as 8, 12, etc.
-			temp_shallow = ScoreManager.dict_easy.get(grid_size)
+			if i_difficulty == 0: #easy
+				temp_node_path_1 = node_difficulty_easy
+				temp_shallow = ScoreManager.dict_easy.get(grid_size)
+			elif i_difficulty == 1: #medium
+				temp_node_path_1 = node_difficulty_medium
+				temp_shallow = ScoreManager.dict_medium.get(grid_size)
+			else: #2 hard
+				temp_node_path_1 = node_difficulty_hard
+				temp_shallow = ScoreManager.dict_hard.get(grid_size)
 			var temp_node_path_2
 			if grid_size == 8: 
 				temp_node_path_2 = temp_node_path_1 + node_grid_08
@@ -51,7 +54,7 @@ func populate_tables() -> void:
 			else:
 				temp_node_path_2 = temp_node_path_1 + node_grid_24
 				
-			print("temp_shallow size: " + str(temp_shallow.size()))
+			#print("temp_shallow size: " + str(temp_shallow.size()))
 			for rank in temp_shallow.size():
 				var temp_node_path_3
 				temp_deep = temp_shallow[rank]
@@ -72,8 +75,6 @@ func populate_tables() -> void:
 				var temp_node_score = temp_node_path_3 + node_l_score
 				get_node(temp_node_name).text = temp_name
 				get_node(temp_node_score).text = temp_score
-	#get_node(c_difficulty+grid+first_pos+p_name).text = temp_name
-	#get_node(c_difficulty+grid+first_pos+p_score).text = temp_score
 
 
 func _on_MainMenuButton_button_up() -> void:
