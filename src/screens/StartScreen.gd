@@ -11,6 +11,7 @@ func _ready() -> void:
 
 func _on_OptionsButton_options_submitted() -> void:
 	get_node("ColorRect").set_frame_color(PlayerData.get_background_colour())
+	get_node("VBox_MainMenu/HBoxContainer/ColourBlindCheckBox").pressed = PlayerData.get_colour_blind_mode_on()
 
 
 func _on_CreditsButton_button_up() -> void:
