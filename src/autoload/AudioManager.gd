@@ -53,21 +53,22 @@ func check_music() -> void:
 
 
 func play_rand_sfx() -> void:
-	var rand_sound = random.randi_range(0, 2)
-	var sfx_vol = AudioManager.get_sfx_vol()
-	match rand_sound:
-		0: 
-			get_node("SFX_01").set_volume_db(get_sfx_vol())
-			get_node("SFX_01").play()
-		1: 
-			get_node("SFX_02").set_volume_db(get_sfx_vol())
-			get_node("SFX_02").play()
-		2: 
-			get_node("SFX_03").set_volume_db(get_sfx_vol())
-			get_node("SFX_03").play()
+	if sfx_on:
+		var rand_sound = random.randi_range(0, 2)
+		var sfx_vol = AudioManager.get_sfx_vol()
+		match rand_sound:
+			0: 
+				get_node("SFX_01").set_volume_db(get_sfx_vol())
+				get_node("SFX_01").play()
+			1: 
+				get_node("SFX_02").set_volume_db(get_sfx_vol())
+				get_node("SFX_02").play()
+			2: 
+				get_node("SFX_03").set_volume_db(get_sfx_vol())
+				get_node("SFX_03").play()
 
 
 func play_victory_sound() -> void: 
-	if AudioManager.get_sfx_on():
+	if sfx_on:
 		get_node("VictorySound").set_volume_db(get_sfx_vol())
 		get_node("VictorySound").play()

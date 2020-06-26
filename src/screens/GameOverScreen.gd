@@ -23,10 +23,12 @@ func _on_OptionsButton_options_submitted() -> void:
 
 
 func _on_MainMenuButton_button_up() -> void:
+	AudioManager.play_rand_sfx()
 	get_tree().change_scene("res://src/screens/StartScreen.tscn")
 
 
 func _on_SubmitButton_button_up() -> void:
+	AudioManager.play_rand_sfx()
 	# Save score and name via score manager
 	var name = get_node("Popup_NameEntry/VBoxContainer/LineEdit").get_text()
 	var score = PlayerData.get_game_time_secs()

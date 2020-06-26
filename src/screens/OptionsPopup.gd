@@ -76,9 +76,7 @@ func _on_SfxOnChckbx_toggled(button_pressed: bool) -> void:
 
 func _on_SfxVol_Slider_value_changed(value: float) -> void:
 	AudioManager.set_sfx_vol(value)
-	var sfx_on = AudioManager.get_sfx_on()
-	if sfx_on:
-		AudioManager.play_rand_sfx()
+	AudioManager.play_rand_sfx()
 
 
 func _on_MusicOnChckbx_toggled(button_pressed: bool) -> void:
@@ -98,6 +96,4 @@ func _on_OptionsPopup_about_to_show() -> void:
 func _on_ColourBLindChkBx_toggled(button_pressed: bool) -> void:
 	new_colour_blind_mode = button_pressed
 	PlayerData.set_colour_blind_mode_on(new_colour_blind_mode)
-	var sfx_on = AudioManager.get_sfx_on()
-	if sfx_on:
-		AudioManager.play_rand_sfx()
+	AudioManager.play_rand_sfx()

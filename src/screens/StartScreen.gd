@@ -16,19 +16,20 @@ func _on_OptionsButton_options_submitted() -> void:
 
 func _on_CreditsButton_button_up() -> void:
 	get_tree().change_scene("res://src/screens/CreditsScreen.tscn")
+	AudioManager.play_rand_sfx()
 
 
 func _on_CheckBox_toggled(button_pressed: bool) -> void:
 	PlayerData.set_colour_blind_mode_on(button_pressed)
 	Config.save_config()
-	var sfx_on = AudioManager.get_sfx_on()
-	if sfx_on:
-		AudioManager.play_rand_sfx()
+	AudioManager.play_rand_sfx()
 
 
 func _on_HowToPlayButton_button_up() -> void:
 	get_tree().change_scene("res://src/screens/HowToPlayScreen.tscn")
+	AudioManager.play_rand_sfx()
 
 
 func _on_HighScoreButton_button_up() -> void:
 	get_tree().change_scene("res://src/screens/HighScoreScreen.tscn")
+	AudioManager.play_rand_sfx()

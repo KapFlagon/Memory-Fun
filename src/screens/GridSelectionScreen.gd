@@ -42,4 +42,5 @@ func next_scene() -> void:
 
 
 func _on_MainMenu_button_up() -> void:
+	AudioManager.play_rand_sfx()
 	get_tree().change_scene("res://src/screens/StartScreen.tscn")

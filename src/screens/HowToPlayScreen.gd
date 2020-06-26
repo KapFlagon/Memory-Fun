@@ -12,6 +12,7 @@ func _ready() -> void:
 
 
 func _on_Button_MainMenu_button_up() -> void:
+	AudioManager.play_rand_sfx()
 	get_tree().change_scene("res://src/screens/StartScreen.tscn")
 
 
@@ -28,12 +29,14 @@ func update_button_visibility() -> void:
 
 
 func _on_Button_Back_button_up() -> void:
+	AudioManager.play_rand_sfx()
 	current_page = current_page - 1
 	update_display()
 	update_button_visibility()
 
 
 func _on_Button_Next_button_up() -> void:
+	AudioManager.play_rand_sfx()
 	current_page = current_page + 1
 	update_display()
 	update_button_visibility()

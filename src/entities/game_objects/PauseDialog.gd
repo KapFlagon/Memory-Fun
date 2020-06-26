@@ -31,19 +31,22 @@ func _on_PauseDialog_popup_hide() -> void:
 
 
 func _on_ResumeButton_button_up() -> void:
+	AudioManager.play_rand_sfx()
 	hide()
 	get_tree().paused = false
 
 
 func _on_OptionsButton_options_submitted() -> void:
-	#get_node("ColorRect").set_frame_color(PlayerData.get_background_colour())
 	emit_signal("pause_options_submitted")
+	AudioManager.play_rand_sfx()
 
 
 func _on_MainMenuButton_button_up() -> void:
+	AudioManager.play_rand_sfx()
 	get_tree().paused = false
 	get_tree().change_scene("res://src/screens/StartScreen.tscn")
 
 
 func _on_PauseDialog_about_to_show() -> void:
+	AudioManager.play_rand_sfx()
 	pause_start_time = OS.get_unix_time()

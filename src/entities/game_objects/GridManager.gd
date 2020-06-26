@@ -241,21 +241,29 @@ func process_inputs() -> void:
 		var down_movement = Vector2(0, 1)
 		if Input.is_action_just_pressed("ui_right"):
 			new_location = current_selector_position + right_movement
-			update_selection_icon_location(new_location)
+			var valid = update_selection_icon_location(new_location)
+			if valid:
+				AudioManager.play_rand_sfx()
 		if Input.is_action_just_pressed("ui_left"):
 			new_location = current_selector_position + left_movement
-			update_selection_icon_location(new_location)
+			var valid = update_selection_icon_location(new_location)
+			if valid:
+				AudioManager.play_rand_sfx()
 		if Input.is_action_just_pressed("ui_up"):
 			new_location = current_selector_position + up_movement
-			update_selection_icon_location(new_location)
+			var valid = update_selection_icon_location(new_location)
+			if valid:
+				AudioManager.play_rand_sfx()
 		if Input.is_action_just_pressed("ui_down"):
 			new_location = current_selector_position + down_movement
-			update_selection_icon_location(new_location)
+			var valid = update_selection_icon_location(new_location)
+			if valid:
+				AudioManager.play_rand_sfx()
 		if Input.is_action_just_pressed("ui_accept"): #or Input.is_action_just_released("ui_select"):
-			AudioManager.play_rand_sfx()
 			#print("ui_accept or ui_select detected")
 			var valid_selection = validate_selection(current_selector_position)
 			if valid_selection:
+				AudioManager.play_rand_sfx()
 				flip_chosen_card(current_selector_position)
 		if Input.is_action_just_released("ui_end"): 
 			#print()
@@ -309,6 +317,7 @@ func process_touch() -> void:
 	var valid_touch = update_selection_icon_location(new_cursor_grid)
 	var valid_selection = validate_selection(current_selector_position)
 	if valid_touch and valid_selection:
+		AudioManager.play_rand_sfx()
 		flip_chosen_card(current_selector_position)
 
 

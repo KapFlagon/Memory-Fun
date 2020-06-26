@@ -29,8 +29,6 @@ func populate_tables() -> void:
 	
 	for i_difficulty in range (3):
 		var temp_node_path_1
-
-			
 		for grid_size in [8, 12, 16, 20, 24]:
 			# Loop iterates 5 times with 'grid_size' as 8, 12, etc.
 			if i_difficulty == 0: #easy
@@ -78,4 +76,9 @@ func populate_tables() -> void:
 
 
 func _on_MainMenuButton_button_up() -> void:
+	AudioManager.play_rand_sfx()
 	get_tree().change_scene("res://src/screens/StartScreen.tscn")
+
+
+func _on_TabContainer_tab_changed(tab: int) -> void:
+	AudioManager.play_rand_sfx()

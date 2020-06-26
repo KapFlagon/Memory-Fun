@@ -1245,4 +1245,5 @@ text = "Main Menu"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="tab_changed" from="TabContainer" to="." method="_on_TabContainer_tab_changed"]
 [connection signal="button_up" from="MainMenuButton" to="." method="_on_MainMenuButton_button_up"]
