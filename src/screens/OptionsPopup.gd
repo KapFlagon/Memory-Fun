@@ -97,3 +97,11 @@ func _on_ColourBLindChkBx_toggled(button_pressed: bool) -> void:
 	new_colour_blind_mode = button_pressed
 	PlayerData.set_colour_blind_mode_on(new_colour_blind_mode)
 	AudioManager.play_rand_sfx()
+
+
+func _on_ResetButton_button_up() -> void:
+	AudioManager.play_rand_sfx()
+	PlayerData.reset_defaults()
+	AudioManager.reset_defaults()
+	Config.save_config()
+	hide()

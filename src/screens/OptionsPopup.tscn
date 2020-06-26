@@ -63,10 +63,10 @@ __meta__ = {
 }
 
 [node name="GridContainer" type="GridContainer" parent="VBox_Options"]
-margin_left = 25.0
+margin_left = 26.0
 margin_top = 53.0
-margin_right = 335.0
-margin_bottom = 282.0
+margin_right = 334.0
+margin_bottom = 251.0
 size_flags_horizontal = 4
 theme = ExtResource( 2 )
 columns = 2
@@ -79,7 +79,7 @@ text = "Enable Colorblind Mode:"
 
 [node name="ColourBLindChkBx" type="CheckBox" parent="VBox_Options/GridContainer"]
 margin_left = 232.0
-margin_right = 310.0
+margin_right = 308.0
 margin_bottom = 29.0
 theme = ExtResource( 2 )
 align = 1
@@ -94,7 +94,7 @@ align = 1
 [node name="ColorPickerButton" type="ColorPickerButton" parent="VBox_Options/GridContainer"]
 margin_left = 232.0
 margin_top = 33.0
-margin_right = 310.0
+margin_right = 308.0
 margin_bottom = 60.0
 color = Color( 0.172549, 0.545098, 0.509804, 1 )
 
@@ -108,7 +108,7 @@ align = 1
 [node name="SfxOnChckbx" type="CheckButton" parent="VBox_Options/GridContainer"]
 margin_left = 232.0
 margin_top = 64.0
-margin_right = 310.0
+margin_right = 308.0
 margin_bottom = 104.0
 pressed = true
 
@@ -122,7 +122,7 @@ align = 1
 [node name="SfxVol_Slider" type="HSlider" parent="VBox_Options/GridContainer"]
 margin_left = 232.0
 margin_top = 108.0
-margin_right = 310.0
+margin_right = 308.0
 margin_bottom = 124.0
 min_value = -80.0
 max_value = 0.0
@@ -139,7 +139,7 @@ align = 1
 [node name="MusicOnChckbx" type="CheckButton" parent="VBox_Options/GridContainer"]
 margin_left = 232.0
 margin_top = 133.0
-margin_right = 310.0
+margin_right = 308.0
 margin_bottom = 173.0
 pressed = true
 __meta__ = {
@@ -156,24 +156,37 @@ align = 1
 [node name="MusicVol_Slider" type="HSlider" parent="VBox_Options/GridContainer"]
 margin_left = 232.0
 margin_top = 177.0
-margin_right = 310.0
+margin_right = 308.0
 margin_bottom = 193.0
 min_value = -80.0
 max_value = 0.0
 step = 5.0
 tick_count = 10
 
-[node name="SubmitOptionsButton" parent="VBox_Options/GridContainer" instance=ExtResource( 5 )]
-margin_left = 71.0
-margin_top = 202.0
-margin_right = 156.0
-margin_bottom = 229.0
+[node name="HBoxContainer" type="HBoxContainer" parent="VBox_Options"]
+margin_top = 255.0
+margin_right = 361.0
+margin_bottom = 282.0
+theme = ExtResource( 2 )
+alignment = 1
 
-[node name="CancelButton" parent="VBox_Options/GridContainer" instance=ExtResource( 4 )]
+[node name="SubmitOptionsButton" parent="VBox_Options/HBoxContainer" instance=ExtResource( 5 )]
+margin_left = 61.0
+margin_top = 0.0
+margin_right = 146.0
+margin_bottom = 27.0
+
+[node name="CancelButton" parent="VBox_Options/HBoxContainer" instance=ExtResource( 4 )]
+margin_left = 150.0
+margin_top = 0.0
+margin_right = 228.0
+margin_bottom = 27.0
+
+[node name="ResetButton" type="Button" parent="VBox_Options/HBoxContainer"]
 margin_left = 232.0
-margin_top = 202.0
-margin_right = 310.0
-margin_bottom = 229.0
+margin_right = 299.0
+margin_bottom = 27.0
+text = "Reset"
 [connection signal="about_to_show" from="." to="." method="_on_OptionsPopup_about_to_show"]
 [connection signal="toggled" from="VBox_Options/GridContainer/ColourBLindChkBx" to="." method="_on_ColourBLindChkBx_toggled"]
 [connection signal="color_changed" from="VBox_Options/GridContainer/ColorPickerButton" to="." method="_on_ColorPickerButton_color_changed"]
@@ -181,5 +194,6 @@ margin_bottom = 229.0
 [connection signal="value_changed" from="VBox_Options/GridContainer/SfxVol_Slider" to="." method="_on_SfxVol_Slider_value_changed"]
 [connection signal="toggled" from="VBox_Options/GridContainer/MusicOnChckbx" to="." method="_on_MusicOnChckbx_toggled"]
 [connection signal="value_changed" from="VBox_Options/GridContainer/MusicVol_Slider" to="." method="_on_MusicVol_Slider_value_changed"]
-[connection signal="button_up" from="VBox_Options/GridContainer/SubmitOptionsButton" to="." method="_on_SubmitOptionsButton_button_up"]
-[connection signal="button_up" from="VBox_Options/GridContainer/CancelButton" to="." method="_on_CancelButton_button_up"]
+[connection signal="button_up" from="VBox_Options/HBoxContainer/SubmitOptionsButton" to="." method="_on_SubmitOptionsButton_button_up"]
+[connection signal="button_up" from="VBox_Options/HBoxContainer/CancelButton" to="." method="_on_CancelButton_button_up"]
+[connection signal="button_up" from="VBox_Options/HBoxContainer/ResetButton" to="." method="_on_ResetButton_button_up"]

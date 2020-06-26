@@ -151,6 +151,6 @@ margin_bottom = 159.0
 text = "Submit"
 [connection signal="button_up" from="VBox/PlayAgainButton" to="." method="_on_PlayAgainButton_button_up"]
 [connection signal="button_up" from="VBox/NewVariants" to="." method="_on_NewVariants_button_up"]
-[connection signal="options_submitted" from="VBox/OptionsButton" to="." method="_on_OptionsButton_options_submitted"]
+[connection signal="popup_hidden" from="VBox/OptionsButton" to="." method="_on_OptionsButton_popup_hidden"]
 [connection signal="button_up" from="VBox/MainMenuButton" to="." method="_on_MainMenuButton_button_up"]
 [connection signal="button_up" from="Popup_NameEntry/VBoxContainer/SubmitButton" to="." method="_on_SubmitButton_button_up"]

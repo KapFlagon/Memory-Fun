@@ -72,3 +72,10 @@ func play_victory_sound() -> void:
 	if sfx_on:
 		get_node("VictorySound").set_volume_db(get_sfx_vol())
 		get_node("VictorySound").play()
+
+
+func reset_defaults() -> void:
+	set_music_on(true)
+	set_music_vol(0)
+	set_sfx_on(true)
+	set_sfx_vol(0)

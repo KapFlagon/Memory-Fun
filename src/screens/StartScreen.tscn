@@ -93,7 +93,7 @@ margin_bottom = 29.0
 theme = ExtResource( 2 )
 text = "Enable Colorblind Mode"
 align = 1
-[connection signal="options_submitted" from="VBox_MainMenu/OptionsButton" to="." method="_on_OptionsButton_options_submitted"]
+[connection signal="popup_hidden" from="VBox_MainMenu/OptionsButton" to="." method="_on_OptionsButton_popup_hidden"]
 [connection signal="button_up" from="VBox_MainMenu/HowToPlayButton" to="." method="_on_HowToPlayButton_button_up"]
 [connection signal="button_up" from="VBox_MainMenu/HighScoreButton" to="." method="_on_HighScoreButton_button_up"]
 [connection signal="button_up" from="VBox_MainMenu/CreditsButton" to="." method="_on_CreditsButton_button_up"]

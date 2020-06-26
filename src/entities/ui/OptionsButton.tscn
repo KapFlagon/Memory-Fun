@@ -15,4 +15,5 @@ __meta__ = {
 
 [node name="OptionsPopup" parent="." instance=ExtResource( 2 )]
 [connection signal="button_up" from="." to="." method="_on_OptionsButton_button_up"]
+[connection signal="popup_hide" from="OptionsPopup" to="." method="_on_OptionsPopup_popup_hide"]
 [connection signal="popup_submitted" from="OptionsPopup" to="." method="_on_OptionsPopup_popup_submitted"]

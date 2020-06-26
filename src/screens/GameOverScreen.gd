@@ -18,10 +18,6 @@ func _on_NewVariants_button_up() -> void:
 	get_tree().change_scene("res://src/screens/DifficultySelectionScreen.tscn")
 
 
-func _on_OptionsButton_options_submitted() -> void:
-	get_node("ColorRect").set_frame_color(PlayerData.get_background_colour())
-
-
 func _on_MainMenuButton_button_up() -> void:
 	AudioManager.play_rand_sfx()
 	get_tree().change_scene("res://src/screens/StartScreen.tscn")
@@ -35,3 +31,7 @@ func _on_SubmitButton_button_up() -> void:
 	ScoreManager.new_score(name, score, PlayerData.get_difficulty(), PlayerData.get_grid_size())
 	get_node("Popup_NameEntry").hide()
 	pass # Replace with function body.
+
+
+func _on_OptionsButton_popup_hidden() -> void:
+	get_node("ColorRect").set_frame_color(PlayerData.get_background_colour())

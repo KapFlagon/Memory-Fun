@@ -72,3 +72,8 @@ func secs_to_string(elapsed_time):
 	var seconds = elapsed_time % 60
 	var str_elapsed_time = "%02d:%02d" % [minutes, seconds]
 	return str_elapsed_time
+
+
+func reset_defaults() -> void:
+	set_background_colour(Color(0.172549,0.545098,0.509804,1))
+	set_colour_blind_mode_on(false)

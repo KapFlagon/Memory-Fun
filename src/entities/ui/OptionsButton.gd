@@ -1,7 +1,7 @@
 extends Button
 
 
-signal options_submitted
+signal popup_hidden
 
 
 # Called when the node enters the scene tree for the first time.
@@ -20,4 +20,12 @@ func _on_OptionsButton_button_up() -> void:
 
 
 func _on_OptionsPopup_popup_submitted() -> void:
-	emit_signal("options_submitted")
+	send_signal()
+
+
+func _on_OptionsPopup_popup_hide() -> void:
+	send_signal()
+
+
+func send_signal() -> void:
+	emit_signal("popup_hidden")
