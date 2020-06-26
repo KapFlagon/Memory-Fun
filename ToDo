@@ -9,6 +9,5 @@ Bug fixes:
 	- Option 2: restrict the colours available to save as background colour
 	- Option 3: Leverage signal color_changed and validate selection? 
 	- Option 4: Select a hue threshold, and if the user selects that then the values auto-snap to a more acceptable value.
-> Need to validate user input for name submission
-	- Restrict length
 > Reset button to restore factory configurations
+> Some button presses are playing sfx even though global options should disable it.

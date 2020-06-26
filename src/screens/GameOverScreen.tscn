@@ -140,6 +140,7 @@ align = 1
 margin_top = 49.0
 margin_right = 389.0
 margin_bottom = 104.0
+max_length = 10
 placeholder_text = "Your Name"
 caret_blink = true
 
