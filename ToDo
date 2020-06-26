@@ -3,9 +3,3 @@ Future Improvements:
 > In "Options" screen, add swatches to display palette used by cards.
 > Add option to select different pre-created card backs.
 
-Bug fixes:
-> Users can select a background colour that is full white or full black, which could hide some text
-	- Option 1: Dynamically colour the text based on the background colour
-	- Option 2: restrict the colours available to save as background colour
-	- Option 3: Leverage signal color_changed and validate selection? 
-	- Option 4: Select a hue threshold, and if the user selects that then the values auto-snap to a more acceptable value.
