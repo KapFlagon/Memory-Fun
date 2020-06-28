@@ -6,6 +6,9 @@ func _ready() -> void:
 	get_node("ColorRect").set_frame_color(PlayerData.get_background_colour())
 	$VBox/HBoxContainer/StatText.set_text(PlayerData.get_game_time_str())
 	get_node("Popup_NameEntry").popup()
+	
+func _process(delta: float) -> void:
+	process_inputs()
 
 
 func _on_PlayAgainButton_button_up() -> void:
@@ -35,3 +38,9 @@ func _on_SubmitButton_button_up() -> void:
 
 func _on_OptionsButton_popup_hidden() -> void:
 	get_node("ColorRect").set_frame_color(PlayerData.get_background_colour())
+
+
+func process_inputs() -> void:
+	if get_node("Popup_NameEntry").visible == true:
+		if Input.is_action_just_pressed("ui_accept"):
+			_on_SubmitButton_button_up()

@@ -259,8 +259,8 @@ func process_inputs() -> void:
 			var valid = update_selection_icon_location(new_location)
 			if valid:
 				AudioManager.play_rand_sfx()
-		if Input.is_action_just_pressed("ui_accept"): #or Input.is_action_just_released("ui_select"):
-			#print("ui_accept or ui_select detected")
+		if Input.is_action_just_pressed("ui_select"): #or Input.is_action_just_released("ui_select"):
+			#print("ui_select or ui_select detected")
 			var valid_selection = validate_selection(current_selector_position)
 			if valid_selection:
 				AudioManager.play_rand_sfx()
