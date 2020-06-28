@@ -19,13 +19,16 @@ func _on_Button_MainMenu_button_up() -> void:
 func update_button_visibility() -> void: 
 	if current_page == 1:
 		get_node("HBox_Buttons/Button_Back").disabled = true
-		get_node("HBox_Buttons/Button_Next").disabled = false
+		get_node("HBox_Buttons/Button_Next").set_text("Next")
+		#get_node("HBox_Buttons/Button_Next").disabled = false
 	elif current_page == 2: 
 		get_node("HBox_Buttons/Button_Back").disabled = false
-		get_node("HBox_Buttons/Button_Next").disabled = false
+		get_node("HBox_Buttons/Button_Next").set_text("Next")
+		#get_node("HBox_Buttons/Button_Next").disabled = false
 	else: 
 		get_node("HBox_Buttons/Button_Back").disabled = false
-		get_node("HBox_Buttons/Button_Next").disabled = true
+		get_node("HBox_Buttons/Button_Next").set_text("Start Game!")
+		#get_node("HBox_Buttons/Button_Next").disabled = true
 
 
 func _on_Button_Back_button_up() -> void:
@@ -36,10 +39,13 @@ func _on_Button_Back_button_up() -> void:
 
 
 func _on_Button_Next_button_up() -> void:
-	AudioManager.play_rand_sfx()
-	current_page = current_page + 1
-	update_display()
-	update_button_visibility()
+	if current_page == 3:
+		get_tree().change_scene("res://src/screens/DifficultySelectionScreen.tscn")
+	else:
+		AudioManager.play_rand_sfx()
+		current_page = current_page + 1
+		update_display()
+		update_button_visibility()
 
 
 func update_display() -> void:
