@@ -61,7 +61,7 @@ func update_display() -> void:
 	# Page 1
 	if current_page == 1:
 		var game_start_text = "Select a difficulty level and a grid size to begin."
-		var goal_text = "Match all cards as quick as you can!"
+		var goal_text = "Match all cards as quickly as you can!"
 		var goal_img = load("res://assets/images/how_to/HowTo_01.png")
 		var difficulty_text = "Higher difficulty levels introduce more shapes and colours."
 		text_1 = game_start_text
@@ -75,7 +75,7 @@ func update_display() -> void:
 	# Page 2
 	if current_page == 2:
 		var controls_directions_text = "Use the 'WASD' keys, the arrow keys, \nor left-mouse clicks to move the selector icon."
-		var controls_input_text = "Use the Space key or Enter key to flip a card. \nThe left-mouse click also flips card."
+		var controls_input_text = "Use the Space key or Enter key to flip a card. \nThe left-mouse click also flips a card."
 		
 		var failed_match_img = load("res://assets/images/how_to/HowTo_02.png")
 		text_1 = controls_directions_text

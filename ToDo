@@ -1,6 +1,3 @@
-> Desired features:
-	- Option to start game on last page of the "how to" screen.
-
 > Future Improvements:
 	- Expand Keyboard controls (tabbing for menu items, enter to select, etc.)
 	- In "Options" screen, add swatches to display palette used by cards.
@@ -9,3 +6,4 @@
 
 Bugs:
 	- Grammar in "how to screen".
+	- Allow unpausing via "escape" button
