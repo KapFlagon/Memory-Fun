@@ -90,6 +90,7 @@ func _on_MusicVol_Slider_value_changed(value: float) -> void:
 
 func _on_OptionsPopup_about_to_show() -> void:
 	get_node("PopupBackground").set_frame_color(PlayerData.get_background_colour())
+	ready_texts()
 	get_config_data()
 
 
@@ -105,3 +106,18 @@ func _on_ResetButton_button_up() -> void:
 	AudioManager.reset_defaults()
 	Config.save_config()
 	hide()
+
+
+func ready_texts() -> void:
+	# 14 entries of text  (all labels, plus on/off text for buttons)
+	get_node("VBox_Options/Options").set_text(tr("OPTIONS"))
+	get_node("VBox_Options/GridContainer/ColourBlindLabel").set_text(tr("COLOURBLIND_MODE")+":")
+	get_node("VBox_Options/GridContainer/BckgrndColLabel").set_text(tr("BACKGROUND_COLOUR")+":")
+	get_node("VBox_Options/GridContainer/SfxOn_Label").set_text(tr("SFX_ON")+":")
+	get_node("VBox_Options/GridContainer/SfxVol_Label").set_text(tr("SFX_VOL")+":")
+	get_node("VBox_Options/GridContainer/MusicOn_Label").set_text(tr("MUS_ON")+":")
+	get_node("VBox_Options/GridContainer/MusicVol_Label").set_text(tr("MUS_VOL")+":")
+	get_node("VBox_Options/HBoxContainer/SubmitOptionsButton").set_text(tr("SUBMIT"))
+	get_node("VBox_Options/HBoxContainer/CancelButton").set_text(tr("CANCEL"))
+	get_node("VBox_Options/HBoxContainer/ResetButton").set_text(tr("RESET"))
+	# Need to either

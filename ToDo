@@ -3,6 +3,16 @@
 	- In "Options" screen, add swatches to display palette used by cards.
 	- Add option to select different pre-created card backs.
 	- Use localization/translation features to add other language options. 
+		) Start screen ; Done
+		) Options pop-up ; Almost Done (see next future implementation)
+		) Pause pop-up ; 
+		) Credits Screen ; 
+		) High Scores Screen ; 
+		) How to Play screen ; 
+		) Game Over screen ; 
+		) Difficulty screen ; 
+		) Grid screen ; 
+	- Update themes so that checkboxButtons do not use words and instead use images of a tick and an x to signify "on" and "off".
 
 Bugs:
 	- Grammar in "how to screen".
