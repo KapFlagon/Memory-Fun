@@ -1,5 +1,13 @@
-Future Improvements:
-> Expand Keyboard controls (tabbing for menu items, enter to select, etc.)
-> In "Options" screen, add swatches to display palette used by cards.
-> Add option to select different pre-created card backs.
+> Desired features:
+	- Option to start game on last page of the "how to" screen.
 
+> Future Improvements:
+	- Expand Keyboard controls (tabbing for menu items, enter to select, etc.)
+	- In "Options" screen, add swatches to display palette used by cards.
+	- Add option to select different pre-created card backs.
+	- Use localization/translation features to add other language options. 
+
+Bugs:
+	- Scores in High-score table are not being sorted in the correct order.
+	- Grammar in "how to screen".
+	- Use "Enter" key as well as "submit" button on screen to submit player name.
