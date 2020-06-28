@@ -99,6 +99,10 @@ ui_touch={
  ]
 }
 
+[locale]
+
+translations=PoolStringArray( "res://assets/internationalization/MemoryFun_Internationalization.en.translation" )
+
 [rendering]
 
 quality/driver/driver_name="GLES2"

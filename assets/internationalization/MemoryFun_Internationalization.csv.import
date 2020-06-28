@@ -1,0 +1,16 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+
+[deps]
+
+files=[ "res://assets/internationalization/MemoryFun_Internationalization.en.translation", "res://assets/internationalization/MemoryFun_Internationalization.fr.translation" ]
+
+source_file="res://assets/internationalization/MemoryFun_Internationalization.csv"
+dest_files=[ "res://assets/internationalization/MemoryFun_Internationalization.en.translation", "res://assets/internationalization/MemoryFun_Internationalization.fr.translation" ]
+
+[params]
+
+compress=true
+delimiter=0
