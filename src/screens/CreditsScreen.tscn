@@ -31,9 +31,9 @@ __meta__ = {
 }
 
 [node name="ScreenTitle" type="Label" parent="VBox_Credits"]
-margin_top = 127.0
+margin_top = 89.0
 margin_right = 800.0
-margin_bottom = 172.0
+margin_bottom = 134.0
 theme = ExtResource( 3 )
 text = "Credits"
 align = 1
@@ -42,16 +42,16 @@ __meta__ = {
 }
 
 [node name="OwnCon" type="Label" parent="VBox_Credits"]
-margin_top = 176.0
+margin_top = 138.0
 margin_right = 800.0
-margin_bottom = 197.0
+margin_bottom = 159.0
 text = "Main Contributions"
 align = 1
 
 [node name="HBox_Prog" type="HBoxContainer" parent="VBox_Credits"]
-margin_top = 201.0
+margin_top = 163.0
 margin_right = 800.0
-margin_bottom = 222.0
+margin_bottom = 184.0
 alignment = 1
 
 [node name="Title" type="Label" parent="VBox_Credits/HBox_Prog"]
@@ -68,9 +68,9 @@ margin_bottom = 21.0
 text = "KapFlagon"
 
 [node name="HBox_Music" type="HBoxContainer" parent="VBox_Credits"]
-margin_top = 226.0
+margin_top = 188.0
 margin_right = 800.0
-margin_bottom = 247.0
+margin_bottom = 209.0
 theme = ExtResource( 2 )
 alignment = 1
 __meta__ = {
@@ -90,9 +90,9 @@ margin_bottom = 21.0
 text = "KapFlagon"
 
 [node name="HBox_Art" type="HBoxContainer" parent="VBox_Credits"]
-margin_top = 251.0
+margin_top = 213.0
 margin_right = 800.0
-margin_bottom = 272.0
+margin_bottom = 234.0
 theme = ExtResource( 2 )
 alignment = 1
 __meta__ = {
@@ -111,17 +111,59 @@ margin_right = 474.0
 margin_bottom = 21.0
 text = "KapFlagon"
 
-[node name="OtherCon" type="Label" parent="VBox_Credits"]
-margin_top = 276.0
+[node name="Spacer" type="Label" parent="VBox_Credits"]
+margin_top = 238.0
 margin_right = 800.0
-margin_bottom = 297.0
+margin_bottom = 259.0
+align = 1
+
+[node name="OtherCon" type="Label" parent="VBox_Credits"]
+margin_top = 263.0
+margin_right = 800.0
+margin_bottom = 284.0
 text = "Additional Contributions"
 align = 1
 
-[node name="HBox_Fonts" type="HBoxContainer" parent="VBox_Credits"]
-margin_top = 301.0
+[node name="HBox_trans" type="HBoxContainer" parent="VBox_Credits"]
+margin_top = 288.0
 margin_right = 800.0
-margin_bottom = 322.0
+margin_bottom = 309.0
+alignment = 1
+
+[node name="Title" type="Label" parent="VBox_Credits/HBox_trans"]
+margin_left = 259.0
+margin_right = 454.0
+margin_bottom = 21.0
+text = "French Translation:"
+
+[node name="Name" type="Label" parent="VBox_Credits/HBox_trans"]
+margin_left = 458.0
+margin_right = 540.0
+margin_bottom = 21.0
+text = "Momo EL"
+
+[node name="HBox_testing" type="HBoxContainer" parent="VBox_Credits"]
+margin_top = 313.0
+margin_right = 800.0
+margin_bottom = 334.0
+alignment = 1
+
+[node name="Title" type="Label" parent="VBox_Credits/HBox_testing"]
+margin_left = 284.0
+margin_right = 362.0
+margin_bottom = 21.0
+text = "Testers:"
+
+[node name="Name" type="Label" parent="VBox_Credits/HBox_testing"]
+margin_left = 366.0
+margin_right = 516.0
+margin_bottom = 21.0
+text = "Momo EL, Pilly D"
+
+[node name="HBox_Fonts" type="HBoxContainer" parent="VBox_Credits"]
+margin_top = 338.0
+margin_right = 800.0
+margin_bottom = 359.0
 alignment = 1
 
 [node name="Title" type="Label" parent="VBox_Credits/HBox_Fonts"]
@@ -138,9 +180,9 @@ text = "LJ Design Studios (used under GPL license)"
 
 [node name="Back" type="Button" parent="VBox_Credits"]
 margin_left = 372.0
-margin_top = 326.0
+margin_top = 363.0
 margin_right = 427.0
-margin_bottom = 353.0
+margin_bottom = 390.0
 grow_horizontal = 0
 grow_vertical = 0
 size_flags_horizontal = 4

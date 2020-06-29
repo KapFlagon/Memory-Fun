@@ -6,7 +6,7 @@
 		) Start screen ; Done
 		) Options pop-up ; Almost Done (see next future implementation)
 		) Pause pop-up ; Done
-		) Credits Screen ; 
+		) Credits Screen ; Done
 		) High Scores Screen ; 
 		) How to Play screen ; 
 		) Game Over screen ; 
