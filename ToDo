@@ -10,7 +10,7 @@
 		) High Scores Screen ; Done
 		) How to Play screen ; Done
 		) Game Over screen ; Done
-		) Difficulty screen ; 
+		) Difficulty screen ; Done
 		) Grid screen ; 
 	- Update themes so that checkboxButtons do not use words and instead use images of a tick and an x to signify "on" and "off".
 
