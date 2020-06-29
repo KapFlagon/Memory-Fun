@@ -3,9 +3,8 @@ extends Control
 
 func _ready() -> void:
 	get_node("ColorRect").set_frame_color(PlayerData.get_background_colour())
-	ready_texts()
 	populate_tables()
-	
+	ready_texts()
 
 
 func populate_tables() -> void:
@@ -87,4 +86,23 @@ func _on_TabContainer_tab_changed(tab: int) -> void:
 
 
 func ready_texts() -> void:
-	pass
+	$Title.set_text(tr("HIGH_SCORES"))
+	$TabContainer.set_tab_title(0, tr("DIFF_EASY"))
+	$TabContainer/Easy/Grid_08/Label.set_text(tr("HSS_8"))
+	$TabContainer/Easy/Grid_12/Label.set_text(tr("HSS_12"))
+	$TabContainer/Easy/Grid_16/Label.set_text(tr("HSS_16"))
+	$TabContainer/Easy/Grid_20/Label.set_text(tr("HSS_20"))
+	$TabContainer/Easy/Grid_24/Label.set_text(tr("HSS_24"))
+	$TabContainer.set_tab_title(1, tr("DIFF_MED"))
+	$TabContainer/Medium/Grid_08/Label.set_text(tr("HSS_8"))
+	$TabContainer/Medium/Grid_12/Label.set_text(tr("HSS_12"))
+	$TabContainer/Medium/Grid_16/Label.set_text(tr("HSS_16"))
+	$TabContainer/Medium/Grid_20/Label.set_text(tr("HSS_20"))
+	$TabContainer/Medium/Grid_24/Label.set_text(tr("HSS_24"))
+	$TabContainer.set_tab_title(2, tr("DIFF_HARD"))
+	$TabContainer/Hard/Grid_08/Label.set_text(tr("HSS_8"))
+	$TabContainer/Hard/Grid_12/Label.set_text(tr("HSS_12"))
+	$TabContainer/Hard/Grid_16/Label.set_text(tr("HSS_16"))
+	$TabContainer/Hard/Grid_20/Label.set_text(tr("HSS_20"))
+	$TabContainer/Hard/Grid_24/Label.set_text(tr("HSS_24"))
+	$MainMenuButton.set_text(tr("MAIN_MENU"))

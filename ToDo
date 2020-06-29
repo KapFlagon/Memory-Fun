@@ -7,7 +7,7 @@
 		) Options pop-up ; Almost Done (see next future implementation)
 		) Pause pop-up ; Done
 		) Credits Screen ; Done
-		) High Scores Screen ; 
+		) High Scores Screen ; Done
 		) How to Play screen ; 
 		) Game Over screen ; 
 		) Difficulty screen ; 
