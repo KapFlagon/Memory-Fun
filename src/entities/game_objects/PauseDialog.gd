@@ -45,7 +45,15 @@ func _on_MainMenuButton_button_up() -> void:
 func _on_PauseDialog_about_to_show() -> void:
 	AudioManager.play_rand_sfx()
 	pause_start_time = OS.get_unix_time()
+	ready_texts()
 
 
 func _on_OptionsButton_popup_hidden() -> void:
 	emit_signal("pause_options_submitted")
+
+
+func ready_texts() -> void:
+	$VBoxContainer/Label.set_text(tr("GAME_PAUSED"))
+	$VBoxContainer/ResumeButton.set_text(tr("RESUME"))
+	$VBoxContainer/OptionsButton.set_text(tr("OPTIONS"))
+	$VBoxContainer/MainMenuButton.set_text(tr("MAIN_MENU"))
