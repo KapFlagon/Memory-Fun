@@ -4,6 +4,7 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	get_node("ColorRect").set_frame_color(PlayerData.get_background_colour())
+	ready_texts()
 	for button in get_tree().get_nodes_in_group("GridSelectGroup"):
 		button.connect("button_up", self, "_grid_button_pressed", [button]) 
 
@@ -44,3 +45,9 @@ func next_scene() -> void:
 func _on_MainMenu_button_up() -> void:
 	AudioManager.play_rand_sfx()
 	get_tree().change_scene("res://src/screens/StartScreen.tscn")
+
+
+func ready_texts() -> void:
+	$VBox_GridSelection/GridPrompt.set_text(tr("GRID_PROMPT")+":")
+	$VBox_GridSelection/HBoxContainer/BackButton.set_text(tr("DIFFICULTY"))
+	$VBox_GridSelection/HBoxContainer/MainMenu.set_text(tr("MAIN_MENU"))

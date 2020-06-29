@@ -2,17 +2,8 @@
 	- Expand Keyboard controls (tabbing for menu items, enter to select, etc.)
 	- In "Options" screen, add swatches to display palette used by cards.
 	- Add option to select different pre-created card backs.
-	- Use localization/translation features to add other language options. 
-		) Start screen ; Done
-		) Options pop-up ; Almost Done (see next future implementation)
-		) Pause pop-up ; Done
-		) Credits Screen ; Done
-		) High Scores Screen ; Done
-		) How to Play screen ; Done
-		) Game Over screen ; Done
-		) Difficulty screen ; Done
-		) Grid screen ; 
 	- Update themes so that checkboxButtons do not use words and instead use images of a tick and an x to signify "on" and "off".
+	- Add French translation
 
 Bugs:
 	- Grammar in "how to screen".
