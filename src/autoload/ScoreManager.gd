@@ -23,7 +23,7 @@ func _ready() -> void:
 
 
 func create_defaults() -> void:
-	var array_dummy_entry = ["Name", 0]
+	var array_dummy_entry = [tr("HSS_BLANK_NAME"), 0]
 	var array_dummy_grid = []
 	var dict_dummy = {}
 	for score_rank in range(5):

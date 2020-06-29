@@ -3,7 +3,9 @@ extends Control
 
 func _ready() -> void:
 	get_node("ColorRect").set_frame_color(PlayerData.get_background_colour())
+	ready_texts()
 	populate_tables()
+	
 
 
 func populate_tables() -> void:
@@ -82,3 +84,7 @@ func _on_MainMenuButton_button_up() -> void:
 
 func _on_TabContainer_tab_changed(tab: int) -> void:
 	AudioManager.play_rand_sfx()
+
+
+func ready_texts() -> void:
+	pass
