@@ -5,6 +5,7 @@ func _ready() -> void:
 	AudioManager.play_victory_sound()
 	get_node("ColorRect").set_frame_color(PlayerData.get_background_colour())
 	$VBox/HBoxContainer/StatText.set_text(PlayerData.get_game_time_str())
+	ready_texts()
 	get_node("Popup_NameEntry").popup()
 	
 func _process(delta: float) -> void:
@@ -44,3 +45,15 @@ func process_inputs() -> void:
 	if get_node("Popup_NameEntry").visible == true:
 		if Input.is_action_just_pressed("ui_accept"):
 			_on_SubmitButton_button_up()
+
+
+func ready_texts() -> void:
+	$VBox/GameOverText.set_text(tr("GAME_OVER"))
+	$VBox/HBoxContainer/StatPrompt.set_text(tr("TIMER_TEXT"))
+	$VBox/PlayAgainButton.set_text(tr("PLAY_AGAIN"))
+	$VBox/NewVariants.set_text(tr("CHANGE_SETTINGS"))
+	$VBox/OptionsButton.set_text(tr("OPTIONS"))
+	$VBox/MainMenuButton.set_text(tr("MAIN_MENU"))
+	$Popup_NameEntry/VBoxContainer/Prompt.set_text(tr("NAME_PROMPT"))
+	$Popup_NameEntry/VBoxContainer/LineEdit.set_placeholder(tr("NAME_PLACEHOLDER"))
+	$Popup_NameEntry/VBoxContainer/SubmitButton.set_text(tr("SUBMIT"))
