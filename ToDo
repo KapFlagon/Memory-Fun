@@ -5,6 +5,8 @@
 	- Update themes so that checkboxButtons do not use words and instead use images of a tick and an x to signify "on" and "off".
 	- Add French translation
 
-Bugs:
-	- Grammar in "how to screen".
-	- Allow unpausing via "escape" button
+> Bugs:
+	- 
+
+> Limitations:
+	- Allow unpausing via "escape" button : Cannot be achieved as _input and _input_event are not called while game is paused. 
