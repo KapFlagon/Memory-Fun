@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://src/themes/Theme_01.tres" type="Theme" id=1]
+[ext_resource path="res://src/themes/Theme_01_large.tres" type="Theme" id=1]
 [ext_resource path="res://src/screens/GridSelectionScreen.gd" type="Script" id=2]
+[ext_resource path="res://src/themes/Theme_01_med.tres" type="Theme" id=3]
+
 
 [node name="GridSelectionScreen" type="Control"]
 anchor_right = 1.0
@@ -37,9 +39,9 @@ __meta__ = {
 }
 
 [node name="GridPrompt" type="Label" parent="VBox_GridSelection"]
-margin_top = 78.0
+margin_top = 97.0
 margin_right = 575.0
-margin_bottom = 123.0
+margin_bottom = 142.0
 text = "Select a Grid Size:"
 align = 1
 __meta__ = {
@@ -47,9 +49,10 @@ __meta__ = {
 }
 
 [node name="GridContainer" type="GridContainer" parent="VBox_GridSelection"]
-margin_top = 127.0
+margin_top = 146.0
 margin_right = 575.0
-margin_bottom = 233.0
+margin_bottom = 226.0
+theme = ExtResource( 3 )
 columns = 3
 __meta__ = {
 "_edit_use_anchors_": false
@@ -59,7 +62,7 @@ __meta__ = {
 "GridSelectGroup",
 ]]
 margin_right = 189.0
-margin_bottom = 51.0
+margin_bottom = 38.0
 size_flags_horizontal = 3
 text = "8"
 
@@ -68,7 +71,7 @@ text = "8"
 ]]
 margin_left = 193.0
 margin_right = 382.0
-margin_bottom = 51.0
+margin_bottom = 38.0
 size_flags_horizontal = 3
 text = "12"
 
@@ -77,16 +80,16 @@ text = "12"
 ]]
 margin_left = 386.0
 margin_right = 575.0
-margin_bottom = 51.0
+margin_bottom = 38.0
 size_flags_horizontal = 3
 text = "16"
 
 [node name="20TileGridButton" type="Button" parent="VBox_GridSelection/GridContainer" groups=[
 "GridSelectGroup",
 ]]
-margin_top = 55.0
+margin_top = 42.0
 margin_right = 189.0
-margin_bottom = 106.0
+margin_bottom = 80.0
 size_flags_horizontal = 3
 text = "20"
 
@@ -94,9 +97,9 @@ text = "20"
 "GridSelectGroup",
 ]]
 margin_left = 193.0
-margin_top = 55.0
+margin_top = 42.0
 margin_right = 382.0
-margin_bottom = 106.0
+margin_bottom = 80.0
 size_flags_horizontal = 3
 text = "24"
 
@@ -112,23 +115,24 @@ size_flags_horizontal = 3
 text = "Custom"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBox_GridSelection"]
-margin_left = 58.0
-margin_top = 237.0
-margin_right = 516.0
-margin_bottom = 288.0
+margin_left = 120.0
+margin_top = 230.0
+margin_right = 454.0
+margin_bottom = 268.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme = ExtResource( 3 )
 
 [node name="BackButton" type="Button" parent="VBox_GridSelection/HBoxContainer"]
-margin_right = 225.0
-margin_bottom = 51.0
+margin_right = 161.0
+margin_bottom = 38.0
 size_flags_horizontal = 3
 text = "Difficulty"
 
 [node name="MainMenu" type="Button" parent="VBox_GridSelection/HBoxContainer"]
-margin_left = 229.0
-margin_right = 458.0
-margin_bottom = 51.0
+margin_left = 165.0
+margin_right = 334.0
+margin_bottom = 38.0
 text = "Main Menu"
 [connection signal="button_up" from="VBox_GridSelection/HBoxContainer/BackButton" to="." method="_on_BackButton_button_up"]
 [connection signal="button_up" from="VBox_GridSelection/HBoxContainer/MainMenu" to="." method="_on_MainMenu_button_up"]

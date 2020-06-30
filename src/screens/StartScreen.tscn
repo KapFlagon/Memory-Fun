@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://src/themes/Theme_01.tres" type="Theme" id=1]
+[ext_resource path="res://src/themes/Theme_01_large.tres" type="Theme" id=1]
 [ext_resource path="res://src/themes/Theme_01_small.tres" type="Theme" id=2]
 [ext_resource path="res://src/screens/StartScreen.gd" type="Script" id=3]
 [ext_resource path="res://src/entities/ui/ExitButton.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/entities/ui/StartButton.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/entities/ui/OptionsButton.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/themes/Theme_01_med.tres" type="Theme" id=7]
 
 [node name="StartScreen" type="Control"]
 anchor_right = 1.0
@@ -34,15 +35,17 @@ margin_top = -176.0
 margin_right = 208.5
 margin_bottom = 176.0
 size_flags_stretch_ratio = 0.0
-theme = ExtResource( 1 )
+theme = ExtResource( 7 )
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Title" type="Label" parent="VBox_MainMenu"]
+margin_top = 32.0
 margin_right = 417.0
-margin_bottom = 45.0
+margin_bottom = 77.0
+theme = ExtResource( 1 )
 text = "Memory Fun!"
 align = 1
 __meta__ = {
@@ -50,40 +53,40 @@ __meta__ = {
 }
 
 [node name="StartButton" parent="VBox_MainMenu" instance=ExtResource( 5 )]
-margin_top = 49.0
-margin_bottom = 100.0
+margin_top = 81.0
+margin_bottom = 119.0
 
 [node name="OptionsButton" parent="VBox_MainMenu" instance=ExtResource( 6 )]
-margin_top = 104.0
-margin_bottom = 155.0
+margin_top = 123.0
+margin_bottom = 161.0
 
 [node name="ExitButton" parent="VBox_MainMenu" instance=ExtResource( 4 )]
 visible = false
 margin_right = 417.0
 
 [node name="HowToPlayButton" type="Button" parent="VBox_MainMenu"]
-margin_top = 159.0
+margin_top = 165.0
 margin_right = 417.0
-margin_bottom = 210.0
+margin_bottom = 203.0
 text = "How to Play"
 
 [node name="HighScoreButton" type="Button" parent="VBox_MainMenu"]
-margin_top = 214.0
+margin_top = 207.0
 margin_right = 417.0
-margin_bottom = 265.0
+margin_bottom = 245.0
 text = "High Scores"
 
 [node name="CreditsButton" type="Button" parent="VBox_MainMenu"]
-margin_top = 269.0
+margin_top = 249.0
 margin_right = 417.0
-margin_bottom = 320.0
+margin_bottom = 287.0
 text = "Credits"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBox_MainMenu"]
 margin_left = 83.0
-margin_top = 324.0
+margin_top = 291.0
 margin_right = 334.0
-margin_bottom = 353.0
+margin_bottom = 320.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 

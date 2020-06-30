@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://src/themes/Theme_01.tres" type="Theme" id=1]
+[ext_resource path="res://src/themes/Theme_01_large.tres" type="Theme" id=1]
 [ext_resource path="res://src/screens/GameOverScreen.gd" type="Script" id=2]
 [ext_resource path="res://assets/audio/sfx/Victory.ogg" type="AudioStream" id=3]
 [ext_resource path="res://src/entities/ui/ExitButton.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/entities/ui/OptionsButton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/themes/Theme_01_med.tres" type="Theme" id=6]
 
 [node name="GameOverScreen" type="Control"]
 anchor_right = 1.0
@@ -33,16 +34,17 @@ margin_top = -176.0
 margin_right = 279.0
 margin_bottom = 176.0
 size_flags_stretch_ratio = 0.0
-theme = ExtResource( 1 )
+theme = ExtResource( 6 )
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="GameOverText" type="Label" parent="VBox"]
-margin_top = 19.0
+margin_top = 51.0
 margin_right = 558.0
-margin_bottom = 64.0
+margin_bottom = 96.0
+theme = ExtResource( 1 )
 text = "You Win! Good Job!"
 align = 1
 __meta__ = {
@@ -50,33 +52,34 @@ __meta__ = {
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBox"]
-margin_top = 68.0
+margin_top = 100.0
 margin_right = 558.0
-margin_bottom = 113.0
+margin_bottom = 132.0
+theme = ExtResource( 6 )
 alignment = 1
 
 [node name="StatPrompt" type="Label" parent="VBox/HBoxContainer"]
-margin_left = 128.0
-margin_right = 426.0
-margin_bottom = 45.0
+margin_left = 172.0
+margin_right = 381.0
+margin_bottom = 32.0
 text = "Time elapsed "
 align = 2
 
 [node name="StatText" type="Label" parent="VBox/HBoxContainer"]
-margin_left = 430.0
-margin_right = 430.0
-margin_bottom = 45.0
+margin_left = 385.0
+margin_right = 385.0
+margin_bottom = 32.0
 
 [node name="PlayAgainButton" type="Button" parent="VBox"]
-margin_top = 117.0
+margin_top = 136.0
 margin_right = 558.0
-margin_bottom = 168.0
+margin_bottom = 174.0
 text = "Play again"
 
 [node name="NewVariants" type="Button" parent="VBox"]
-margin_top = 172.0
+margin_top = 178.0
 margin_right = 558.0
-margin_bottom = 223.0
+margin_bottom = 216.0
 text = "Change Grid or Difficulty"
 
 [node name="ExitButton" parent="VBox" instance=ExtResource( 4 )]
@@ -86,14 +89,14 @@ margin_right = 417.0
 margin_bottom = 305.0
 
 [node name="OptionsButton" parent="VBox" instance=ExtResource( 5 )]
-margin_top = 227.0
+margin_top = 220.0
 margin_right = 558.0
-margin_bottom = 278.0
+margin_bottom = 258.0
 
 [node name="MainMenuButton" type="Button" parent="VBox"]
-margin_top = 282.0
+margin_top = 262.0
 margin_right = 558.0
-margin_bottom = 333.0
+margin_bottom = 300.0
 text = "Main Menu"
 
 [node name="VictorySound" type="AudioStreamPlayer" parent="."]
