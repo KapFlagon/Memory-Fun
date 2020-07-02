@@ -87,9 +87,18 @@ func new_score(name: String, score: int, difficulty: int, grid_size: int) -> voi
 
 class ScoreSorter:
 	static func sort_descending(score_entry_a, score_entry_b):
-		if score_entry_a[1] < score_entry_b[1]:
-			return true
-		return false
+		if score_entry_b[1] == 0:
+			if score_entry_a[1] > score_entry_b[1]:
+				return true
+			else:
+				return false
+		elif score_entry_b[1] != 0:
+			if score_entry_a[1] == 0:
+				return false
+			elif score_entry_a[1] < score_entry_b[1]:
+				return true
+			else: 
+				return false
 
 
 func secs_to_string(elapsed_time):

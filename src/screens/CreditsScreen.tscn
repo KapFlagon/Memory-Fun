@@ -5,7 +5,6 @@
 [ext_resource path="res://src/themes/Theme_01_large.tres" type="Theme" id=3]
 [ext_resource path="res://src/themes/Theme_01_med.tres" type="Theme" id=4]
 
-
 [node name="CreditsScreen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -135,16 +134,16 @@ margin_bottom = 320.0
 alignment = 1
 
 [node name="Title" type="Label" parent="VBox_Credits/HBox_trans"]
-margin_left = 259.0
-margin_right = 454.0
+margin_left = 261.0
+margin_right = 456.0
 margin_bottom = 21.0
 text = "French Translation:"
 
 [node name="Name" type="Label" parent="VBox_Credits/HBox_trans"]
-margin_left = 458.0
-margin_right = 540.0
+margin_left = 460.0
+margin_right = 539.0
 margin_bottom = 21.0
-text = "Momo EL"
+text = "El Momo"
 
 [node name="HBox_testing" type="HBoxContainer" parent="VBox_Credits"]
 margin_top = 324.0
@@ -153,16 +152,16 @@ margin_bottom = 345.0
 alignment = 1
 
 [node name="Title" type="Label" parent="VBox_Credits/HBox_testing"]
-margin_left = 284.0
-margin_right = 362.0
+margin_left = 261.0
+margin_right = 339.0
 margin_bottom = 21.0
 text = "Testers:"
 
 [node name="Name" type="Label" parent="VBox_Credits/HBox_testing"]
-margin_left = 366.0
-margin_right = 516.0
+margin_left = 343.0
+margin_right = 539.0
 margin_bottom = 21.0
-text = "Momo EL, Pilly D"
+text = "El Momo, TugOfWart"
 
 [node name="HBox_Fonts" type="HBoxContainer" parent="VBox_Credits"]
 margin_top = 349.0
