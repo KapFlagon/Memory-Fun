@@ -6,7 +6,7 @@
 	- Add French translation
 
 > Bugs:
-	- 
+	- Touch screen does not work in browsers as mouse click.
 
 > Limitations:
 	- Allow unpausing via "escape" button : Cannot be achieved as _input and _input_event are not called while game is paused. 
