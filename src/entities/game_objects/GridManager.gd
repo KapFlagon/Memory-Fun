@@ -92,7 +92,6 @@ func grid_to_pixel(column, row):
 	var scaled_padding_y = scale_item_padding_y()
 	var new_x = x_start + ((scaled_width + scaled_padding_x) * column)
 	var new_y = y_start + ((scaled_height + scaled_padding_y) * row)
-	#print("x: " + str(new_x) + ", y: " + str(new_y))
 	return Vector2(new_x, new_y)
 	
 	
@@ -102,9 +101,7 @@ func pixel_to_grid(pos : Vector2):
 	var scaled_padding_x = scale_item_padding_x()
 	var scaled_padding_y = scale_item_padding_y()
 	var calc_col = floor((pos.x - x_start) / (scaled_padding_x + scaled_width))
-	#print("mouse pos x: " + str(pos.x) + " column calc: " + str(calc_col))
 	var calc_row = floor((pos.y  - y_start - scaled_padding_y) / scaled_height)
-	#print("mouse pos y: " + str(pos.y) + " row calc: " + str(calc_row))
 	return Vector2(calc_col, calc_row)
 
 
@@ -150,7 +147,6 @@ func create_2D_array():
 func print_2D_array(): 
 	for i in columns:
 		for j in rows:
-			#"grid number " + str(i) + ", " + str(j))
 			card_grid[i][j].print_card()
 
 
@@ -193,14 +189,12 @@ func check_2D_array_state() -> void:
 		for j in rows: 
 			if card_grid[i][j].get_current_state() == e_states.MATCHED:
 				matched_count = matched_count + 1 
-	#print("matched_count:" + str(matched_count))
 	if matched_count == (columns * rows):
 		game_state = e_game_state.COMPLETED
 		get_tree().change_scene("res://src/screens/GameOverScreen.tscn")
 
 
 func shuffle_cards(card_1D_array, num_of_shuffles: int):
-	# https://bost.ocks.org/mike/shuffle/  ? 
 	for n in range(num_of_shuffles): 
 		card_1D_array.shuffle()
 	return card_1D_array
@@ -260,13 +254,11 @@ func process_inputs() -> void:
 			if valid:
 				AudioManager.play_rand_sfx()
 		if Input.is_action_just_pressed("ui_select"): #or Input.is_action_just_released("ui_select"):
-			#print("ui_select or ui_select detected")
 			var valid_selection = validate_selection(current_selector_position)
 			if valid_selection:
 				AudioManager.play_rand_sfx()
 				flip_chosen_card(current_selector_position)
 		if Input.is_action_just_released("ui_end"): 
-			#print()
 			pass
 		if Input.is_action_just_pressed("ui_touch"):
 			process_touch()

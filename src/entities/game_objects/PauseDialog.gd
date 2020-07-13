@@ -26,7 +26,6 @@ func get_total_pause_time():
 
 func _on_PauseDialog_popup_hide() -> void:
 	total_pause_time = pause_end_time - pause_start_time
-	#print("total_pause_time: " + str(total_pause_time))
 	emit_signal("unpaused", get_total_pause_time())
 
 

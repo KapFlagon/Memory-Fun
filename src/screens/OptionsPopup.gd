@@ -1,5 +1,6 @@
 extends PopupDialog
 
+
 var original_background_colour
 var original_sfx_on
 var original_sfx_vol
@@ -120,4 +121,3 @@ func ready_texts() -> void:
 	get_node("VBox_Options/HBoxContainer/SubmitOptionsButton").set_text(tr("SUBMIT"))
 	get_node("VBox_Options/HBoxContainer/CancelButton").set_text(tr("CANCEL"))
 	get_node("VBox_Options/HBoxContainer/ResetButton").set_text(tr("RESET"))
-	# Need to either

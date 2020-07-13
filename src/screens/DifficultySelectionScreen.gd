@@ -32,16 +32,10 @@ func _difficulty_button_pressed(button):
 
 func set_tooltip_texts() -> void:
 	if PlayerData.get_colour_blind_mode_on():
-#		get_node("VBox_DifficultySelection/EasyDifButton").set_tooltip("3 Shapes, 1 Background Icon")
-#		get_node("VBox_DifficultySelection/MedDifButton").set_tooltip("5 Shapes, 3 Background Icons")
-#		get_node("VBox_DifficultySelection/HardDifButton").set_tooltip("5 Shapes, 7 Background Icons")
 		get_node("VBox_DifficultySelection/EasyDifButton").set_tooltip(tr("DIFF_EASY_HINT_CB"))
 		get_node("VBox_DifficultySelection/MedDifButton").set_tooltip(tr("DIFF_MED_HINT_CB"))
 		get_node("VBox_DifficultySelection/HardDifButton").set_tooltip(tr("DIFF_HARD_HINT_CB"))
 	else:
-#		get_node("VBox_DifficultySelection/EasyDifButton").set_tooltip("3 Shapes, 1 Colour")
-#		get_node("VBox_DifficultySelection/MedDifButton").set_tooltip("5 Shapes, 3 Colours")
-#		get_node("VBox_DifficultySelection/HardDifButton").set_tooltip("5 Shapes, 7 Colours")
 		get_node("VBox_DifficultySelection/EasyDifButton").set_tooltip(tr("DIFF_EASY_HINT_COL"))
 		get_node("VBox_DifficultySelection/MedDifButton").set_tooltip(tr("DIFF_MED_HINT_COL"))
 		get_node("VBox_DifficultySelection/HardDifButton").set_tooltip(tr("DIFF_HARD_HINT_COL"))

@@ -53,7 +53,6 @@ func populate_tables() -> void:
 			else:
 				temp_node_path_2 = temp_node_path_1 + node_grid_24
 				
-			#print("temp_shallow size: " + str(temp_shallow.size()))
 			for rank in temp_shallow.size():
 				var temp_node_path_3
 				temp_deep = temp_shallow[rank]

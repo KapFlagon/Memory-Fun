@@ -21,15 +21,12 @@ func update_button_visibility() -> void:
 	if current_page == 1:
 		get_node("HBox_Buttons/Button_Back").disabled = true
 		get_node("HBox_Buttons/Button_Next").set_text(tr("NEXT"))
-		#get_node("HBox_Buttons/Button_Next").disabled = false
 	elif current_page == 2: 
 		get_node("HBox_Buttons/Button_Back").disabled = false
 		get_node("HBox_Buttons/Button_Next").set_text(tr("NEXT"))
-		#get_node("HBox_Buttons/Button_Next").disabled = false
 	else: 
 		get_node("HBox_Buttons/Button_Back").disabled = false
 		get_node("HBox_Buttons/Button_Next").set_text(tr("START"))
-		#get_node("HBox_Buttons/Button_Next").disabled = true
 
 
 func _on_Button_Back_button_up() -> void:
@@ -61,12 +58,6 @@ func update_display() -> void:
 
 	# Page 1
 	if current_page == 1:
-#		var game_start_text = "Select a difficulty level and a grid size to begin."
-#		var goal_text = "Match all cards as quickly as you can!"
-#		var difficulty_text = "Higher difficulty levels introduce more shapes and colours."
-#		text_1 = game_start_text
-#		text_2 = goal_text
-#		text_3 = difficulty_text
 		text_1 = tr("HTPS_GAME_START")
 		text_2 = tr("HTPS_GOAL")
 		text_3 = tr("HTPS_DIFF")
@@ -77,11 +68,6 @@ func update_display() -> void:
 		get_node("Img_5").hide()
 	# Page 2
 	if current_page == 2:
-#		var controls_directions_text = "Use the 'WASD' keys, the arrow keys, \nor left-mouse clicks to move the selector icon."
-#		var controls_input_text = "Use the Space key or Enter key to flip a card. \nThe left-mouse click also flips a card."
-#		text_1 = controls_directions_text
-#		text_2 = controls_input_text
-#		text_3 = ""
 		text_1 = tr("HTPS_CONTROLS_MOVEMENT")
 		text_2 = tr("HTPS_CONTROLS_INPUT")
 		text_3 = ""
@@ -92,12 +78,6 @@ func update_display() -> void:
 		get_node("Img_5").hide()
 	# Page 3
 	if current_page == 3: 
-#		var failed_match_text = "If you flip two cards that don't match, \nthey will turn face down again.\n"
-#		var colourblind_text = "Colourblind mode disabled: \nCards have a shape and a colour which must be matched.\n\n\nColourblind mode enabled: \nWhite cards use additional background shapes.\n\n"
-#		var timer_text = "You can see your time at the bottom of the screen. \nIt will be your score."
-#		text_1 = failed_match_text
-#		text_2 = colourblind_text
-#		text_3 = timer_text
 		text_1 = tr("HTPS_NO_MATCH")
 		text_2 = tr("HTPS_COLOURBLIND")
 		text_3 = tr("HTPS_TIMER")

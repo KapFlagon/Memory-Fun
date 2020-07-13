@@ -9,11 +9,6 @@ func _ready() -> void:
 		button.connect("button_up", self, "_grid_button_pressed", [button]) 
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta: float) -> void:
-#	pass
-
-
 func _on_BackButton_button_up() -> void:
 	AudioManager.play_rand_sfx()
 	get_tree().change_scene("res://src/screens/DifficultySelectionScreen.tscn")
