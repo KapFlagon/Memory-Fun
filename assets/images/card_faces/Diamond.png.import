@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ColourBlind_Lines_Diag_RL.png-beba80ca6d5b2833aacaac28487e66dc.stex"
+path="res://.import/Diamond.png-95e85eeed5203fea9a2914d66422226c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/ColourBlind_Lines_Diag_RL.png"
-dest_files=[ "res://.import/ColourBlind_Lines_Diag_RL.png-beba80ca6d5b2833aacaac28487e66dc.stex" ]
+source_file="res://assets/images/card_faces/Diamond.png"
+dest_files=[ "res://.import/Diamond.png-95e85eeed5203fea9a2914d66422226c.stex" ]
 
 [params]
 

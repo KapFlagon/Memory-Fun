@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ColourBlind_Lines_H.png-78330232a87373162e5bafec4e30b9b8.stex"
+path="res://.import/Star.png-33ec795750d9e2c433fe96f008b92593.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/ColourBlind_Lines_H.png"
-dest_files=[ "res://.import/ColourBlind_Lines_H.png-78330232a87373162e5bafec4e30b9b8.stex" ]
+source_file="res://assets/images/card_faces/Star.png"
+dest_files=[ "res://.import/Star.png-33ec795750d9e2c433fe96f008b92593.stex" ]
 
 [params]
 

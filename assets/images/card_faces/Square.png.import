@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Triangle.png-18f9c8cae466402676b888d16b8c096b.stex"
+path="res://.import/Square.png-6c89f40e2c952c65f31d1676d0900739.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/Triangle.png"
-dest_files=[ "res://.import/Triangle.png-18f9c8cae466402676b888d16b8c096b.stex" ]
+source_file="res://assets/images/card_faces/Square.png"
+dest_files=[ "res://.import/Square.png-6c89f40e2c952c65f31d1676d0900739.stex" ]
 
 [params]
 

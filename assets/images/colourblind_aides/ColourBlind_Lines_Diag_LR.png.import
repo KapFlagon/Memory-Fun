@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Circle.png-1f5a33f4bc91c2dab1dfa0506c52f711.stex"
+path="res://.import/ColourBlind_Lines_Diag_LR.png-4447672de020db6e613aa2193c26349a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/Circle.png"
-dest_files=[ "res://.import/Circle.png-1f5a33f4bc91c2dab1dfa0506c52f711.stex" ]
+source_file="res://assets/images/colourblind_aides/ColourBlind_Lines_Diag_LR.png"
+dest_files=[ "res://.import/ColourBlind_Lines_Diag_LR.png-4447672de020db6e613aa2193c26349a.stex" ]
 
 [params]
 

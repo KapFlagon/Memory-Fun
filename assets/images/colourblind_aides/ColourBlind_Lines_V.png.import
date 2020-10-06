@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CardBack.png-381a4ad613464095c67931474e6aee1e.stex"
+path="res://.import/ColourBlind_Lines_V.png-bebfa8bddfc0a4b66b4153a67c46e72a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/CardBack.png"
-dest_files=[ "res://.import/CardBack.png-381a4ad613464095c67931474e6aee1e.stex" ]
+source_file="res://assets/images/colourblind_aides/ColourBlind_Lines_V.png"
+dest_files=[ "res://.import/ColourBlind_Lines_V.png-bebfa8bddfc0a4b66b4153a67c46e72a.stex" ]
 
 [params]
 

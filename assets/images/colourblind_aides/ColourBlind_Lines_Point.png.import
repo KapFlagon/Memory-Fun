@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Star.png-9cb524d3a0057019ebfb0ce03c177501.stex"
+path="res://.import/ColourBlind_Lines_Point.png-cd2b3509e2fb1700633e2ac36e5543dc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/Star.png"
-dest_files=[ "res://.import/Star.png-9cb524d3a0057019ebfb0ce03c177501.stex" ]
+source_file="res://assets/images/colourblind_aides/ColourBlind_Lines_Point.png"
+dest_files=[ "res://.import/ColourBlind_Lines_Point.png-cd2b3509e2fb1700633e2ac36e5543dc.stex" ]
 
 [params]
 
