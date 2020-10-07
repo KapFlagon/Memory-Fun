@@ -18,7 +18,8 @@ func settings_to_dict():
 	settings_dict =  {
 		"gameplay": {
 			"colourblind": PlayerData.get_colour_blind_mode_on(),
-			"background_colour": PlayerData.get_background_colour()
+			"background_colour": PlayerData.get_background_colour(),
+			"card_back": PlayerData.get_card_back()
 		},
 		"audio": {
 			"music_on": AudioManager.get_music_on(),
@@ -48,7 +49,8 @@ func load_config():
 	else:
 		for section in settings_dict.keys():
 			for key in settings_dict[section]:
-				settings_dict[section][key] = config_file.get_value(section, key, null)
+				var default = settings_dict[section][key]
+				settings_dict[section][key] = config_file.get_value(section, key, default)
 		return true
 
 
@@ -60,6 +62,7 @@ func get_config_parameter(section: String, key: String):
 func push_config():
 	PlayerData.set_colour_blind_mode_on(get_config_parameter("gameplay", "colourblind"))
 	PlayerData.set_background_colour(get_config_parameter("gameplay", "background_colour"))
+	PlayerData.set_card_back(get_config_parameter("gameplay", "card_back"))
 	AudioManager.set_music_on(get_config_parameter("audio", "music_on"))
 	AudioManager.set_music_vol(get_config_parameter("audio", "music_vol"))
 	AudioManager.sfx_on = get_config_parameter("audio", "sfx_on")

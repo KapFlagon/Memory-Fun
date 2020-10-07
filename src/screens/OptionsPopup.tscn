@@ -8,6 +8,7 @@
 
 [node name="OptionsPopup" type="PopupDialog"]
 pause_mode = 2
+visible = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -56,9 +57,8 @@ __meta__ = {
 }
 
 [node name="Options" type="Label" parent="VBox_Options"]
-margin_top = 15.0
 margin_right = 361.0
-margin_bottom = 60.0
+margin_bottom = 45.0
 text = "Options"
 align = 1
 __meta__ = {
@@ -67,9 +67,9 @@ __meta__ = {
 
 [node name="GridContainer" type="GridContainer" parent="VBox_Options"]
 margin_left = 42.0
-margin_top = 64.0
+margin_top = 49.0
 margin_right = 318.0
-margin_bottom = 240.0
+margin_bottom = 256.0
 size_flags_horizontal = 4
 theme = ExtResource( 2 )
 columns = 2
@@ -166,10 +166,23 @@ max_value = 0.0
 step = 5.0
 tick_count = 10
 
+[node name="CardBack_Label" type="Label" parent="VBox_Options/GridContainer"]
+margin_top = 183.0
+margin_right = 228.0
+margin_bottom = 204.0
+text = "Select Card back: "
+
+[node name="CardBackOptionButton" type="OptionButton" parent="VBox_Options/GridContainer"]
+margin_left = 232.0
+margin_top = 180.0
+margin_right = 276.0
+margin_bottom = 207.0
+expand_icon = true
+
 [node name="HBoxContainer" type="HBoxContainer" parent="VBox_Options"]
-margin_top = 244.0
+margin_top = 260.0
 margin_right = 361.0
-margin_bottom = 271.0
+margin_bottom = 287.0
 theme = ExtResource( 2 )
 alignment = 1
 
@@ -197,6 +210,7 @@ text = "Reset"
 [connection signal="value_changed" from="VBox_Options/GridContainer/SfxVol_Slider" to="." method="_on_SfxVol_Slider_value_changed"]
 [connection signal="toggled" from="VBox_Options/GridContainer/MusicOnChckbx" to="." method="_on_MusicOnChckbx_toggled"]
 [connection signal="value_changed" from="VBox_Options/GridContainer/MusicVol_Slider" to="." method="_on_MusicVol_Slider_value_changed"]
+[connection signal="item_selected" from="VBox_Options/GridContainer/CardBackOptionButton" to="." method="_on_CardBackOptionButton_item_selected"]
 [connection signal="button_up" from="VBox_Options/HBoxContainer/SubmitOptionsButton" to="." method="_on_SubmitOptionsButton_button_up"]
 [connection signal="button_up" from="VBox_Options/HBoxContainer/CancelButton" to="." method="_on_CancelButton_button_up"]
 [connection signal="button_up" from="VBox_Options/HBoxContainer/ResetButton" to="." method="_on_ResetButton_button_up"]
