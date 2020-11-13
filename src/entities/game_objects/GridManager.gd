@@ -52,7 +52,7 @@ func scale_item_padding_y():
 
 func create_card(card_params_array):
 	var new_card = CardPreLoad.instance()
-	new_card.init_card(card_params_array[0], card_params_array[1])
+	new_card.init_card(card_params_array[0], card_params_array[1], PlayerData.get_card_back())
 	new_card.set_scale(Vector2(item_scale,item_scale))
 	return new_card
 

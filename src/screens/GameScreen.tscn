@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/entities/game_objects/GridManager.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/entities/ui/Hud.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/screens/GameScreen.gd" type="Script" id=3]
 [ext_resource path="res://src/entities/game_objects/PauseDialog.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/entities/ui/PauseButton.tscn" type="PackedScene" id=5]
 
 [node name="GameScreen" type="Node2D"]
 script = ExtResource( 3 )
@@ -31,5 +32,10 @@ margin_right = 460.0
 margin_bottom = 446.263
 
 [node name="PauseDialog" parent="." instance=ExtResource( 4 )]
+
+[node name="Button" parent="." instance=ExtResource( 5 )]
+margin_top = 432.0
+margin_bottom = 478.0
 [connection signal="pause_options_submitted" from="PauseDialog" to="." method="_on_PauseDialog_pause_options_submitted"]
 [connection signal="unpaused" from="PauseDialog" to="Hud" method="_on_PauseDialog_unpaused"]
+[connection signal="button_down" from="Button" to="." method="_on_Button_button_down"]

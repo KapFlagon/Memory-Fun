@@ -4,9 +4,11 @@ extends CardBase
 export (int) var current_state setget set_current_state, get_current_state
 export (int) var shape setget set_shape, get_shape
 export (int) var colour setget set_colour, get_colour
+export (int) var card_back setget set_card_back, get_card_back
 
 
-var img_file
+var front_img_file
+var back_img_file
 
 
 # functions 
@@ -14,11 +16,12 @@ var img_file
 func _ready() -> void:
 	pass # Replace with function body.
 
-func init_card(new_shape, new_colour) -> void:
+func init_card(new_shape, new_colour, new_card_back) -> void:
 	# Using as a "constructor" of sorts
 	set_shape(new_shape)
 	set_colour (new_colour)
 	set_current_state(e_states.FACE_DOWN)
+	set_card_back(new_card_back)
 
 
 func set_current_state(new_state) -> void:
@@ -49,20 +52,29 @@ func get_colour():
 	return colour
 
 
+func get_card_back():
+	return card_back
+
+
+func set_card_back(new_card_back) -> void: 
+	card_back = new_card_back
+	load_card_back_resource()
+
+
 func load_shape_resource() -> void: 
-	while img_file == null:
+	while front_img_file == null:
 		match shape:
 			e_shapes.CIRCLE: 
-				img_file = load("res://assets/images/Circle.png") # Godot loads the Resource when it reads the line.
+				front_img_file = load("res://assets/images/card_faces/Circle.png") # Godot loads the Resource when it reads the line.
 			e_shapes.SQUARE: 
-				img_file = load("res://assets/images/Square.png") 
+				front_img_file = load("res://assets/images/card_faces/Square.png") 
 			e_shapes.TRIANGLE: 
-				img_file = load("res://assets/images/Triangle.png") 
+				front_img_file = load("res://assets/images/card_faces/Triangle.png") 
 			e_shapes.DIAMOND:
-				img_file = load("res://assets/images/Diamond.png") 
+				front_img_file = load("res://assets/images/card_faces/Diamond.png") 
 			e_shapes.STAR:
-				img_file = load("res://assets/images/Star.png") 
-		get_node("FaceSprite").texture = img_file
+				front_img_file = load("res://assets/images/card_faces/Star.png") 
+		get_node("FaceSprite").texture = front_img_file
 
 
 func load_colour_resource() -> void:
@@ -86,19 +98,19 @@ func load_colour_resource() -> void:
 func load_colour_blind_resource() -> void: 
 	match colour:
 		e_colours.WHITE: 
-			get_node("ColourblindSprite").texture = load("res://assets/images/ColourBlind_Lines_Point.png")
+			get_node("ColourblindSprite").texture = load("res://assets/images/colourblind_aides/ColourBlind_Lines_Point.png")
 		e_colours.YELLOW:
-			get_node("ColourblindSprite").texture = load("res://assets/images/ColourBlind_Lines_X.png")
+			get_node("ColourblindSprite").texture = load("res://assets/images/colourblind_aides/ColourBlind_Lines_X.png")
 		e_colours.RED:
-			get_node("ColourblindSprite").texture = load("res://assets/images/ColourBlind_Lines_Plus.png")
+			get_node("ColourblindSprite").texture = load("res://assets/images/colourblind_aides/ColourBlind_Lines_Plus.png")
 		e_colours.BLUE:
-			get_node("ColourblindSprite").texture = load("res://assets/images/ColourBlind_Lines_V.png")
+			get_node("ColourblindSprite").texture = load("res://assets/images/colourblind_aides/ColourBlind_Lines_V.png")
 		e_colours.ORANGE:
-			get_node("ColourblindSprite").texture = load("res://assets/images/ColourBlind_Lines_H.png")
+			get_node("ColourblindSprite").texture = load("res://assets/images/colourblind_aides/ColourBlind_Lines_H.png")
 		e_colours.PURPLE:
-			get_node("ColourblindSprite").texture = load("res://assets/images/ColourBlind_Lines_Diag_LR.png")
+			get_node("ColourblindSprite").texture = load("res://assets/images/colourblind_aides/ColourBlind_Lines_Diag_LR.png")
 		e_colours.GREEN:
-			get_node("ColourblindSprite").texture = load("res://assets/images/ColourBlind_Lines_Diag_RL.png")
+			get_node("ColourblindSprite").texture = load("res://assets/images/colourblind_aides/ColourBlind_Lines_Diag_RL.png")
 
 
 func colour_blind_mode_on() -> void: 
@@ -135,3 +147,17 @@ func get_width():
 
 func get_height():
 	return $Border.get_size().y
+
+
+func load_card_back_resource() -> void: 
+	while back_img_file == null:
+		match card_back:
+			e_backs.A: 
+				back_img_file = load("res://assets/images/card_backs/CardBack_A.png") # Godot loads the Resource when it reads the line.
+			e_backs.B: 
+				back_img_file = load("res://assets/images/card_backs/CardBack_B.png") 
+			e_backs.C: 
+				back_img_file = load("res://assets/images/card_backs/CardBack_C.png") 
+			e_backs.D: 
+				back_img_file = load("res://assets/images/card_backs/CardBack_D.png") 
+		get_node("BackSprite").texture = back_img_file

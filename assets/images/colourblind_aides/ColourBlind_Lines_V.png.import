@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Triangle.png-18f9c8cae466402676b888d16b8c096b.stex"
+path="res://.import/ColourBlind_Lines_V.png-bebfa8bddfc0a4b66b4153a67c46e72a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/Triangle.png"
-dest_files=[ "res://.import/Triangle.png-18f9c8cae466402676b888d16b8c096b.stex" ]
+source_file="res://assets/images/colourblind_aides/ColourBlind_Lines_V.png"
+dest_files=[ "res://.import/ColourBlind_Lines_V.png-bebfa8bddfc0a4b66b4153a67c46e72a.stex" ]
 
 [params]
 

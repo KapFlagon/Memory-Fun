@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Circle.png-1f5a33f4bc91c2dab1dfa0506c52f711.stex"
+path="res://.import/Square.png-6c89f40e2c952c65f31d1676d0900739.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/Circle.png"
-dest_files=[ "res://.import/Circle.png-1f5a33f4bc91c2dab1dfa0506c52f711.stex" ]
+source_file="res://assets/images/card_faces/Square.png"
+dest_files=[ "res://.import/Square.png-6c89f40e2c952c65f31d1676d0900739.stex" ]
 
 [params]
 

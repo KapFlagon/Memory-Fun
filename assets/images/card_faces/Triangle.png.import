@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ColourBlind_Lines_X.png-af2db7b5c05e31429dc6efe68611a82d.stex"
+path="res://.import/Triangle.png-bc3fcde90700ee512f1f476d7f48b743.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/ColourBlind_Lines_X.png"
-dest_files=[ "res://.import/ColourBlind_Lines_X.png-af2db7b5c05e31429dc6efe68611a82d.stex" ]
+source_file="res://assets/images/card_faces/Triangle.png"
+dest_files=[ "res://.import/Triangle.png-bc3fcde90700ee512f1f476d7f48b743.stex" ]
 
 [params]
 
